@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact | Shot Of F8</title>
+        <meta charset="UTF-8"/>
+		<meta name="keywords" content="contact, shot of f8, shot of faith, f8, billiard, ball, pool, hall, form, phone, number, mail, address"/>
+		<meta name="description" content="Contact us through our form or use our phone number directly to book a table in our beautiful pool hall"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,200&amp;family=Nova+Mono&amp;display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    </head>
+
+    <body>
+        <!-- _*-*_ HEADER _*-*_ -->
+        <header>
+            <div id="logo">
+                <a href="../index.html"><img src="../img/logoF8.png" alt="shot of f8 logo"/></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li id="ddl"><a href="bgames.html">Billiard Games <i class="fas fa-angle-down"></i></a>
+                        <ul>
+                            <li><a href="bgames.html#8ball">8-Ball</a></li>
+                            <li><a href="bgames.html#9ball">9-Ball</a></li>
+                            <li><a href="bgames.html#straight">Straight</a></li>
+                            <li><a href="bgames.html#snooker">Snooker</a></li>
+                            <li><a href="bgames.html#carom">Carom Billiard</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- _*-*_ MAIN _*-*_ -->
+        <main>
+            <section class="hero-img contact-hero-img">
+                <h1>Contact Us</h1>    
+            </section>
+            <section class="contact-section">
+                <div class="wrapper">
+                    <article id="contact-form">
+                        <form action="shotoff8.php" method="post">
+                            <div class="form-part">
+                                <label for="fname">First Name</label><br/>
+                                <input type="text" name="fname" id="fname" maxlength="35"/>
+                            </div>
+                            <div class="form-part">
+                                <label for="lname">Last Name</label><br/>
+                                <input type="text" name="lname" id="lname" maxlength="35"/>
+                            </div>
+                            <div class="form-part">
+                                <label for="email">E-mail</label><br/>
+                                <input type="email" name="email" id="email" maxlength="35"/>
+                            </div>
+                            <div class="form-part">
+                                <label for="phone-number">Phone Number</label><br/>
+                                <input type="tel" name="phone-number" id="phone-number" value="+381 " maxlength="18"/>
+                            </div>
+                            <textarea name="message" id="message" cols="10" rows="5" placeholder="Send us a message.."></textarea>
+                            <input type="submit" name="btn" id="btn" value="Submit">
+                        </form>
+                    </article>
+                    <article id="contact-info">
+                        <h2>Phone Number:</h2>
+                        <a href="tel:+381631234567"><i class="fas fa-phone-alt"></i>+381 63 1234 567</a>
+                        <h2>E-mail:</h2>
+                        <a href="mailto:shotoff8@gmail.com"><i class="fas fa-envelope"></i>shotoff8&#64;gmail.com</a>
+                        <h2>Address:</h2>
+                        <a href="https://goo.gl/maps/xdPu3Fgb6vnmKZP3A" target="_blank"><i class="fas fa-map-marker-alt"></i>Zdravka Čelara 16, Beograd, Srbija</a>
+                    </article>
+                </div>
+            </section>
+            <section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.358671714505!2d20.48222611573346!3d44.814257184594936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9609031735%3A0xc17ed71f59ac4725!2z0JLQuNGB0L7QutCwINCY0KbQoiDRiNC60L7Qu9Cw!5e0!3m2!1ssr!2srs!4v1638819292803!5m2!1ssr!2srs" width="100%" height="500px" loading="lazy"></iframe>
+            </section>
+        </main>
+        <!-- _*-*_ FOOTER _*-*_ -->
+        <footer>
+            <div id="social">
+                <div class="line"><hr/></div>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>  
+                <a href="../rss.xml" target="_blank"><i class="fas fa-rss"></i></a> 
+                <a href="../sitemap.xml" target="_blank"><i class="fas fa-sitemap"></i></a>
+                <div class="line"><hr/></div>  
+            </div>
+            <div id="copyright">
+                <p>Copyright &copy; 2021 ShotOfF8, All rights reserved.</p>
+            </div>
+        </footer>      
+    </body>
+</html>

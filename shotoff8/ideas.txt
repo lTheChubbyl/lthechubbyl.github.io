@@ -1,0 +1,54 @@
+pages
+- Home
+- Gallery
+- About us 
+- Contact
+- Instructions
+
+******************************************************
+Gallery
+.uno {
+    background: url("../img/img4.jpg");
+    
+}
+
+.dos {
+    background: url("../img/img21.jpg");
+}
+
+.uno, .dos {
+    width: 50%;
+    height: 600px;
+    float: left;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.uno:hover, .dos:hover {
+    filter: none;
+}
+******************************************************
+Viridian Green - #0C9292 LD
+
+Prussian Blue - #23395B
+Auburn - #A22522
+Maximum Yellow - #F7C249 (RED)
+British Racing Green - #0D462D
+
+Snow - #FFF7F8 W
+Baby Powder - #FFFFFA W
+Cultured - #FAF9F9 W
+
+******************************************************
+
+8-ball
+9-ball
+Straight
+Snooker
+Carom Billiard
+
+#16171B
+
+http://shotoff8.byethost31.com/
+http://shotoff8.000webhostapp.com/

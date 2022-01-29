@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>News from the World of Billiard</title>
+        <link>http://shotoff8.000webhostapp.com/index.html</link>
+        <description>Latest news</description>
+        <item>
+            <title>BetVictor Shoot Out Wild Cards</title>
+            <description>Eight amateur players have been nominated...</description>
+            <link>http://shotoff8.000webhostapp.com/index.html#news-section</link>
+        </item>
+        <item>
+            <title>Zhao is the UK Snooker Champion</title>
+            <description>Young talent Zhao Xintong won his first pro title</description>
+            <link>http://shotoff8.000webhostapp.com/index.html#news-section</link>
+        </item>
+        <item>
+            <title>Carlo Biado wins the Abu Dhabi Open 9-Ball Championship</title>
+            <description>Carlo Biado continued his magnificent year...</description>
+            <link>http://shotoff8.000webhostapp.com/index.html#news-section</link>
+        </item>
+    </channel>
+</rss>
