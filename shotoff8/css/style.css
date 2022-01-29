@@ -323,7 +323,7 @@ header nav ul #ddl ul li a{
 }
 
 #fixed-bg {
-    background-image: url("/img/fixedbg.jpg");
+    background-image: url("../img/fixedbg.jpg");
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
