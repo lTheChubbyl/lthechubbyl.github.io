@@ -1,0 +1,581 @@
+/* _*-*_ GLOBAL _*-*_ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+    &::before, &::after {
+        box-sizing: border-box;
+    }
+}
+
+    /* _-_ VARIABLES _-_ */
+
+    $neon-light-blue: #83EEFF;
+    $non-neon-blue: #587291; 
+    $snow-white: #FFFAFA;
+    $global-bg: #1D1D1F;
+
+    $section-p: 3rem 0 4.5rem;
+    
+    $revealSpeed: 1.5s;
+
+    $levels: 100%, 95%, 70%, 50%, 75%, 80%;
+
+    @mixin neon-glow {
+        text: {
+            transform: uppercase;
+            shadow: 
+                0 0 0.3em rgba(#fff, 0.7),
+                0 0 0.4em rgba(#fff, 0.5);
+        }
+        font: {
+            family: 'Jura', Arial, sans-serif;
+            weight: 700;
+        }
+        color: $neon-light-blue;
+        border: 3px solid $neon-light-blue;
+        padding: 0.75em 1.5em;
+        background: rgba(#000, 0.5);
+        transition: 200ms ease-in-out;
+        text-shadow: 
+            0 0 0.3em rgba(#fff, 0.7),
+            0 0 0.4em rgba(#fff, 0.5);
+        box-shadow: 
+            0 0 0.5em 0 $neon-light-blue,
+            inset 0 0 0.5em 0 $neon-light-blue;
+        &:hover {
+            text-shadow: 
+                0 0 0.6em rgba(#fff, 0.8),
+                0 0 0.7em rgba(#fff, 0.7);
+            box-shadow: 
+                0 0 0.8em 0.1em $neon-light-blue,
+                inset 0 0 0.8em 0.1em $neon-light-blue;
+        }
+    }
+    
+    /* _-_ ANIMATIONS _-_ */
+
+    @keyframes reveal {
+        to {
+            left: 100%;
+        }
+    }
+        
+    @keyframes swoosh {
+        0%, 100% {
+            clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
+        }
+        50% {
+            clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
+        }
+    }
+    @keyframes goDown {
+        0% {
+            opacity: 1;
+        } 
+        100% {
+            opacity: 0;
+            transform: translate(-1rem, -1rem);
+        }
+    }
+
+html {
+    scroll-behavior: smooth;
+    body {
+        line-height: 1;
+        background: $global-bg;
+        color: $snow-white;
+    }
+}
+
+h1 {
+    font: {
+        family: 'Jura', Arial, sans-serif;
+        weight: 400;
+        size: 4.5rem;
+    }
+}
+h2 {
+    @extend h1;
+    font: {
+        family: 'Jura', Arial, sans-serif;
+        weight: 700; 
+        size: 2rem;
+    }
+    text-align: center;
+    width: 20%;
+    margin: 0 auto 2.5em;
+    padding: 0.4em;
+    border-right: 3px solid $snow-white;
+    background: rgba(#000, 0.6);
+    text-transform: uppercase;
+    span {
+        color: $neon-light-blue;
+        font-family: 'Jura', Arial, sans-serif;
+        text-shadow: 0 0 0.2em rgba(#fff, 0.5);
+    }
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* _*-*_ HEADER _*-*_ */
+
+header {
+    nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+        ul {
+            list-style-type: none;
+            text-align: right;
+            margin: 1.2rem auto;
+            li {
+                display: block;
+                a {
+                    text-decoration: none;
+                    color: $snow-white;
+                    display: block;
+                    padding: 0.3em;
+                    font-size: 1.2rem;
+                }
+            } 
+        }
+        .vr {
+            border-right: 1px solid $neon-light-blue;
+            height: 25%;
+            width: 100%; 
+            position: relative;
+            right: 50%;
+        }
+    }
+}
+
+/* _*-*_ MAIN _*-*_ */
+
+#intro {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    #logo {
+        position: absolute;
+        width: 100%;
+        z-index: 4;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        a {
+            img {
+                width: 6rem;
+                transition: 300ms ease-in-out;
+                &:hover {
+                    filter: grayscale(100%);//blur(1px)
+                }
+            }
+        }      
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(25%);
+    }
+    #intro-desc {
+        position: absolute;
+        top: 25%;
+        left: 16%;
+        .intro-desc-item {
+            border-left: 3px solid $neon-light-blue;
+            padding-left: 1.5rem;
+            background: rgba(#000, 0.5);
+            margin-bottom: 2rem;
+            @mixin pseudo {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            h1 {
+                position: relative;
+                padding: 0.2em;
+                &::before {
+                    @include pseudo;
+                }
+                &::after {
+                    @include pseudo;
+                    background: $snow-white;
+                    animation: reveal $revealSpeed 100ms forwards;
+                }
+            }
+            p {  
+                padding: 0.45em;
+                position: relative;
+                font: {
+                    family: 'Jura', Arial, sans-serif;
+                    size: 1.5rem;
+                }
+                &.intro-desc-title {
+                    &::before {
+                        @include pseudo; 
+                    }
+                    &::after {
+                        @include pseudo;
+                        background: $snow-white;
+                        animation: reveal $revealSpeed $revealSpeed forwards;
+                    }
+                }
+            }  
+        }
+    }
+    #incentive {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        bottom: 10%;
+        @mixin arrows($wh, $br) {
+            width: $wh;
+            height: $wh;
+            border-right: $br solid $neon-light-blue;
+            border-bottom: $br solid $neon-light-blue;      
+        }
+        a {
+            text-decoration: none;
+            .arrow {
+                @include arrows(3rem, 2px);
+                transform: rotateZ(45deg);
+                &::before {
+                    @include arrows(1.5rem, 1px);
+                    content: '';
+                    position: absolute;
+                    right: 25%;
+                    bottom: 25%;
+                    animation: goDown 2s ($revealSpeed)*2 infinite;
+                }
+            }
+        }    
+    }
+}
+
+#services {
+    padding: $section-p;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        .services-part {
+            text-align: center;
+            background: rgba(#808080, 0.1);
+            border-left: 3px solid $snow-white;
+            display: flex;
+            flex-direction: column;
+            i {
+                font-size: 2.5rem;
+                padding: 1.2rem;
+                box-shadow: 3px 3px 3px #000;
+                margin: 2rem auto;
+            }
+            h3 {
+                color: $neon-light-blue;
+                font: {
+                    size: 1.5rem;
+                    weight: 400; 
+                    family: 'Jura', Arial, sans-serif; 
+                }
+                text-shadow: 0 0 0.2em rgba(#fff, 0.4);
+            }
+            hr {
+                margin: 0.6rem auto;
+                color: $non-neon-blue;
+                width: 20%;
+                box-shadow: 0 2px 3px #000;
+            }
+            p {
+                line-height: 1.4;
+                padding: 1.5em;
+            }
+            &:last-of-type i {
+                width: calc(5rem+10px);
+            }
+        }
+    }
+}
+
+#skills {
+    padding: $section-p;
+    background-image: url("../img/horizontal-shapes-inverted-dimmed.jpg");
+    //ne znam sta da radim
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        .skills-part {
+            display: flex;
+            justify-content: space-between;
+            width: 10rem;
+            height: 7.5rem;
+            background: $snow-white;
+            .skill-desc {
+                color: black;
+                text-align: center;
+                margin: 0 auto;
+                i {
+                    font-size: 3rem;
+                    text-align: center;
+                    margin: 0.3em auto;
+                    text-shadow: 2px 2px 2px rgba($neon-light-blue, 0.4);
+                }
+                h3 {
+                    font: {
+                        size: 1.2rem;
+                        weight: 400; 
+                        family: 'Jura', Arial, sans-serif; 
+                    }
+                    padding: 0.5em;
+                }
+            }
+            .skill-bar-out {
+                height: 100%;
+                width: 30%;
+                background: $global-bg;
+                position: relative;
+                // border-left: 1px solid $global-bg;
+                .skill-bar-in {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    background: $neon-light-blue;
+                    animation: swoosh 1.5s ease-in-out infinite;
+                    p {
+                        position: absolute;
+                        color: black;
+                        bottom: 0.1em;
+                        width: 100%;
+                        text-align: center;
+                        font: {
+                            weight: 700; 
+                            family: 'Jura', Arial, sans-serif; 
+                        }
+                    }
+                }    
+            }
+            @for $i from 1 through 6 {
+                &:nth-of-type(6n+#{$i}) {
+                    .skill-bar-out {
+                        .skill-bar-in {
+                            height: nth($levels, $i); 
+                        }
+                    }   
+                }       
+            }    
+        } 
+    }
+}
+
+#projects {
+    padding: $section-p;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        .projects-part {
+            position: relative;
+            img {
+                display: block;
+                width: 100%;
+                filter: grayscale(0%);
+                transition: 300ms ease-in-out;
+            }
+            .project-desc {
+                position: absolute;
+                opacity: 1;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                background: rgba(#000, 0.7);
+                border-left: 3px solid $snow-white;
+                padding: 0.5em;
+                transition: 300ms ease-in-out;
+                h3 {
+                    margin-bottom: 0.3em;
+                    font-family: 'Jura', Arial, sans-serif;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    color: $neon-light-blue;
+                    padding: 0.25em;
+                    text-shadow: 0 0 0.2em rgba(#fff, 0.4);
+                }
+            }
+            .project-btn {
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: 300ms ease-in-out;
+                a {
+                    @include neon-glow();
+                    text-decoration: none;
+                }
+            }
+            &:hover {
+                img {
+                    filter: grayscale(80%) brightness(20%);
+                }
+                .project-desc {
+                    opacity: 0;
+                }
+                .project-btn {
+                    opacity: 1;
+                }
+            }
+            &:last-of-type .project-btn a {
+                pointer-events: none;
+            }
+        } 
+    }
+}
+
+#about-me {
+    padding: $section-p;
+    background-image: url("../img/vertical-minimalist-inverted.jpg");
+    //ne znam sta da radim
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        .about-me-part {
+            border-left: 3px solid $snow-white;
+            figure {
+                position: relative;
+                img {
+                    width: 100%;
+                    display: block;
+                    
+                }
+                figcaption {
+                    background: rgba(#000, 0.5);
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    font-family: 'Jura', Arial, sans-serif;
+                    font-weight: 700;
+                    color: $neon-light-blue;
+                    padding: 0.25em;
+                    text-shadow: 0 0 0.2em rgba(#fff, 0.4);
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    padding: $section-p;
+    .wrapper {
+        #contact-form {
+            width: 70%;
+            margin: 0 auto;
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 2rem;
+                .form-part {
+                    width: 42%;
+                    label {
+                        color: $snow-white;
+                        font-family: 'Jura', Arial, sans-serif;
+                        font-size: 1.1rem;
+                    }
+                    hr {
+                        color: $non-neon-blue;
+                        width: 2.5rem;
+                        box-shadow: 0 1px 2px #000; 
+                        margin-top: 0.3rem; 
+                    }
+                    input {
+                        width: 100%;
+                        color: $snow-white;
+                        border: none;
+                        border-left: 1px solid $neon-light-blue;
+                        padding: 0.5rem;
+                        background: rgba(#000, 0.5);
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                        transition: 100ms ease-in-out;
+                        &::placeholder {
+                            font-style: italic;
+                            font-size: 0.9rem;
+                            color: rgba(#fff, 0.8);
+                        }
+                        &:focus {
+                            border-left: 3px solid $neon-light-blue;
+                            outline: none;
+                            box-shadow: 
+                                rgba($snow-white, 0.1) 0 0.3rem 1rem, 
+                                rgba($snow-white, 0.1) 0 -0.3rem 1rem;
+                        }
+                    }
+                }
+                textarea {
+                    width: 100%;
+                    color: $snow-white;
+                    border: none;
+                    border-left: 1px solid $neon-light-blue;
+                    padding: 8px;
+                    background: rgba(#000, 0.5);
+                    resize: none;
+                    transition: 200ms ease-in-out;
+                    &::placeholder {
+                        font-style: italic;
+                        font-size: 0.9rem;
+                        color: rgba(#fff, 0.8);
+                    }
+                    &:focus {
+                        outline: none;
+                        border-left: 3px solid $neon-light-blue;
+                        box-shadow: 
+                                rgba($snow-white, 0.1) 0 0.3rem 1rem, 
+                                rgba($snow-white, 0.1) 0 -0.3rem 1rem; 
+                    }
+                }
+                input#btn {
+                    @include neon-glow();
+                    margin: 0 auto;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .focus a:focus {
+//     color: red;
+// }
+
+/* _*-*_ FOOTER _*-*_ */

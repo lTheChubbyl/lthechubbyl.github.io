@@ -1,0 +1,46 @@
+dark themed
+fixed nav
+self writing (maybe)
+back to top
+start scrolling
+history section (maybe)
+hard gradient
+overlapping, purposely going out of bounds
+
+clippy - clip path maker
+
+kevin powell - neon button
+
+fluid animation
+
+nice neon glow on neon text
+----->>>>>AOS<<<<<-----
+intro btn
+dim the fixed
+separator on progress bar
+
+seo checker
+
+clip path footer maybe
+
+- FONTS -
+Monserrat
+Titillium Web
+Josefin Sans
+
+Jura
+
+- COLORS -
+#4D4DFF - Blue RYB (Neon Blue)
+#83EEFF - Electric Blue (Neon Light Blue)
+#FFFAFA - Snow White
+#1D1D1F - Eerie Black
+Yellow/Orange???
+
+#88665D
+#587291 - Blue Yonder
+#E57A44
+#CC5803
+#192BC2 - Persian Blue
+#F7CB15 - Jonquil
+#F7B32B
