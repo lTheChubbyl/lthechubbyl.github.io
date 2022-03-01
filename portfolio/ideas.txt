@@ -22,6 +22,9 @@ separator on progress bar
 seo checker
 
 clip path footer maybe
+socials
+maybe add shit into contact(socials)
+straight line in project languages
 
 - FONTS -
 Monserrat

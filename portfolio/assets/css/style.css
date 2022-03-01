@@ -522,6 +522,14 @@ header nav .vr {
   text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.4);
 }
 
+#projects .wrapper .projects-part .project-desc p {
+  font-size: 1rem;
+}
+
+#projects .wrapper .projects-part .project-desc p span {
+  color: #83EEFF;
+}
+
 #projects .wrapper .projects-part .project-btn {
   opacity: 0;
   position: absolute;
@@ -575,46 +583,80 @@ header nav .vr {
 
 #about-me {
   padding: 3rem 0 4.5rem;
-  background-image: url("../img/vertical-minimalist-inverted.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 #about-me .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
 }
 
-#about-me .wrapper .about-me-part {
-  border-left: 3px solid #FFFAFA;
+#about-me .wrapper #about-me-l-part .about-me-img {
+  background: rgba(0, 0, 0, 0.8);
 }
 
-#about-me .wrapper .about-me-part figure {
-  position: relative;
-}
-
-#about-me .wrapper .about-me-part figure img {
-  width: 100%;
+#about-me .wrapper #about-me-l-part .about-me-img img {
   display: block;
+  width: 100%;
 }
 
-#about-me .wrapper .about-me-part figure figcaption {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  text-align: center;
-  font-size: 1.4rem;
-  font-family: 'Jura', Arial, sans-serif;
-  font-weight: 700;
+#about-me .wrapper #about-me-r-part {
+  width: 50%;
+}
+
+#about-me .wrapper #about-me-r-part h3 {
   color: #83EEFF;
-  padding: 0.25em;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: 'Jura', Arial, sans-serif;
   text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.4);
-  position: absolute;
-  bottom: 0;
+}
+
+#about-me .wrapper #about-me-r-part hr {
+  color: #587291;
+  width: 2.5rem;
+  -webkit-box-shadow: 0 1px 2px #000;
+          box-shadow: 0 1px 2px #000;
+  margin: 0.3rem 0 1rem;
+}
+
+#about-me .wrapper #about-me-r-part .info-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-me .wrapper #about-me-r-part .info-desc .info-desc-l {
+  width: 8rem;
+}
+
+#about-me .wrapper #about-me-r-part .info-desc .info-desc-l p {
+  margin: 0.3em 0;
+  font-size: 1.2rem;
+  font-family: 'Jura', Arial, sans-serif;
+  padding: 0.5em 0;
+  color: rgba(255, 250, 250, 0.8);
+}
+
+#about-me .wrapper #about-me-r-part .info-desc .info-desc-r p {
+  margin: 0.3em 0;
+  font-family: 'Jura', Arial, sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5em;
+  background: #000;
+  border-left: 1px solid #FFFAFA;
 }
 
 #contact {

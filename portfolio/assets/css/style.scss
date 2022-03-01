@@ -424,6 +424,12 @@ header {
                     padding: 0.25em;
                     text-shadow: 0 0 0.2em rgba(#fff, 0.4);
                 }
+                p {
+                    font-size: 1rem;
+                    span {
+                        color: $neon-light-blue;
+                    }
+                }
             }
             .project-btn {
                 opacity: 0;
@@ -457,35 +463,66 @@ header {
 
 #about-me {
     padding: $section-p;
-    background-image: url("../img/vertical-minimalist-inverted.jpg");
-    //ne znam sta da radim
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    // background-image: url("../img/vertical-minimalist-inverted.jpg");
+    // //ne znam sta da radim
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
     .wrapper {
         display: flex;
-        justify-content: space-between;
-        .about-me-part {
-            border-left: 3px solid $snow-white;
-            figure {
-                position: relative;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 5rem;
+        #about-me-l-part {
+            .about-me-img {
+                background: rgba(#000, 0.8);
                 img {
-                    width: 100%;
                     display: block;
-                    
-                }
-                figcaption {
-                    background: rgba(#000, 0.5);
                     width: 100%;
-                    text-align: center;
-                    font-size: 1.4rem;
-                    font-family: 'Jura', Arial, sans-serif;
-                    font-weight: 700;
-                    color: $neon-light-blue;
-                    padding: 0.25em;
-                    text-shadow: 0 0 0.2em rgba(#fff, 0.4);
-                    position: absolute;
-                    bottom: 0;
+                }
+            }
+        }
+        #about-me-r-part {
+            width: 50%;
+            h3 {
+                color: $neon-light-blue;
+                text-transform: uppercase;
+                margin-top: 2rem;
+                font: {
+                    size: 1.5rem;
+                    weight: 400; 
+                    family: 'Jura', Arial, sans-serif;
+                }
+                text-shadow: 0 0 0.2em rgba(#fff, 0.4);
+            }
+            hr {
+                color: $non-neon-blue;
+                width: 2.5rem;
+                box-shadow: 0 1px 2px #000; 
+                margin: 0.3rem 0 1rem;
+            }
+            .info-desc {
+                display: flex;
+                align-items: center;
+                .info-desc-l {
+                    width: 8rem;
+                    p {
+                        margin: 0.3em 0;
+                        font-size: 1.2rem;
+                        font-family: 'Jura', Arial, sans-serif;
+                        padding: 0.5em 0;
+                        color: rgba($snow-white, 0.8);
+                    }
+                }
+                .info-desc-r {
+                    p {
+                        margin: 0.3em 0;
+                        font-family: 'Jura', Arial, sans-serif;
+                        font-size: 1.2rem;
+                        padding: 0.5em;
+                        background: #000;
+                        border-left: 1px solid $snow-white;
+                    }
                 }
             }
         }
