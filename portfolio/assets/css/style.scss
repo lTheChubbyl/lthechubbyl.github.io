@@ -651,6 +651,7 @@ footer {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        margin-top: 1rem;
         #necessary {
             text-align: center;
             a {
@@ -677,7 +678,7 @@ footer {
 }
 
 
-
+/***********************************************************/
 
 
 /* _*-*_ RESPONSIVE _*-*_ */
@@ -1113,8 +1114,8 @@ footer {
                 }
             }
             #copyright {
+                padding: 0.2em;
                 p {
-                    padding: 0.2em;
                     font-size: 0.9rem;
                 }
             }
@@ -1362,14 +1363,34 @@ footer {
             #necessary {
                 a {
                     i {
-                        font-size: 1.6rem;
+                        font-size: 1.2rem;
                         padding: 0.2em;  
                     }
                 }
             }
             #copyright {
+                padding: 0.1em;
                 p {
-                    padding: 0.2em;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 424px) {
+    h2 {
+        font-size: 1.2rem;
+        width: 45%;
+        margin-bottom: 1.8rem;
+    }
+    #intro {
+        #intro-desc {
+            .intro-desc-item {
+                h1 {
+                    font-size: 2.2rem;
+                }
+                p {
                     font-size: 0.8rem;
                 }
             }
