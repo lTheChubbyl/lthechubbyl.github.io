@@ -336,11 +336,11 @@ header {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 2.5rem;
+        gap: 2rem;
         .skills-part {
             display: flex;
             justify-content: space-between;
-            width: 13%;
+            width: 14%;
             height: 7.5rem;
             background: $snow-white;
             .skill-desc {
@@ -1187,7 +1187,7 @@ footer {
                     font-size: 1rem;
                 }
                 p {
-                    padding: 0.5em;
+                    padding: 0.5em 0.8em;
                     line-height: 1.2;
                     font-size: 0.7rem;
                 }
@@ -1318,8 +1318,7 @@ footer {
                     .form-part {
                         width: 100%;
                         label {
-                            font-size: 0
-                            9rem;
+                            font-size: 0.9rem;
                         }
                         input {
                             padding: 0.3rem;
@@ -1392,6 +1391,40 @@ footer {
                 }
                 p {
                     font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 374px) {
+    h2 {
+        font-size: 1.1rem;
+        width: 48%;
+        margin-bottom: 1.8rem;
+    }
+    .wrapper {
+        width: 90%;
+    }
+    #intro {
+        #intro-desc {
+            .intro-desc-item {
+                padding-left: 0.8rem;
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+        #incentive {
+            a {
+                .arrow {
+                    @include arrows(1.8rem, 2px);
+                    &::before {
+                        @include arrows(0.6rem, 1px);
+                    }
                 }
             }
         }

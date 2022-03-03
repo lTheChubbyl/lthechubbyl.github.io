@@ -394,7 +394,7 @@ header nav .vr {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 #skills .wrapper .skills-part {
@@ -404,7 +404,7 @@ header nav .vr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 13%;
+  width: 14%;
   height: 7.5rem;
   background: #FFFAFA;
 }
@@ -1330,7 +1330,7 @@ footer .wrapper #copyright {
     font-size: 1rem;
   }
   #services .wrapper .services-part p {
-    padding: 0.5em;
+    padding: 0.5em 0.8em;
     line-height: 1.2;
     font-size: 0.7rem;
   }
@@ -1445,7 +1445,7 @@ footer .wrapper #copyright {
     width: 100%;
   }
   #contact .wrapper #contact-form form .form-part label {
-    font-size: 0 9rem;
+    font-size: 0.9rem;
   }
   #contact .wrapper #contact-form form .form-part input {
     padding: 0.3rem;
@@ -1512,6 +1512,38 @@ footer .wrapper #copyright {
   }
   #intro #intro-desc .intro-desc-item p {
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  h2 {
+    font-size: 1.1rem;
+    width: 48%;
+    margin-bottom: 1.8rem;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  #intro #intro-desc .intro-desc-item {
+    padding-left: 0.8rem;
+  }
+  #intro #intro-desc .intro-desc-item h1 {
+    font-size: 2rem;
+  }
+  #intro #intro-desc .intro-desc-item p {
+    font-size: 0.7rem;
+  }
+  #intro #incentive a .arrow {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-right: 2px solid #83EEFF;
+    border-bottom: 2px solid #83EEFF;
+  }
+  #intro #incentive a .arrow::before {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-right: 1px solid #83EEFF;
+    border-bottom: 1px solid #83EEFF;
   }
 }
 /*# sourceMappingURL=style.css.map */
