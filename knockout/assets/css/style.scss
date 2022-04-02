@@ -1,0 +1,657 @@
+/* _*-*_ GLOBAL _*-*_ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+    &::before, &::after {
+        box-sizing: border-box;
+    }
+}
+/* _-_ VARIABLES _-_ */
+$dark: #111111;
+$light: #F8F8FF;
+$red: #A00005;
+$angle: 120deg;
+
+@mixin niceBtn {
+}
+
+/* _-_ ANIMATIONS _-_ */
+
+html {
+    scroll-behavior: smooth;
+    body {
+        line-height: 1;
+    }
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 10px;
+}
+
+hr {
+    border: 2px solid $red;
+    color: $red;
+    width: 14rem;
+    transform: skew(-30deg);
+    opacity: 1;
+    margin: 0.2rem auto 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: $light;
+}
+
+a {
+    text-decoration: none;
+}
+
+.active {
+    color: $dark !important;
+    border-bottom: 2px solid $red !important;
+    background: $light;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.modal-content {
+    border-radius: 0;
+    background-color: $light;
+}
+
+.section-heading {
+    width: 100%;
+    margin-bottom: 1.5em;
+    h2 {
+        color: $red;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2.5rem;
+        width: 50%;
+    }
+    &.justify-content-end {
+        background: linear-gradient($angle, transparent 50%, $dark 50%);
+        h2 {
+            padding: 0.4em 0.4em 0 1.5em;
+        }
+    }
+    &.justify-content-start {
+        background: linear-gradient($angle, $dark 50%, transparent 50%);
+        h2 {
+            padding: 0.4em 1.5em 0 0.4em;
+            text-align: right;
+        }
+    }
+}
+
+.my-btn {
+    padding: 0.5em 0.5em 0.2em 1.5em;
+    width: 14em;
+    border-radius: 0;
+    clip-path: polygon(11% 0%, 100% 0%, 100% 100%, 0% 100%);
+    font: {
+        size: 1.1rem;
+        family: 'Josefin Sans', sans-serif;
+    }
+}
+
+.scrolled {
+    background: $dark !important;
+}
+
+/* _*-*_ PAGE - HOME _*-*_ */
+/* _-_ HOME - HEADER _-_ */
+header {
+    nav {
+        transition: background 250ms ease-in-out;
+        img {
+            width: 16rem;
+            transition: 200ms ease-in-out;
+            &:hover {
+                filter: grayscale(100%) opacity(75%);
+            }
+        }
+        .navbar-toggler {
+            border-radius: 0;
+            border: none !important;
+            i {
+                color: $light;
+                opacity: 0.9;
+                font-size: 2.5rem;
+            }
+            &:focus {
+                color: transparent;
+            }
+        }
+        #navbarNav {
+            a {
+                color: $light;
+                padding: 0.5em;
+                width: 10em;
+                border-bottom: 2px solid $light;
+                font-family: 'Josefin Sans', sans-serif;
+                &:hover {
+                    color: $dark !important;
+                    border-bottom: 2px solid $red !important;
+                    background: $light;
+                }
+            }
+        }
+    }
+}
+/* _-_ HOME - MAIN _-_ */
+main {
+    #intro {
+        height: 100vh;
+        background: $light;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient($angle, $light 0% 20%, transparent 20% 100%);
+            z-index: 0;
+        }
+        video {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(50%);
+        }
+        .wrapper {
+            width: 100%;
+            #intro-desc {
+                left: 4.5%;
+                top: 25%;
+                z-index: 1;
+                #intro-title {
+                    max-width: 42rem;
+                    h1 {
+                        color: transparent;
+                        background: linear-gradient($angle, $dark 0% 36.7%, $light 36.7% 100%);
+                        -webkit-text-stroke-width: 1px;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        span {
+                            font-size: 3.2rem;     
+                        }
+                    }
+                }
+                #intro-btn {
+                    width: 37rem;
+                    padding: 1.2rem 1rem;
+                    background: $light;
+                    a {
+                        color: $light;
+                        background: $dark;
+                        border: 1px solid $dark;
+                        &:hover {
+                            color: $dark;
+                            background: $light;
+                        }
+                        &:last-of-type {
+                            color: $dark;
+                            background: $light;
+                            &:hover {
+                                color: $red;
+                                border: 1px solid $red;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            #intro-free {
+                width: 22rem;
+                padding: 1.2rem 3rem;
+                background: $light;
+                bottom: 20%;
+                z-index: 1;
+                p {
+                    color: $dark;
+                    span {
+                        font-size: 2.2rem;
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: $red;
+                    }
+                }
+                a {
+                    color: $light;
+                    background: $dark;
+                    &:hover {
+                        color: $dark;
+                        background: $light;
+                        border: 1px solid $dark; 
+                    }
+                }
+            }
+        }
+    }
+    #benefits {
+        background: $light;
+        .row {
+            article {
+                img {
+                    width: 30%;
+                }
+                h3 {
+                    color: $dark;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+                p {
+                    color: $dark;
+                }
+            }
+        }
+    }
+    #workout {
+        background: url("../img/mirror-practice-dimmed.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
+        .row {
+            article {
+                h3 {
+                    color: $light;
+                    font-family: 'Josefin Sans', sans-serif;
+                    margin-bottom: 1.5rem;
+                }
+                p {
+                    padding: 1em 0;
+                }
+                a {
+                    color: $dark;
+                    background: $light;
+                    border: 1px solid $light;
+                    &:hover {
+                        color: $light;
+                        background: $dark;
+                        border: 1px solid $dark;
+                    }
+                }
+            }
+        }
+    }
+    #membership {
+        background: $light;
+        .wrapper {
+            .row {
+                article {
+                    img {
+                        height: 100%;
+                        margin-left: -6rem;
+                        object-fit: cover;
+                    }
+                    h3 {
+                        color: $dark;
+                        font-family: 'Josefin Sans', sans-serif;
+                        margin-bottom: 1.5rem;
+                    }
+                    p {
+                        color: $dark;
+                        padding: 1em 0;
+                    }
+                    a {
+                        color: $light;
+                        background: $dark;
+                        border-radius: 0;
+                        border: 1px solid $dark;
+                        &:hover {
+                            color: $dark;
+                            background: $light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #location {
+        height: 60vh;
+        #address {
+            width: 100%;
+            background: linear-gradient($angle, $dark 0% 35%, transparent 35% 100%);
+            p {
+                span {
+                    color: $red;
+                }
+                padding: 1.6rem 1rem 0.8rem;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+        }
+    }
+}
+/* _-_ HOME - FOOTER _-_ */
+footer {
+    color: $light;
+    background-color: #111111;
+    border-top: 1px solid $light;
+    p {
+        line-height: 1;    
+    }
+    h6 {
+        font-size: 1.3rem;
+    }
+    a {
+        color: $red;
+        text-decoration: none;
+        font-weight: 700;
+        font-family: 'Josefin Sans', sans-serif;
+        transition: 200ms ease-in-out;
+        &:hover {
+            color: $light;
+        }
+    }
+    hr {
+        width: 22rem;
+    }
+    img {
+        width: 12rem;
+        transition: 200ms ease-in-out;
+        &:hover {
+            filter: grayscale(100%) opacity(75%);
+        }
+    }
+    #socials {
+        a {
+            i {
+                font-size: 2rem;
+                padding: 0.1em;
+            }
+        }
+    }
+    #contact {
+        i {
+            color: $light;
+        }
+        p {
+            &:last-of-type {
+                a {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+    #copyright {
+        p {
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+    }
+}
+
+/* _*-*_ PAGE - WORKOUT _*-*_ */
+/* _-_ WORKOUT - MAIN _-_ */
+main {
+    #hero-workout {
+        background: url("../img/battle-rope.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 60vh;
+        article {
+            transform: translateY(-50%);
+            h1 {
+                background-color: $light;
+                width: max-content;
+            }
+        }
+    }
+}
+
+/* _*-*_ PAGE - MEMBERSHIP _*-*_ */
+/* _-_ MEMBERSHIP - MAIN _-_ */
+main {
+    #hero-membership {
+        background: url("../img/respect.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        background-attachment: fixed;
+        width: 100%;
+        height: 60vh;
+        article {
+            transform: translateY(-50%);
+            h1 {
+                background-color: $light;
+                width: max-content;
+            }
+        }
+    }
+    #options {
+        .section-heading {
+            background: linear-gradient($angle, $light 50%, transparent 50%);
+        }
+        background: $dark;
+        .options-part {
+            .card {
+                border-radius: 0;
+                border: 1px solid black;
+                background: $light;
+                .card-body {
+                    h2 {
+                        color: $red;
+                        font-family: 'Josefin Sans', sans-serif;
+                    }
+                    h3 {
+                        font-size: 2rem;
+                        font-family: 'Josefin Sans', sans-serif;
+                        span {
+                            font-size: 1.2rem;
+                            padding: 0.1em;
+                            font-family: 'Josefin Sans', sans-serif;
+                        }
+                        &#discounted {
+                            width: max-content;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                width: 100%;
+                                border-top: 2px solid rgba($red, 0.8);
+                                transform: rotate(-20deg);
+                            }
+                            &::after {
+                                content: '$199.';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                transform: translate(6.5rem, -1rem);
+                                color: black;
+                            }
+                            span {
+                                &::after {
+                                    content: '99';
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    transform: translate(10.8rem, -1rem);
+                                    color: black;
+                                }   
+                            }
+                        }
+                    }
+                    p {
+                        color: black;
+                    }
+                    a {
+                        color: $light;
+                        background: $dark;
+                        border-radius: 0;
+                        border: 1px solid $dark;
+                        &:hover {
+                            color: $dark;
+                            background: $light;
+                        }
+                    }
+                    .my-card-footer {
+                        small {
+                            line-height: 1.2;
+                            i {
+                                color: $red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #member-benefits {
+        .section-heading {
+            border-top: 1px solid $light;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        h3 {
+            color: $dark;
+            font-family: 'Josefin Sans', sans-serif;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            color: $dark;
+            padding: 1em 0;
+        }
+    }
+}
+
+/* _*-*_ PAGE - ABOUT _*-*_ */
+/* _-_ ABOUT - MAIN _-_ */
+main {
+    #hero-about {
+        background: url("../img/resting-on-ropes.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 60vh;
+        article {
+            transform: translateY(-50%);
+            h1 {
+                background-color: $light;
+                width: max-content;
+            }
+        }
+    }
+}
+
+/* _*-*_ PAGE - CONTACT _*-*_ */
+/* _-_ CONTACT - MAIN _-_ */
+main {
+    #hero-contact {
+        background: url("../img/speed-bag.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        height: 60vh;
+        article {
+            transform: translateY(-50%);
+            h1 {
+                background-color: $light;
+                width: max-content;
+            }
+        }
+    }
+    #contact-form {
+        background: $light;
+        #form-part {
+            form {
+                .form-floating {
+                    input, textarea {
+                        border-radius: 0;
+                        border: none;
+                        border-bottom: 1px solid $dark;
+                        background: $light;
+                        color: $dark;
+                        font-family: 'Josefin Sans', sans-serif;
+                        outline: none;
+                        transition: 200ms ease-in-out;
+                        font-size: 1.2rem;
+                        &:focus {
+                            border: none;
+                            border-bottom: 3px solid $dark;
+                            box-shadow: 
+                                rgba($dark, 0.1) 0 0.3rem 1rem, 
+                                rgba($dark, 0.1) 0 -0.3rem 1rem; 
+                        }
+                    }
+                    label {
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: $dark;
+                    }
+                    textarea {
+                        resize: none;
+                        height: 15rem;
+                    }
+                }
+                button {
+                    color: $light;
+                    background: $dark;
+                    border: 1px solid $dark;
+                    &:hover {
+                        color: $dark;
+                        background: $light;
+                    }
+                }
+            }
+        }
+        #info-part {
+            align-self: center;
+            a {
+                color: $red;
+                font-weight: 700;
+                font-family: 'Josefin Sans', sans-serif;
+                transition: 200ms ease-in-out;
+                &:hover {
+                    color: $dark;
+                }
+            }
+            i {
+                color: $dark;
+            }
+            p {
+                font-size: 1.5rem;
+                &:last-of-type {
+                    a {
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1441px) {
+}
+
+@media screen and (max-width: 1025px) {
+    .section-heading {
+        h2 {
+            font-size: 2rem;
+            width: 60%;
+        }
+        &.justify-content-end {
+            background: linear-gradient($angle, transparent 0% 40%, $dark 40% 100%);
+        }
+        &.justify-content-start {
+            background: linear-gradient($angle, $dark 0% 60%, transparent 60% 100%);
+        }
+    }
+}

@@ -1,0 +1,722 @@
+/* _*-*_ GLOBAL _*-*_ */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* _-_ VARIABLES _-_ */
+/* _-_ ANIMATIONS _-_ */
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 10px;
+}
+
+hr {
+  border: 2px solid #A00005;
+  color: #A00005;
+  width: 14rem;
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
+  opacity: 1;
+  margin: 0.2rem auto 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  color: #F8F8FF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  color: #111111 !important;
+  border-bottom: 2px solid #A00005 !important;
+  background: #F8F8FF;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.modal-content {
+  border-radius: 0;
+  background-color: #F8F8FF;
+}
+
+.section-heading {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.section-heading h2 {
+  color: #A00005;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.5rem;
+  width: 50%;
+}
+
+.section-heading.justify-content-end {
+  background: linear-gradient(120deg, transparent 50%, #111111 50%);
+}
+
+.section-heading.justify-content-end h2 {
+  padding: 0.4em 0.4em 0 1.5em;
+}
+
+.section-heading.justify-content-start {
+  background: linear-gradient(120deg, #111111 50%, transparent 50%);
+}
+
+.section-heading.justify-content-start h2 {
+  padding: 0.4em 1.5em 0 0.4em;
+  text-align: right;
+}
+
+.my-btn {
+  padding: 0.5em 0.5em 0.2em 1.5em;
+  width: 14em;
+  border-radius: 0;
+  -webkit-clip-path: polygon(11% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(11% 0%, 100% 0%, 100% 100%, 0% 100%);
+  font-size: 1.1rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.scrolled {
+  background: #111111 !important;
+}
+
+/* _*-*_ PAGE - HOME _*-*_ */
+/* _-_ HOME - HEADER _-_ */
+header nav {
+  -webkit-transition: background 250ms ease-in-out;
+  transition: background 250ms ease-in-out;
+}
+
+header nav img {
+  width: 16rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+header nav img:hover {
+  -webkit-filter: grayscale(100%) opacity(75%);
+          filter: grayscale(100%) opacity(75%);
+}
+
+header nav .navbar-toggler {
+  border-radius: 0;
+  border: none !important;
+}
+
+header nav .navbar-toggler i {
+  color: #F8F8FF;
+  opacity: 0.9;
+  font-size: 2.5rem;
+}
+
+header nav .navbar-toggler:focus {
+  color: transparent;
+}
+
+header nav #navbarNav a {
+  color: #F8F8FF;
+  padding: 0.5em;
+  width: 10em;
+  border-bottom: 2px solid #F8F8FF;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+header nav #navbarNav a:hover {
+  color: #111111 !important;
+  border-bottom: 2px solid #A00005 !important;
+  background: #F8F8FF;
+}
+
+/* _-_ HOME - MAIN _-_ */
+main #intro {
+  height: 100vh;
+  background: #F8F8FF;
+}
+
+main #intro::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: linear-gradient(120deg, #F8F8FF 0% 20%, transparent 20% 100%);
+  z-index: 0;
+}
+
+main #intro video {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+main #intro .wrapper {
+  width: 100%;
+}
+
+main #intro .wrapper #intro-desc {
+  left: 4.5%;
+  top: 25%;
+  z-index: 1;
+}
+
+main #intro .wrapper #intro-desc #intro-title {
+  max-width: 42rem;
+}
+
+main #intro .wrapper #intro-desc #intro-title h1 {
+  color: transparent;
+  background: linear-gradient(120deg, #111111 0% 36.7%, #F8F8FF 36.7% 100%);
+  -webkit-text-stroke-width: 1px;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+main #intro .wrapper #intro-desc #intro-title h1 span {
+  font-size: 3.2rem;
+}
+
+main #intro .wrapper #intro-desc #intro-btn {
+  width: 37rem;
+  padding: 1.2rem 1rem;
+  background: #F8F8FF;
+}
+
+main #intro .wrapper #intro-desc #intro-btn a {
+  color: #F8F8FF;
+  background: #111111;
+  border: 1px solid #111111;
+}
+
+main #intro .wrapper #intro-desc #intro-btn a:hover {
+  color: #111111;
+  background: #F8F8FF;
+}
+
+main #intro .wrapper #intro-desc #intro-btn a:last-of-type {
+  color: #111111;
+  background: #F8F8FF;
+}
+
+main #intro .wrapper #intro-desc #intro-btn a:last-of-type:hover {
+  color: #A00005;
+  border: 1px solid #A00005;
+}
+
+main #intro .wrapper #intro-free {
+  width: 22rem;
+  padding: 1.2rem 3rem;
+  background: #F8F8FF;
+  bottom: 20%;
+  z-index: 1;
+}
+
+main #intro .wrapper #intro-free p {
+  color: #111111;
+}
+
+main #intro .wrapper #intro-free p span {
+  font-size: 2.2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #A00005;
+}
+
+main #intro .wrapper #intro-free a {
+  color: #F8F8FF;
+  background: #111111;
+}
+
+main #intro .wrapper #intro-free a:hover {
+  color: #111111;
+  background: #F8F8FF;
+  border: 1px solid #111111;
+}
+
+main #benefits {
+  background: #F8F8FF;
+}
+
+main #benefits .row article img {
+  width: 30%;
+}
+
+main #benefits .row article h3 {
+  color: #111111;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main #benefits .row article p {
+  color: #111111;
+}
+
+main #workout {
+  background: url("../img/mirror-practice-dimmed.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+main #workout .row article h3 {
+  color: #F8F8FF;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+main #workout .row article p {
+  padding: 1em 0;
+}
+
+main #workout .row article a {
+  color: #111111;
+  background: #F8F8FF;
+  border: 1px solid #F8F8FF;
+}
+
+main #workout .row article a:hover {
+  color: #F8F8FF;
+  background: #111111;
+  border: 1px solid #111111;
+}
+
+main #membership {
+  background: #F8F8FF;
+}
+
+main #membership .wrapper .row article img {
+  height: 100%;
+  margin-left: -6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #membership .wrapper .row article h3 {
+  color: #111111;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+main #membership .wrapper .row article p {
+  color: #111111;
+  padding: 1em 0;
+}
+
+main #membership .wrapper .row article a {
+  color: #F8F8FF;
+  background: #111111;
+  border-radius: 0;
+  border: 1px solid #111111;
+}
+
+main #membership .wrapper .row article a:hover {
+  color: #111111;
+  background: #F8F8FF;
+}
+
+main #location {
+  height: 60vh;
+}
+
+main #location #address {
+  width: 100%;
+  background: linear-gradient(120deg, #111111 0% 35%, transparent 35% 100%);
+}
+
+main #location #address p {
+  padding: 1.6rem 1rem 0.8rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main #location #address p span {
+  color: #A00005;
+}
+
+/* _-_ HOME - FOOTER _-_ */
+footer {
+  color: #F8F8FF;
+  background-color: #111111;
+  border-top: 1px solid #F8F8FF;
+}
+
+footer p {
+  line-height: 1;
+}
+
+footer h6 {
+  font-size: 1.3rem;
+}
+
+footer a {
+  color: #A00005;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+footer a:hover {
+  color: #F8F8FF;
+}
+
+footer hr {
+  width: 22rem;
+}
+
+footer img {
+  width: 12rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+footer img:hover {
+  -webkit-filter: grayscale(100%) opacity(75%);
+          filter: grayscale(100%) opacity(75%);
+}
+
+footer #socials a i {
+  font-size: 2rem;
+  padding: 0.1em;
+}
+
+footer #contact i {
+  color: #F8F8FF;
+}
+
+footer #contact p:last-of-type a {
+  pointer-events: none;
+}
+
+footer #copyright p {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* _*-*_ PAGE - WORKOUT _*-*_ */
+/* _-_ WORKOUT - MAIN _-_ */
+main #hero-workout {
+  background: url("../img/battle-rope.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 60vh;
+}
+
+main #hero-workout article {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main #hero-workout article h1 {
+  background-color: #F8F8FF;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/* _*-*_ PAGE - MEMBERSHIP _*-*_ */
+/* _-_ MEMBERSHIP - MAIN _-_ */
+main #hero-membership {
+  background: url("../img/respect.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  width: 100%;
+  height: 60vh;
+}
+
+main #hero-membership article {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main #hero-membership article h1 {
+  background-color: #F8F8FF;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #options {
+  background: #111111;
+}
+
+main #options .section-heading {
+  background: linear-gradient(120deg, #F8F8FF 50%, transparent 50%);
+}
+
+main #options .options-part .card {
+  border-radius: 0;
+  border: 1px solid black;
+  background: #F8F8FF;
+}
+
+main #options .options-part .card .card-body h2 {
+  color: #A00005;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main #options .options-part .card .card-body h3 {
+  font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main #options .options-part .card .card-body h3 span {
+  font-size: 1.2rem;
+  padding: 0.1em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+main #options .options-part .card .card-body h3#discounted {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #options .options-part .card .card-body h3#discounted::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  border-top: 2px solid rgba(160, 0, 5, 0.8);
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+}
+
+main #options .options-part .card .card-body h3#discounted::after {
+  content: '$199.';
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(6.5rem, -1rem);
+          transform: translate(6.5rem, -1rem);
+  color: black;
+}
+
+main #options .options-part .card .card-body h3#discounted span::after {
+  content: '99';
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(10.8rem, -1rem);
+          transform: translate(10.8rem, -1rem);
+  color: black;
+}
+
+main #options .options-part .card .card-body p {
+  color: black;
+}
+
+main #options .options-part .card .card-body a {
+  color: #F8F8FF;
+  background: #111111;
+  border-radius: 0;
+  border: 1px solid #111111;
+}
+
+main #options .options-part .card .card-body a:hover {
+  color: #111111;
+  background: #F8F8FF;
+}
+
+main #options .options-part .card .card-body .my-card-footer small {
+  line-height: 1.2;
+}
+
+main #options .options-part .card .card-body .my-card-footer small i {
+  color: #A00005;
+}
+
+main #member-benefits .section-heading {
+  border-top: 1px solid #F8F8FF;
+}
+
+main #member-benefits img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main #member-benefits h3 {
+  color: #111111;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+main #member-benefits p {
+  color: #111111;
+  padding: 1em 0;
+}
+
+/* _*-*_ PAGE - ABOUT _*-*_ */
+/* _-_ ABOUT - MAIN _-_ */
+main #hero-about {
+  background: url("../img/resting-on-ropes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 60vh;
+}
+
+main #hero-about article {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main #hero-about article h1 {
+  background-color: #F8F8FF;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+/* _*-*_ PAGE - CONTACT _*-*_ */
+/* _-_ CONTACT - MAIN _-_ */
+main #hero-contact {
+  background: url("../img/speed-bag.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 60vh;
+}
+
+main #hero-contact article {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+main #hero-contact article h1 {
+  background-color: #F8F8FF;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main #contact-form {
+  background: #F8F8FF;
+}
+
+main #contact-form #form-part form .form-floating input, main #contact-form #form-part form .form-floating textarea {
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #111111;
+  background: #F8F8FF;
+  color: #111111;
+  font-family: 'Josefin Sans', sans-serif;
+  outline: none;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  font-size: 1.2rem;
+}
+
+main #contact-form #form-part form .form-floating input:focus, main #contact-form #form-part form .form-floating textarea:focus {
+  border: none;
+  border-bottom: 3px solid #111111;
+  -webkit-box-shadow: rgba(17, 17, 17, 0.1) 0 0.3rem 1rem, rgba(17, 17, 17, 0.1) 0 -0.3rem 1rem;
+          box-shadow: rgba(17, 17, 17, 0.1) 0 0.3rem 1rem, rgba(17, 17, 17, 0.1) 0 -0.3rem 1rem;
+}
+
+main #contact-form #form-part form .form-floating label {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #111111;
+}
+
+main #contact-form #form-part form .form-floating textarea {
+  resize: none;
+  height: 15rem;
+}
+
+main #contact-form #form-part form button {
+  color: #F8F8FF;
+  background: #111111;
+  border: 1px solid #111111;
+}
+
+main #contact-form #form-part form button:hover {
+  color: #111111;
+  background: #F8F8FF;
+}
+
+main #contact-form #info-part {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main #contact-form #info-part a {
+  color: #A00005;
+  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+main #contact-form #info-part a:hover {
+  color: #111111;
+}
+
+main #contact-form #info-part i {
+  color: #111111;
+}
+
+main #contact-form #info-part p {
+  font-size: 1.5rem;
+}
+
+main #contact-form #info-part p:last-of-type a {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .section-heading h2 {
+    font-size: 2rem;
+    width: 60%;
+  }
+  .section-heading.justify-content-end {
+    background: linear-gradient(120deg, transparent 0% 40%, #111111 40% 100%);
+  }
+  .section-heading.justify-content-start {
+    background: linear-gradient(120deg, #111111 0% 60%, transparent 60% 100%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
