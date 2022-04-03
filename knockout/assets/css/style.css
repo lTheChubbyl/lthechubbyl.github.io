@@ -1168,7 +1168,7 @@ main #contact-form #info-part p:last-of-type a {
     font-size: 0.8rem;
   }
   main #workout-carousel #carousel .carousel-inner .carousel-item .slide-desc {
-    height: 13rem;
+    height: 14rem;
   }
 }
 
@@ -1286,7 +1286,7 @@ main #contact-form #info-part p:last-of-type a {
             transform: translate(8rem, -1rem);
   }
   main #workout-carousel #carousel .carousel-inner .carousel-item .slide-desc {
-    height: 15rem;
+    height: 16rem;
   }
 }
 
@@ -1296,9 +1296,6 @@ main #contact-form #info-part p:last-of-type a {
   }
   main #intro .wrapper #intro-free {
     bottom: 6rem;
-  }
-  main #workout-carousel #carousel .carousel-inner .carousel-item .slide-desc {
-    height: 15.5rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
