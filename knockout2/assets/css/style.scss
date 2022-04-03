@@ -982,7 +982,7 @@ main {
         width: 12rem;
     }
     main #intro {
-        min-height: 500px;
+        min-height: 550px;
         .wrapper {
             #intro-desc {
                 left: 2rem;
@@ -1086,5 +1086,11 @@ main {
     }
     main #options .options-part .card .card-body h3#discounted span::after {
         transform: translate(8rem, -1rem);
+    }
+}
+
+@media screen and (max-width: 376px) {
+    main #intro {
+        height: 500px;
     }
 }
