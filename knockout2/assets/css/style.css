@@ -1013,7 +1013,7 @@ main #contact-form #info-part p:last-of-type a {
     width: 12rem;
   }
   main #intro {
-    min-height: 550px;
+    height: 500px;
   }
   main #intro .wrapper #intro-desc {
     left: 2rem;
