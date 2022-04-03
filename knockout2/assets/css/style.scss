@@ -982,7 +982,7 @@ main {
         width: 12rem;
     }
     main #intro {
-        height: 500px;
+        min-height: 550px;
         .wrapper {
             #intro-desc {
                 left: 2rem;
@@ -1005,7 +1005,7 @@ main {
             #intro-free {
                 width: 17rem;
                 padding: 0.8rem 0;
-                bottom: 2rem;
+                bottom: 3rem;
                 p {
                     line-height: 1.2;
                     span {
@@ -1091,6 +1091,10 @@ main {
 
 @media screen and (max-width: 376px) {
     main #intro {
-        height: 500px;
+        min-height: 500px;
+
+        .wrapper  #intro-free {
+            bottom: 4rem;
+        }
     }
 }

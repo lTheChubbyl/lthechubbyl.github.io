@@ -1013,7 +1013,7 @@ main #contact-form #info-part p:last-of-type a {
     width: 12rem;
   }
   main #intro {
-    height: 500px;
+    min-height: 550px;
   }
   main #intro .wrapper #intro-desc {
     left: 2rem;
@@ -1034,7 +1034,7 @@ main #contact-form #info-part p:last-of-type a {
   main #intro .wrapper #intro-free {
     width: 17rem;
     padding: 0.8rem 0;
-    bottom: 2rem;
+    bottom: 3rem;
   }
   main #intro .wrapper #intro-free p {
     line-height: 1.2;
@@ -1116,7 +1116,10 @@ main #contact-form #info-part p:last-of-type a {
 
 @media screen and (max-width: 376px) {
   main #intro {
-    height: 500px;
+    min-height: 500px;
+  }
+  main #intro .wrapper #intro-free {
+    bottom: 4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
