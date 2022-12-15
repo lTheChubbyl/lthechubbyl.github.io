@@ -4,4 +4,3 @@ $('#read-more').hide();
         $('#read-more').slideToggle('slow');
     })
 });
-

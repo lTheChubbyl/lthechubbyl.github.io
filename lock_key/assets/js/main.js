@@ -1,4 +1,5 @@
 if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_key/') {
+// if (location.pathname == '/index.html' || location.pathname == '/') {
     var propertySection = document.getElementById('property-section-content');
     const contentPropertyMatrix = [
         ['For Sale', 'Home', '500.000', 'Halpine Manor', '528 Whitemarsh Ave. Brentwood, New York'],
@@ -101,36 +102,57 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
 
     var searchPropertySort = ['3 bedroom/s', '6 bedroom/s'];
     var searchPropertyTypes = ['Appartment', 'Building', 'Home', 'Villa'];
+    var typeSelect, typeOption, sortSelect, sortOption;
 
-    var typeSelect = document.createElement('select');
-    typeSelect.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
-    typeSelect.setAttribute('id', 'search-type');
-    searchFields[0].append(typeSelect);
-    var typeDefaultOption = document.createElement('option');
-    typeDefaultOption.setAttribute('value', 0);
-    typeDefaultOption.innerHTML += 'Property Type...';
-    typeSelect.append(typeDefaultOption);
-    for (let index = 0; index < searchPropertyTypes.length; index++) {
-        let typeOption = document.createElement('option');
-        typeOption.setAttribute('value', searchPropertyTypes[index]);
-        typeOption.innerHTML += searchPropertyTypes[index];
-        typeSelect.append(typeOption);
+    function CreateSearchDDL(ddlName, ddlId, defaultValue, valueArray, optionName, position) {
+        ddlName = document.createElement('select');
+        ddlName.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
+        ddlName.setAttribute('id', ddlId);
+        searchFields[position].append(ddlName);
+        var typeDefaultOption = document.createElement('option');
+        typeDefaultOption.setAttribute('value', 0);
+        typeDefaultOption.innerHTML += defaultValue;
+        ddlName.append(typeDefaultOption);
+        for (let index = 0; index < valueArray.length; index++) {
+            optionName = document.createElement('option');
+            optionName.setAttribute('value', valueArray[index]);
+            optionName.innerHTML += valueArray[index];
+            ddlName.append(optionName);
+        }
     }
 
-    var sortSelect = document.createElement('select');
-    sortSelect.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
-    sortSelect.setAttribute('id', 'search-sort');
-    searchFields[1].append(sortSelect);
-    var sortDefaultOption = document.createElement('option');
-    sortDefaultOption.setAttribute('value', 0);
-    sortDefaultOption.innerHTML += 'Number of bedrooms...';
-    sortSelect.append(sortDefaultOption);
-    for (let index = 0; index < searchPropertySort.length; index++) {
-        let sortOption = document.createElement('option');
-        sortOption.setAttribute('value', searchPropertySort[index]);
-        sortOption.innerHTML += searchPropertySort[index];
-        sortSelect.append(sortOption);
-    }
+    CreateSearchDDL(typeSelect, 'search-type', 'Property Type...', searchPropertyTypes, typeOption, 0);
+    CreateSearchDDL(sortSelect, 'search-sort', 'Number of bedrooms...', searchPropertySort, sortOption, 1);
+
+    // var typeSelect = document.createElement('select');
+    // typeSelect.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
+    // typeSelect.setAttribute('id', 'search-type');
+    // searchFields[0].append(typeSelect);
+    // var typeDefaultOption = document.createElement('option');
+    // typeDefaultOption.setAttribute('value', 0);
+    // typeDefaultOption.innerHTML += 'Property Type...';
+    // typeSelect.append(typeDefaultOption);
+    // for (let index = 0; index < searchPropertyTypes.length; index++) {
+    //     let typeOption = document.createElement('option');
+    //     typeOption.setAttribute('value', searchPropertyTypes[index]);
+    //     typeOption.innerHTML += searchPropertyTypes[index];
+    //     typeSelect.append(typeOption);
+    // }
+
+    // var sortSelect = document.createElement('select');
+    // sortSelect.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
+    // sortSelect.setAttribute('id', 'search-sort');
+    // searchFields[1].append(sortSelect);
+    // var sortDefaultOption = document.createElement('option');
+    // sortDefaultOption.setAttribute('value', 0);
+    // sortDefaultOption.innerHTML += 'Number of bedrooms...';
+    // sortSelect.append(sortDefaultOption);
+    // for (let index = 0; index < searchPropertySort.length; index++) {
+    //     let sortOption = document.createElement('option');
+    //     sortOption.setAttribute('value', searchPropertySort[index]);
+    //     sortOption.innerHTML += searchPropertySort[index];
+    //     sortSelect.append(sortOption);
+    // }
 
     var searchFieldType = document.querySelector('#search-type');
     var searchFieldSort = document.querySelector('#search-sort');
@@ -214,7 +236,7 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
     /* _*-*_ END|DYNAMIC "PROPERTY AGENTS" CONTENT _*-*_ */
 
     /* _*-*_ BEGIN|DYNAMIC "TESTIMONIALS" CONTENT _*-*_ */
-    var testimonialsSection = document.getElementById('testimonials');
+    var testimonialsSection = document.querySelectorAll('#testimonials .swiper-slide');
     const contentTestimonialsDetails = [
         ['"When I found Clark I knew I was finally working with a real professional I could rely on."' ,'Naomi Mitchell', 'Happy Lock&Key client'], 
         ['"Everyones on the same page. Lock&Key is the ultimate time saver for people like me."' ,'Charles Wilson', 'Happy Lock&Key client'], 
@@ -251,12 +273,13 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
                     testimonialDiv4.appendChild(testimonialSmall);
                     testimonialSmall.innerHTML += contentTestimonialsDetails[index][2];
 
-    testimonialsSection.append(testimonialDiv1);
+    testimonialsSection[index].append(testimonialDiv1);
     }
     /* _*-*_ END|DYNAMIC "TESTIMONIALS" CONTENT _*-*_ */
 }
 
 else if (location.pathname == '/lock_key/contact.html') {
+// else if (location.pathname == '/contact.html') {
     /* _*-*_ BEGIN|CONTACT FORM VALIDATION _*-*_ */
     var formSubmit = document.querySelector('#form-btn');
     formSubmit.addEventListener('click', formValidation);
@@ -372,3 +395,54 @@ for (let index = 0; index < footerIconPartArray.length; index++) {
 footerInfoTemp += `</div>`;
 footerInfo.innerHTML += footerInfoTemp;
 /* _*-*_ END|DYNAMIC "FOOTER" CONTENT _*-*_ */
+
+var swiperHeader = new Swiper('.swiperHeader', {
+    effect: "fade",
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+});
+
+var swiperTestimonials = new Swiper('.swiperTestimonials', {
+    loop: true,
+    slidesPerView: 2,
+    centeredSlides: true,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-120%", 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ["120%", 0, -500],
+        },
+    },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+      },
+});
