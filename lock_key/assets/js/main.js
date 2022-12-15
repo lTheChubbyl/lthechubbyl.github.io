@@ -1,4 +1,4 @@
-if (location.pathname == '/lock_key/index.html') {
+// if (location.pathname == '/lock_key/index.html') {
     var propertySection = document.getElementById('property-section-content');
     const contentPropertyMatrix = [
         ['For Sale', 'Home', '500.000', 'Halpine Manor', '528 Whitemarsh Ave. Brentwood, New York'],
@@ -254,9 +254,9 @@ if (location.pathname == '/lock_key/index.html') {
     testimonialsSection.append(testimonialDiv1);
     }
     /* _*-*_ END|DYNAMIC "TESTIMONIALS" CONTENT _*-*_ */
-}
+// }
 
-else if (location.pathname == '/lock_key/contact.html') {
+// else if (location.pathname == '/lock_key/contact.html') {
     /* _*-*_ BEGIN|CONTACT FORM VALIDATION _*-*_ */
     var formSubmit = document.querySelector('#form-btn');
     formSubmit.addEventListener('click', formValidation);
@@ -315,7 +315,7 @@ else if (location.pathname == '/lock_key/contact.html') {
         }
     }
     /* _*-*_ END|CONTACT FORM VALIDATION _*-*_ */
-}
+// }
 
 /* _*-*_ BEGIN|DYNAMIC "NAVBAR" LINKS _*-*_ */
 var navPart = document.getElementById('navbarCollapse');
