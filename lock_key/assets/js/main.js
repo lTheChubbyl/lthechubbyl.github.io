@@ -1,4 +1,4 @@
-if (location.pathname == '/index.html') {
+if (location.pathname == '/lock_key/index.html') {
     var propertySection = document.getElementById('property-section-content');
     const contentPropertyMatrix = [
         ['For Sale', 'Home', '500.000', 'Halpine Manor', '528 Whitemarsh Ave. Brentwood, New York'],
@@ -256,7 +256,7 @@ if (location.pathname == '/index.html') {
     /* _*-*_ END|DYNAMIC "TESTIMONIALS" CONTENT _*-*_ */
 }
 
-else if (location.pathname == '/contact.html') {
+else if (location.pathname == '/lock_key/contact.html') {
     /* _*-*_ BEGIN|CONTACT FORM VALIDATION _*-*_ */
     var formSubmit = document.querySelector('#form-btn');
     formSubmit.addEventListener('click', formValidation);
