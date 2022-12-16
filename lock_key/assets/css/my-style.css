@@ -5,3 +5,25 @@
 .error-message {
     font-size: 0.8rem;
 }
+
+.icon {
+    width: 3rem; 
+    height: 3rem;
+}
+
+.green-dashed-border {
+    border: 1px dashed rgba(0, 185, 142, .3);
+}
+
+#search-section {
+    padding: 2rem;
+}
+
+#maps {
+    min-height: 400px;
+}
+
+#form-message {
+    height: 10rem;
+    resize: none;
+}

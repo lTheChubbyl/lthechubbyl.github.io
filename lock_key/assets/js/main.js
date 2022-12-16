@@ -1,13 +1,14 @@
 if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_key/') {
 // if (location.pathname == '/index.html' || location.pathname == '/') {
-    var propertySection = document.getElementById('property-section-content');
+    /* _*-*_ BEGIN|DYNAMIC "PROPERTY LISTING" CONTENT _*-*_ */
+    var propertySectionContent = document.getElementById('property-section-content');
     const contentPropertyMatrix = [
-        ['For Sale', 'Home', '500.000', 'Halpine Manor', '528 Whitemarsh Ave. Brentwood, New York'],
-        ['For Rent', 'Villa', '9.999', 'Brownhill Villa', '5 Lafayette Ave. Bronx, New York'],
-        ['For Sale', 'Appartment', '250.000', 'Powlett House', '9034 Franklin St. Freeport, New York'],
-        ['For Rent', 'Home', '4.999', 'Moore Estate', '9370 Willow St. Massapequa, New York'],
-        ['For Sale', 'Home', '100.000', 'McArthy Garden', 'Canal St. Hempstead, New York'],
-        ['For Rent', 'Building', '1.999', 'Sabilline Building ', '8465 Sunnyslope Drive Bronx, New York']
+        ['For Sale', 'Home', '500.000', 'Halpine Manor', '528 Whitemarsh Ave. Brentwood, New York', 'blue_house'],
+        ['For Rent', 'Villa', '9.999', 'Brownhill Villa', '5 Lafayette Ave. Bronx, New York', 'villa'],
+        ['For Sale', 'Apartment', '250.000', 'Powlett House', '9034 Franklin St. Freeport, New York', 'apartment'],
+        ['For Rent', 'Home', '4.999', 'Moore Estate', '9370 Willow St. Massapequa, New York', 'green_house'],
+        ['For Sale', 'Home', '100.000', 'McArthy Garden', 'Canal St. Hempstead, New York', 'brown_house'],
+        ['For Sale', 'Building', '150.000.000', 'Sabilline Building ', '8465 Sunnyslope Drive Bronx, New York', 'building_construction']
     ];
 
     const contentPropertyDetails = [[1000, 6, 4], [500, 3, 2], [1000, 6, 4], [500, 3, 2], [1000, 6, 4], [500, 3, 2]];
@@ -22,18 +23,19 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
             window['propertyDiv' + index].setAttribute('class', contentPropertyDivClasses[index-1]);
         }
         let propertyAnchor1 = document.createElement('a');
-        propertyAnchor1.setAttribute('href', '#');
+        propertyAnchor1.setAttribute('href', '#property-section');
+        propertyAnchor1.setAttribute('disabled', 'disabled');
         let propertyImage = document.createElement('img');
         Object.assign(propertyImage, {
             className: 'img-fluid',
-            src: `img/property-${index+1}.jpg`,
-            alt: ''
-        })
+            src: `assets/img/${contentPropertyMatrix[index][5]}.jpg`,
+            alt: contentPropertyMatrix[index][5]
+        });
         let propertyHeader5 = document.createElement('h5');
         propertyHeader5.setAttribute('class', 'text-primary mb-3');
         let propertyAnchor2 = document.createElement('a');
         propertyAnchor2.setAttribute('class', 'd-block h5 mb-2');
-        propertyAnchor2.setAttribute('href', '#');
+        propertyAnchor2.setAttribute('href', '#property-section');
         let propertyParagraph = document.createElement('p');
         let propertyIcon = document.createElement('i');
         propertyIcon.setAttribute('class', 'fa fa-map-marker-alt text-primary me-2');
@@ -48,30 +50,25 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
         propertyDiv5.classList.add('text-secondary');
         propertySmall2.classList.add('bedroom-num');
         propertySmall3.classList.remove('border-end');
-        
 
         propertyDiv1.appendChild(propertyDiv2);
-        propertyDiv2.appendChild(propertyDiv3);
-            propertyDiv3.appendChild(propertyAnchor1);
-                propertyAnchor1.appendChild(propertyImage);
-            propertyDiv3.appendChild(propertyDiv4);
-                propertyDiv4.textContent += contentPropertyMatrix[index][0];
-            propertyDiv3.appendChild(propertyDiv5);
-                propertyDiv5.textContent += contentPropertyMatrix[index][1];
-        propertyDiv2.appendChild(propertyDiv6);
-            propertyDiv6.appendChild(propertyHeader5);
-                propertyHeader5.innerHTML += contentPropertyMatrix[index][2] + '&#x20AC;';
-                propertyDiv6.appendChild(propertyAnchor2);
-                    propertyAnchor2.innerHTML += contentPropertyMatrix[index][3];
-                propertyDiv6.appendChild(propertyParagraph);
-                    propertyParagraph.appendChild(propertyIcon);
-                    propertyParagraph.innerHTML += contentPropertyMatrix[index][4];
-        propertyDiv2.appendChild(propertyDiv7);
-                propertySmall1.innerHTML += contentPropertyDetails[index][0] + 'm&#178;';
-                propertySmall2.innerHTML += contentPropertyDetails[index][1] + ' bedroom/s';
-                propertySmall3.innerHTML += contentPropertyDetails[index][2] + ' bathrooom/s';
+            propertyDiv2.appendChild(propertyDiv3);
+                propertyDiv3.append(propertyAnchor1, propertyDiv4, propertyDiv5);
+                    propertyAnchor1.appendChild(propertyImage);
+                    propertyDiv4.textContent += contentPropertyMatrix[index][0];
+                    propertyDiv5.textContent += contentPropertyMatrix[index][1];
+            propertyDiv2.appendChild(propertyDiv6);
+                propertyDiv6.append(propertyHeader5, propertyAnchor2, propertyParagraph);
+                    propertyHeader5.innerHTML += contentPropertyMatrix[index][2] + '&#x20AC;';
+                        propertyAnchor2.innerHTML += contentPropertyMatrix[index][3];
+                        propertyParagraph.appendChild(propertyIcon);
+                        propertyParagraph.innerHTML += contentPropertyMatrix[index][4];
+            propertyDiv2.appendChild(propertyDiv7);
+                    propertySmall1.innerHTML += contentPropertyDetails[index][0] + 'm&#178;';
+                    propertySmall2.innerHTML += contentPropertyDetails[index][1] + ' bedroom/s';
+                    propertySmall3.innerHTML += contentPropertyDetails[index][2] + ' bathrooom/s';
 
-    propertySection.append(propertyDiv1);
+    propertySectionContent.append(propertyDiv1);
     }
     /* _*-*_ END|DYNAMIC "PROPERTY LISTING" CONTENT _*-*_ */
 
@@ -101,7 +98,7 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
     var searchFields = document.querySelectorAll(".search-form-item");
 
     var searchPropertySort = ['3 bedroom/s', '6 bedroom/s'];
-    var searchPropertyTypes = ['Appartment', 'Building', 'Home', 'Villa'];
+    var searchPropertyTypes = ['Apartment', 'Building', 'Home', 'Villa'];
     var typeSelect, typeOption, sortSelect, sortOption;
 
     function CreateSearchDDL(ddlName, ddlId, defaultValue, valueArray, optionName, position) {
@@ -123,36 +120,6 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
 
     CreateSearchDDL(typeSelect, 'search-type', 'Property Type...', searchPropertyTypes, typeOption, 0);
     CreateSearchDDL(sortSelect, 'search-sort', 'Number of bedrooms...', searchPropertySort, sortOption, 1);
-
-    // var typeSelect = document.createElement('select');
-    // typeSelect.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
-    // typeSelect.setAttribute('id', 'search-type');
-    // searchFields[0].append(typeSelect);
-    // var typeDefaultOption = document.createElement('option');
-    // typeDefaultOption.setAttribute('value', 0);
-    // typeDefaultOption.innerHTML += 'Property Type...';
-    // typeSelect.append(typeDefaultOption);
-    // for (let index = 0; index < searchPropertyTypes.length; index++) {
-    //     let typeOption = document.createElement('option');
-    //     typeOption.setAttribute('value', searchPropertyTypes[index]);
-    //     typeOption.innerHTML += searchPropertyTypes[index];
-    //     typeSelect.append(typeOption);
-    // }
-
-    // var sortSelect = document.createElement('select');
-    // sortSelect.setAttribute('class', 'form-select border-0 py-3 search-form-ddl');
-    // sortSelect.setAttribute('id', 'search-sort');
-    // searchFields[1].append(sortSelect);
-    // var sortDefaultOption = document.createElement('option');
-    // sortDefaultOption.setAttribute('value', 0);
-    // sortDefaultOption.innerHTML += 'Number of bedrooms...';
-    // sortSelect.append(sortDefaultOption);
-    // for (let index = 0; index < searchPropertySort.length; index++) {
-    //     let sortOption = document.createElement('option');
-    //     sortOption.setAttribute('value', searchPropertySort[index]);
-    //     sortOption.innerHTML += searchPropertySort[index];
-    //     sortSelect.append(sortOption);
-    // }
 
     var searchFieldType = document.querySelector('#search-type');
     var searchFieldSort = document.querySelector('#search-sort');
@@ -177,22 +144,13 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
                 propertyListPart[index].classList.remove('hide');
             }
         }
-        if (propertySection.clientHeight == 0) {
-            document.getElementById('no-property').classList.remove('hide');
-            document.getElementById('no-property').innerHTML += 'There are no properties that match your search criteria!';
-            document.getElementById('property-filters').parentElement.classList.add('hide');
-        }
-        else {
-            document.getElementById('no-property').classList.add('hide');
-            document.getElementById('property-filters').parentElement.classList.remove('hide');
-        }
-    })
+    });
     /* _*-*_ END|DYNAMIC "SEARCH" CONTENT _*-*_ */
 
 
     /* _*-*_ BEGIN|DYNAMIC "PROPERTY AGENTS" CONTENT _*-*_ */
     var agentSection = document.getElementById('agent-section');
-    const contentAgentDetails = [['Mackenzie Perkins', 'Real Estate Brokerage Manager'], ['Clark Wilson', 'Senior Real Estate Specialist'], ['Lilly Johnson', 'Commercial Investment Member'],['Jordan Woods', 'Accredited Land Consultant']];
+    const contentAgentDetails = [['Mackenzie Perkins', 'Real Estate Brokerage Manager', 'mackenzie'], ['Clark Wilson', 'Senior Real Estate Specialist', 'clark'], ['Lilly Johnson', 'Commercial Investment Member', 'lily'],['Jordan Woods', 'Accredited Land Consultant', 'jordan']];
 
     const contentAgentDivClasses = ['col-lg-3 col-md-6 wow fadeInUp', 'team-item rounded overflow-hidden', 'position-relative', 'position-absolute start-50 top-100 translate-middle d-flex align-items-center', 'text-center p-4 mt-3'];
 
@@ -206,12 +164,13 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
         let agentImage = document.createElement('img');
         Object.assign(agentImage, {
             className: 'img-fluid',
-            src: `img/team-${index+1}.jpg`,
-            alt: ''
-        })
+            src: `assets/img/${contentAgentDetails[index][2]}.jpg`,
+            alt: contentAgentDetails[index][2]
+        });
         for (let index = 0; index < 3; index++) {
             window['agentAnchor' + index + 1] = document.createElement('a');
             window['agentAnchor' + index + 1].setAttribute('class', 'btn btn-square mx-1');
+            window['agentAnchor' + index + 1].setAttribute('href', '#agent-section');
             window['agentIcon' + index + 1] = document.createElement('i');
             window['agentIcon' + index + 1].setAttribute('class', contentAgentIconClasses[index]);
             window['agentAnchor' + index + 1].appendChild(window['agentIcon' + index + 1]);
@@ -223,12 +182,10 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
 
         agentDiv1.appendChild(agentDiv2);
             agentDiv2.appendChild(agentDiv3);
-                agentDiv3.appendChild(agentImage);
-                agentDiv3.appendChild(agentDiv4);
+                agentDiv3.append(agentImage, agentDiv4);
             agentDiv2.appendChild(agentDiv5);
-                agentDiv5.appendChild(agentHeader5);
+                agentDiv5.append(agentHeader5, agentSmall);
                     agentHeader5.innerHTML += contentAgentDetails[index][0]
-                agentDiv5.appendChild(agentSmall);
                     agentSmall.innerHTML += contentAgentDetails[index][1]
 
     agentSection.append(agentDiv1);
@@ -238,9 +195,10 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
     /* _*-*_ BEGIN|DYNAMIC "TESTIMONIALS" CONTENT _*-*_ */
     var testimonialsSection = document.querySelectorAll('#testimonials .swiper-slide');
     const contentTestimonialsDetails = [
-        ['"When I found Clark I knew I was finally working with a real professional I could rely on."' ,'Naomi Mitchell', 'Happy Lock&Key client'], 
-        ['"Everyones on the same page. Lock&Key is the ultimate time saver for people like me."' ,'Charles Wilson', 'Happy Lock&Key client'], 
-        ['"With Lock&Key, I have finally accomplished things that have been waiting forever to get done."' ,'Andrew Hill', 'Happy Lock&Key client']];
+        ['"When I found Clark I knew I was finally working with a real professional I could rely on."' ,'Naomi Mitchell', '- happy Lock&Key client', 'naomi'], 
+        ['"Everyone is on the same page. Lock&Key is the ultimate time saver for people like me."' ,'Charles Wilson', '- grateful Lock&Key client', 'charles'], 
+        ['"With Lock&Key, I have finally accomplished things that have been waiting forever to get done."' ,'Zoe Diaz', '- thankful Lock&Key client', 'zoe']
+    ];
 
     const contentTestimonialsDivClasses = ['testimonial-item bg-light rounded p-3', 'bg-white border rounded p-4', 'd-flex align-items-center', 'ps-3'];
 
@@ -252,9 +210,9 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
         let testimonialParagraph = document.createElement('p');
         let testimonialImage = document.createElement('img');
         Object.assign(testimonialImage, {
-            className: 'img-fluid flex-shrink-0 rounded',
-            src: `img/testimonial-${index+1}.jpg`,
-            alt: ''
+            className: 'img-fluid flex-shrink-0 rounded-circle',
+            src: `assets/img/${contentTestimonialsDetails[index][3]}.jpg`,
+            alt: contentTestimonialsDetails[index][3]
         });
         testimonialImage.style.width = '45px';
         testimonialImage.style.height = '45px';
@@ -263,14 +221,11 @@ if (location.pathname == '/lock_key/index.html' || location.pathname == '/lock_k
         let testimonialSmall = document.createElement('small');
 
         testimonialDiv1.appendChild(testimonialDiv2);
-            testimonialDiv2.appendChild(testimonialParagraph);
+            testimonialDiv2.append(testimonialParagraph, testimonialDiv3);
                 testimonialParagraph.innerHTML += contentTestimonialsDetails[index][0];
-            testimonialDiv2.appendChild(testimonialDiv3);
-                testimonialDiv3.appendChild(testimonialImage);
-                testimonialDiv3.appendChild(testimonialDiv4);
-                    testimonialDiv4.appendChild(testimonialHeader6);
+                testimonialDiv3.append(testimonialImage, testimonialDiv4);
+                    testimonialDiv4.append(testimonialHeader6, testimonialSmall);
                         testimonialHeader6.innerHTML += contentTestimonialsDetails[index][1];
-                    testimonialDiv4.appendChild(testimonialSmall);
                     testimonialSmall.innerHTML += contentTestimonialsDetails[index][2];
 
     testimonialsSection[index].append(testimonialDiv1);
@@ -302,7 +257,7 @@ else if (location.pathname == '/lock_key/contact.html') {
     function formValidation() {
         errors = 0;
         let formFullName, formEmail, formSubject, formMessage, formTerms, formSuccess;
-        let regExFullName, regExEmail, regExSubject, regExMessage;
+        let regExFullName, regExEmail, regExSubject;
 
         formFullName = document.querySelector('#form-name');
         formEmail = document.querySelector('#form-email');
@@ -314,27 +269,37 @@ else if (location.pathname == '/lock_key/contact.html') {
         regExFullName = /^[A-ZČĆŠĐŽ][a-zčćđšž]{2,14}([\s][A-ZČĆŠĐŽ][a-zčćđšž]{2,14})+$/;
         regExEmail = /^[a-z0-9+_.-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
         regExSubject = /^[A-ZČĆŠĐŽa-zčćđšž0-9\s\.,!?""-]{3,}$/;
-        regExMessage = /^.{10,}$/;
 
         regExValidation(formFullName, regExFullName, 'Field "Full name" accepts only letters. </br><em><small> - example: John Doe</small></em>');
         regExValidation(formEmail, regExEmail, 'Field "E-mail" is invalid. </br><em><small> - example: john.doe@gmail.com</small></em>');
         regExValidation(formSubject, regExSubject, 'Field "Subject" accepts letter, numbers and (!?.,-")');
-        regExValidation(formMessage, regExMessage, 'Field "Message" must have at least 10 characters.');
 
         if(!formTerms.checked) {
             formTerms.classList.add('border-2', 'border-danger', 'rounded');
             formTerms.nextElementSibling.classList.add('text-danger');
+            errors++;
         }
         else {
             formTerms.classList.remove('border-2', 'border-danger', 'rounded');
             formTerms.nextElementSibling.classList.remove('text-danger');
         }
 
+        if(formMessage.textLength < 10) {
+            formMessage.classList.add('border-2', 'border-danger', 'rounded');
+            formMessage.parentElement.nextElementSibling.innerHTML = 'Field "Message" must contain at least 10 characters.';
+            formMessage.parentElement.nextElementSibling.classList.remove('hide');
+            errors++;
+        }
+        else{
+            formMessage.classList.remove('border-2', 'border-danger', 'rounded');
+            formMessage.parentElement.nextElementSibling.innerHTML = '';
+            formMessage.parentElement.nextElementSibling.classList.add('hide');
+        }
+
         if(errors==0) {
             formSuccess.classList.remove('hide');
             formSuccess.innerHTML = 'Thank you for contacting us. We will reply to your message ASAP!';
             document.getElementById("form-contact").reset();
-            // document.getElementById("form-btn").removeAttribute('disabled');
         }
     }
     /* _*-*_ END|CONTACT FORM VALIDATION _*-*_ */
@@ -357,7 +322,7 @@ for (let index = 1; index <= 4; index++) {
     window['navAnchor' + index].innerHTML += navMatrix[index - 1][2];
     navDiv.append(window['navAnchor' + index]);
 }
-navAnchor3.setAttribute('target', '_blank');
+navAnchor4.setAttribute('target', '_blank');
 navPart.append(navDiv);
 
 /* - BEGIN|"NAVBAR" ACTIVE LINK - */
