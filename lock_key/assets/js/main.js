@@ -382,7 +382,7 @@ var swiperHeader = new Swiper('.swiperHeader', {
 
 var swiperTestimonials = new Swiper('.swiperTestimonials', {
     loop: true,
-    slidesPerView: 2,
+    slidesPerView: 1,
     centeredSlides: true,
     effect: "creative",
     creativeEffect: {
@@ -409,5 +409,10 @@ var swiperTestimonials = new Swiper('.swiperTestimonials', {
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true,
-      },
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2
+        }
+    }
 });
