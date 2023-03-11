@@ -281,6 +281,15 @@ $(document).ready(function() {
 	localStorage.removeItem("search-temp");
 	//#endregion
 
+	//#region INPUT NUMBER DISABLE
+	$("[type='number']").on("keydown",function (e) {
+		let windowSize = $(window).width()
+		if (windowSize > 767) {
+			e.preventDefault();
+		}
+	});
+	//#endregion
+
 	//#region FOOTER CATEGORIES
 	let footerCats = "";
 	for (const cat of categories) {
@@ -547,7 +556,7 @@ function getProductPage(products) {
 				<div class="add-to-cart d-flex align-items-end my-4">
 					<div class="form-group">
 						<label for="quantity" class="form-label mb-2">Quantity</label>
-						<input type="number" class="form-control" id="quantity" value="1" min="1" max="10" onkeydown="return false" />
+						<input type="number" class="form-control" id="quantity" value="1" min="1" max="10" />
 					</div>
 					<div class="form-group">
 						<button class="add-to-cart-btn btn btn-primary" data-id="${product.id}"><i class="fa fa-shopping-cart"></i> add to cart</button>
@@ -855,7 +864,7 @@ function getOrderItems(products) {
 						<img src="${orderItems[i].images[0].small}" alt="${orderItems[i].name}" />
 					</div>
 					<div class="col-2 text-center">
-						<input type="number" class="order-qty" value="${cartItems[i].quantity}" data-id="${orderItems[i].id}" min="1" max="10" onkeydown="return false" />
+						<input type="number" class="order-qty" value="${cartItems[i].quantity}" data-id="${orderItems[i].id}" min="1" max="10" />
 					</div>
 					<div class="col-md-5 col-10 ">${orderItems[i].name}</div>
 					<div class="col-md-3 text-end">${cartItems[i].quantity} x ${orderItems[i].price.current_price} €</div>
