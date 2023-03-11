@@ -183,7 +183,6 @@ $(document).ready(function() {
 
 			//#region PRODUCT - IMG CHANGE
 			$("#product-imgs img").on("click", function() {
-				console.log("nesto")
 				let smallSrc = $(this).attr("src");
 				smallSrc = smallSrc.slice(0, -5) + smallSrc.slice(-4);
 				console.log(smallSrc)
