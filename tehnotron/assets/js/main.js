@@ -566,7 +566,7 @@ function getProductPage(products) {
 
 		<div class="col-md-12">
 			<div id="product-tab">
-				<ul class="tab-nav nav nav-tabs" role="tab-list">
+				<ul class="tab-nav">
 					<li class="active"><a data-toggle="tab" href="#tab1">Specifications</a></li>
 					<li><a data-toggle="tab" href="#tab2">Details</a></li>
 					<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
