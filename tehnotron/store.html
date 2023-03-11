@@ -23,80 +23,61 @@
 	<body>
 		<div class="sticky-md-top">
 			<header>
-				<!-- <div id="top-header">
-					<div class="container-lg">
-						<div class="row">
-							<ul class="navbar-nav me-auto mb-2 mb-lg-0 header-links justify-content-evenly">
-								
-							</ul>
-						</div>
-					</div>
-				</div> -->
-				<header>
-					<!-- <div id="top-header">
-						<div class="container-lg">
-							<div class="row">
-								<ul class="navbar-nav me-auto mb-2 mb-lg-0 header-links justify-content-evenly">
-									
-								</ul>
+				<div id="header">
+					<div class="container-lg py-2">
+						<div class="row align-items-center justify-content-between">
+							<div class="col-md-3">
+								<div class="header-logo d-flex justify-content-center mb-md-0 mb-2">
+									<a href="index.html" class="logo">
+										  <img src="assets/img/TehnoTRON.png" alt="tehnotron logo" />
+									</a>
+								</div>
 							</div>
-						</div>
-					</div> -->
-					<div id="header">
-						<div class="container-lg py-2">
-							<div class="row align-items-center justify-content-between">
-								<div class="col-md-3">
-									<div class="header-logo d-flex justify-content-center mb-md-0 mb-2">
-										<a href="index.html" class="logo">
-											  <img src="assets/img/TehnoTRON.png" alt="tehnotron logo" />
+							<div class="col-md-5">
+								<div class="header-search" id="header-search">
+									<div class="input-group">
+										<input class="form-control border-0" id="search" type="text" placeholder="Search...">
+										<button class="btn btn-primary search-btn" type="button"><i class="fa-solid fa-magnifying-glass px-3"></i></button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="row header-ctn mt-2 justify-content-center">
+									<div class="col-4">
+										<a href="#" class="wishlist">
+											<i class="fa-regular fa-heart"></i>
+											<span>Wishlist</span>
+											<div class="qty d-none" id="wishQty"></div>
 										</a>
 									</div>
-								</div>
-								<div class="col-md-5">
-									<form class="header-search" id="header-search" method="get">
-										<div class="input-group">
-											<input class="form-control border-0" id="search" type="text" placeholder="Search...">
-											<button class="btn btn-primary search-btn" type="button"><i class="fa-solid fa-magnifying-glass px-3"></i></button>
+									<div class="col-4">
+										<a href="checkout.html" id="cart">
+											<i class="fa fa-shopping-cart"></i>
+											<span>Cart</span>
+											<div class="qty d-none" id="cartQty"></div>
+										</a>
+									</div>
+									<div class="menu-toggle col-4">
+										<a href="#">
+											<i class="fa fa-bars"></i>
+											<span>Menu</span>
+										</a>
+									</div>
+									<div id="wishlist-tab" class="position-fixed top-0 bottom-0 end-0">
+										<div id="close-tab">
+											<i class="fa-solid fa-xmark fs-3 mt-3 ms-2"></i>
 										</div>
-									</form>
-								</div>
-								<div class="col-md-3">
-									<div class="row header-ctn mt-2 justify-content-center">
-										<div class="col-4">
-											<a href="#" class="wishlist">
-												<i class="fa-regular fa-heart"></i>
-												<span>Wishlist</span>
-												<div class="qty d-none" id="wishQty"></div>
-											</a>
-										</div>
-										<div class="col-4">
-											<a href="checkout.html" id="cart">
-												<i class="fa fa-shopping-cart"></i>
-												<span>Cart</span>
-												<div class="qty d-none" id="cartQty"></div>
-											</a>
-										</div>
-										<div class="menu-toggle col-4">
-											<a href="#">
-												<i class="fa fa-bars"></i>
-												<span>Menu</span>
-											</a>
-										</div>
-										<div id="wishlist-tab" class="position-fixed top-0 bottom-0 end-0">
-											<div id="close-tab">
-												<i class="fa-solid fa-xmark fs-3 mt-3 ms-2"></i>
-											</div>
-											<h3 class="title text-center text-uppercase mb-5">wishlist</h3>
-											<div id="wishlist-tab-content">
-												
-											</div>
+										<h3 class="title text-center text-uppercase mb-5">wishlist</h3>
+										<div id="wishlist-tab-content">
+											
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</header>
+				</div>
+			</header>
 	
 			<nav id="navigation">
 				<div class="container">

@@ -880,7 +880,7 @@ function getOrderItems(products) {
 					<div class="col-2 text-center">
 						<input type="number" class="order-qty" value="${cartItems[i].quantity}" data-id="${orderItems[i].id}" min="1" max="10" />
 					</div>
-					<div class="col-md-5 col-10"><a href="/tehnotron/product.html?id=${orderItems.id}">${orderItems[i].name}</a></div>
+					<div class="col-md-5 col-10"><a href="/tehnotron/product.html?id=${orderItems[i].id}">${orderItems[i].name}</a></div>
 					<div class="col-md-3 text-end">${cartItems[i].quantity} x ${orderItems[i].price.current_price} €</div>
 					<a class="position-absolute top-0 end-0 w-auto trash" data-id="${orderItems[i].id}"><i class="fa-solid fa-trash-can"></i></a>
 				</div>
