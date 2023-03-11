@@ -269,9 +269,9 @@ $(document).ready(function() {
 
 	//#region SEARCH
 	$("#header-search button").on("click", function() {
-		if (location.pathname != "/store.html") {
+		if (location.pathname != "/tehnotron/store.html") {
 			setLS("search-temp", $("#search").val());
-			window.location.pathname = "/store.html";
+			window.location.pathname = "/tehnotron/store.html";
 		}
 		else {
 			productsFilterAndSort();
@@ -750,7 +750,7 @@ function addToCart() {
 
 	cartItems = getLS("cart");
 
-	if (location.pathname == "/product.html") {
+	if (location.pathname == "/tehnotron/product.html") {
 		let qtyValue = parseInt($("#quantity").val());
 		if (cartItems == null) {
 			cartItems = 
