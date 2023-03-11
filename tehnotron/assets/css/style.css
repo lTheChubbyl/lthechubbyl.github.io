@@ -403,15 +403,15 @@ textarea.input {
 	Search
 \*----------------------------*/
 
-form.header-search {
+header-search {
   position: relative;
 }
 
-form.header-search .form-control {
+header-search .form-control {
   border-radius: 40px 0px 0px 40px
 }
 
-form.header-search .search-btn {
+header-search .search-btn {
   background: #15161D;
   color: #FFF;
   border: none;

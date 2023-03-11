@@ -268,18 +268,33 @@ $(document).ready(function() {
 
 	//#region SEARCH
 	$("#header-search button").on("click", function() {
+		setLS("search-temp", $("#search").val());
 		if (location.pathname != "/tehnotron/store.html") {
-			setLS("search-temp", $("#search").val());
 			window.location.pathname = "/tehnotron/store.html";
 		}
 		else {
 			productsFilterAndSort();
 		}
 	});
+	$('#search').keypress(function(event){
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+
+		if(keycode == "13"){
+			setLS("search-temp", $("#search").val());
+			if (location.pathname != "/tehnotron/store.html") {
+				window.location.pathname = "/tehnotron/store.html";
+			}
+		}
+		else {
+			productsFilterAndSort();
+		}
+	
+	});
 	$("#search").val(getLS("search-temp"));
 	productsFilterAndSort();
 	localStorage.removeItem("search-temp");
 	//#endregion
+
 
 	//#region INPUT NUMBER DISABLE
 	$("[type='number']").on("keydown",function (e) {
