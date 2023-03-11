@@ -1276,7 +1276,8 @@ form.header-search .search-btn {
 #product-tab .tab-nav li {
   display: inline-block;
   background: #FFF;
-  padding: 0px 15px;
+  padding: 0px 10px;
+  cursor: pointer;
 }
 
 #product-tab .tab-nav li+li {
@@ -1289,7 +1290,7 @@ form.header-search .search-btn {
   color: #8D99AE;
 }
 
-#product-tab .tab-nav li.active a {
+#product-tab .tab-nav li a.active {
   color: #FFCB08;
 }
 
@@ -1303,10 +1304,9 @@ form.header-search .search-btn {
   transition: 0.2s all;
 }
 
-#product-tab .tab-nav li a:hover:after, #product-tab .tab-nav li a:focus:after, #product-tab .tab-nav li.active a:after {
+#product-tab .tab-nav li a:hover:after, #product-tab .tab-nav li a:focus:after, #product-tab .tab-nav li a.active:after {
   width: 100%;
 }
-
 /*-- Rating --*/
 
 .rating-avg {

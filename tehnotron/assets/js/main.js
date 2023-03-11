@@ -525,7 +525,7 @@ function getProductPage(products) {
 		<div class="col-md-5">
 			<div id="product-main-img">
 				<div class="product-preview">
-					<img src="${product.images[0].big}" alt="${product.name}" />
+					<img src="${product.images[0].big}" alt="">
 				</div>
 			</div>
 		</div>
@@ -563,31 +563,33 @@ function getProductPage(products) {
 				</ul>
 			</div>
 		</div>
-
 		<div class="col-md-12">
 			<div id="product-tab">
-				<ul class="tab-nav">
-					<li class="active"><a data-toggle="tab" href="#tab1">Specifications</a></li>
-					<li><a data-toggle="tab" href="#tab2">Details</a></li>
-					<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+				<ul class="tab-nav nav nav-tabs justify-content-center" role="tablist">
+					<li class="nav-item active" role="presentation"><a class="active" data-bs-toggle="tab" data-bs-target="#tab1">Specifications</a></li>
+					<li role="presentation"><a data-bs-toggle="tab" data-bs-target="#tab2">Details</a></li>
+					<li role="presentation"><a data-bs-toggle="tab" data-bs-target="#tab3">Reviews (3)</a></li>
 				</ul>
 				<div class="tab-content">
-					<div id="tab1" class="tab-pane active" role="tabpanel">
+					<div id="tab1" class="tab-pane fade show active" role="tabpanel">
 						<div class="row justify-content-center">
+						<h3 class="title text-uppercase text-center text-decoration-underline mb-3">Specifications</h3>
 							${getSpecs(product.specifications)}
 						</div>
 					</div>
-					<div id="tab2" class="tab-pane" role="tabpanel">
+					<div id="tab2" class="tab-pane fade" role="tabpanel">
 						<div class="row justify-content-center">
 							<div class="col-md-8">
+							<h3 class="title text-uppercase text-center text-decoration-underline mb-3">Details</h3>
 								${product.description.long}
 							</div>
 						</div>
 					</div>
-					<div id="tab3" class="tab-pane" role="tabpanel">
+					<div id="tab3" class="tab-pane fade" role="tabpanel">
 						<div class="row justify-content-center align-items-center">
 							<div class="col-md-8">
 								<div id="reviews">
+								<h3 class="title text-uppercase text-center text-decoration-underline mb-3">Reviews</h3>
 									${getReview(product.review_ids)}
 								</div>
 							</div>
@@ -625,7 +627,7 @@ function getSpecs(specs) {
 }
 
 function getReview(reviewArray) {
-	let reviewHTML = `<ul class="reviews"><li class="h3 text-decoration-underline">Most Helpful Reviews</li>`;
+	let reviewHTML = `<ul class="reviews">`;
 	var reviews = getLS("reviews");
 	for (const ra of reviewArray) {
 		var r = reviews.find(element => element.id == ra);
