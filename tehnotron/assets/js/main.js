@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 			for (const category of categories) {
 				categoryHTML += `
-					<div class="col-md-3">
+					<div class="col-md-3 p-md-0 p-4">
 						<div class="shop">
 							<a href="store.html?cat=${category.id}">
 								<div class="shop-img">
