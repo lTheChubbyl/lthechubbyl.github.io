@@ -1,0 +1,935 @@
+[
+    {
+        "id": 1,
+        "name": "Lenovo Idea Pad Gaming 3",
+        "category_id": 1,
+        "brand_id": 1,
+        "price": {
+            "old_price": 847.46,
+            "current_price": 677.96
+        },
+        "images": [
+            {
+                "big": "assets/img/lenovoidea3.jpg",
+                "small": "assets/img/lenovoidea3s.jpg"
+            },
+            {
+                "big": "assets/img/lenovoidea3.1.jpg",
+                "small": "assets/img/lenovoidea3.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The Lenovo IdeaPad Gaming 3 is a budget-friendly gaming laptop designed for casual gamers. It features a 15.6-inch Full HD IPS display, 10th Gen Intel Core i5 processor, NVIDIA GeForce GTX 1650 graphics, 8GB DDR4 RAM, and a 256GB SSD. It has a backlit keyboard, a 720p webcam, and Harman Kardon speakers.",
+            "long": "<p>The Lenovo IdeaPad Gaming 3 is a budget gaming laptop that offers solid performance and features at an affordable price. It is powered by an AMD Ryzen 5 5600H processor and Nvidia GeForce GTX 1650 graphics, which can handle most modern games at medium to high settings. The laptop also has a 15.6-inch Full HD IPS display with a 120Hz refresh rate, which provides a smooth and responsive gaming experience. </p><p>Other features include 8GB of DDR4 RAM, a 256GB NVMe SSD, and a backlit keyboard with decent key travel and response. The laptop also has a good selection of ports, including USB Type-C, HDMI, and Ethernet. The build quality is solid, and the design is subtle enough to be used in a professional setting. </p><p>The IdeaPad Gaming 3 also comes with Lenovo Vantage, a software that allows you to customize the laptop's performance, network settings, and lighting effects. Additionally, it has dual speakers with Dolby Audio for an immersive sound experience, and a 720p HD webcam for video calls.</p><p>Overall, the Lenovo IdeaPad Gaming 3 is a great option for gamers on a budget who want a capable and reliable laptop for gaming and everyday use.</p>"
+        },
+        "specifications": [
+            {
+                "name": "processor",
+                "value": "AMD Ryzen 5 4600H"
+            },
+            {
+                "name": "memory",
+                "value": "8 GB DDR4 - 3200 MHz"
+            },
+            {
+                "name": "storage",
+                "value": "512 GB SSD"
+            },
+            {
+                "name": "display",
+                "value": "15,6\" Anti-glare"
+            },
+            {
+                "name": "graphics",
+                "value": "nVidia GeForce GTX 1650"
+            },
+            {
+                "name": "installedOS",
+                "value": "Linux"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [7, 6, 2],
+        "discount": 20,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 2,
+        "name": "iPhone 14 Pro Max",
+        "category_id": 2,
+        "brand_id": 2,
+        "price": {
+            "old_price": 1846.60,
+            "current_price": 1659.13
+        },
+        "images": [
+            {
+                "big": "assets/img/iphone14.1.jpg",
+                "small": "assets/img/iphone14.1s.jpg"
+            },
+            {
+                "big": "assets/img/iphone14.2.jpg",
+                "small": "assets/img/iphone14.2s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The iPhone 14 Pro Max is the latest high-end smartphone from Apple. It features a 6.7-inch Super Retina XDR display, A16 Bionic chip, 5G connectivity, and up to 1TB of storage. It has a triple-camera system with 12MP ultra-wide, wide, and telephoto lenses, as well as a LiDAR scanner. It also has Face ID, Apple Pay, and runs on iOS 16.",
+            "long": "<p>The iPhone 14 Pro Max is the latest flagship smartphone from Apple, set to be released in the fall of 2023. It will feature a large 6.7-inch OLED display with a resolution of 2778 x 1284 pixels, resulting in a pixel density of 458 pixels per inch. The phone will be powered by a new A18 chip, which is expected to provide significant performance improvements over the previous generation.</p><p>The iPhone 14 Pro Max will feature a triple-camera system on the back, including a wide, ultra-wide, and telephoto lens. The camera system is expected to offer improved low-light performance, better optical zoom, and improved computational photography features. The front-facing camera is expected to be a 12-megapixel sensor with support for Face ID.</p><p>The phone is rumored to feature 5G connectivity, which will allow for faster download and upload speeds. It will also come with Wi-Fi 6E, Bluetooth 5.2, and NFC support. The iPhone 14 Pro Max will run on the latest version of iOS, which is expected to offer several new features and improvements.</p><p>The iPhone 14 Pro Max is expected to come with a range of storage options, including 128GB, 256GB, 512GB, and 1TB. The phone is also expected to come in several different colors, including Gold, Silver, Graphite, and a new Rose Gold color.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "12 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "48 + 12 + 12 MP"
+            },
+            {
+                "name": "memory",
+                "value": "6 GB"
+            },
+            {
+                "name": "storage",
+                "value": "256 GB"
+            },
+            {
+                "name": "battery",
+                "value": "4323 mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.7\" LTPO OLED, 120Hz"
+            },
+            {
+                "name": "color",
+                "value": "Space Black"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [8, 13, 3],
+        "discount": 10,
+        "is_new": true,
+        "in_stock": true
+    },
+    {
+        "id": 3,
+        "name": "Razer DeathAdder V2",
+        "category_id": 3,
+        "brand_id": 6,
+        "price": {
+            "old_price": null,
+            "current_price": 84.74
+        },
+        "images": [
+            {
+                "big": "assets/img/razerdav2.jpg",
+                "small": "assets/img/razerdav2s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The Razer DeathAdder V2 is a gaming mouse designed for esports professionals. It features a 20,000 DPI optical sensor, Razer Speedflex Cable, and Razer Chroma RGB lighting. It has eight programmable buttons and is designed for right-handed users. It also has onboard memory to store up to five different profiles.",
+            "long": "<p>The Razer DeathAdder V2 is a high-performance gaming mouse designed to deliver unparalleled precision and speed. Featuring Razer's 20,000 DPI Focus+ Optical Sensor, this mouse is capable of tracking movements with incredible accuracy, ensuring that every action is translated into game-winning results. The ergonomic design of the DeathAdder V2 is optimized for comfort, with a lightweight body that feels comfortable even during extended gaming sessions. The mouse also features eight programmable buttons that can be customized to suit your individual playstyle, as well as Razer Chroma RGB lighting that adds a touch of style to your setup. With its advanced features and durable design, the Razer DeathAdder V2 is the ultimate gaming mouse for serious gamers.</p>"
+        },
+        "specifications": [
+            {
+                "name": "wireless",
+                "value": false
+            },
+            {
+                "name": "sensor",
+                "value": "optical"
+            },
+            {
+                "name": "maxDPI",
+                "value": 20000
+            },
+            {
+                "name": "weight",
+                "value": 88
+            },
+            {
+                "name": "switchLife",
+                "value": "70 Million Clicks"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [10, 12, 7],
+        "discount": null,
+        "is_new": true,
+        "in_stock": true
+    },
+    {
+        "id": 4,
+        "name": "Samsung Galaxy A52S 5G",
+        "category_id": 2,
+        "brand_id": 5,
+        "price": {
+            "old_price": 452.53,
+            "current_price": 406.76
+        },
+        "images": [
+            {
+                "big": "assets/img/samsunga52.jpg",
+                "small": "assets/img/samsunga52s.jpg"
+            },
+            {
+                "big": "assets/img/samsunga52.1.jpg",
+                "small": "assets/img/samsunga52.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "A mid-range smartphone from Samsung that supports 5G connectivity. It features a 6.5-inch Super AMOLED display, a quad-camera setup on the back, and a 4500mAh battery.",
+            "long": "<p>The Samsung Galaxy A52S 5G is a mid-range smartphone that offers 5G connectivity, a large 6.5-inch Super AMOLED display, and a 64MP quad-camera setup. It's powered by a Qualcomm Snapdragon 778G chipset, which provides fast and reliable performance, and comes with 6GB or 8GB of RAM and 128GB of internal storage. The phone also has a large 4,500mAh battery with support for 25W fast charging and runs on the latest Android 11 operating system with Samsung's One UI 3.1 skin on top.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "32 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "64 + 12 + 5 + 5 MP"
+            },
+            {
+                "name": "memory",
+                "value": "8 GB"
+            },
+            {
+                "name": "storage",
+                "value": "256 GB"
+            },
+            {
+                "name": "battery",
+                "value": "4500 mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.5\" Super AMOLED"
+            },
+            {
+                "name": "color",
+                "value": "Awesome Black"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [3, 11, 1],
+        "discount": 10,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 5,
+        "name": "JBL Tune 510BT",
+        "category_id": 3,
+        "brand_id": 8,
+        "price": {
+            "old_price": null,
+            "current_price": 63.55
+        },
+        "images": [
+            {
+                "big": "assets/img/jbl510bt.jpg",
+                "small": "assets/img/jbl510bts.jpg"
+            }
+        ],
+        "description": {
+            "short": "A pair of wireless on-ear headphones from JBL that features Bluetooth connectivity and a built-in microphone. They provide up to 40 hours of battery life on a single charge and offer JBL's signature sound quality.",
+            "long": "<p>The JBL Tune 510BT is a wireless on-ear headphone that offers a comfortable fit, powerful bass, and up to 40 hours of battery life. It has Bluetooth 5.0 connectivity, which allows you to easily pair it with your smartphone or tablet, and features JBL's Pure Bass Sound technology, which delivers deep and immersive bass. The headphones also have a built-in microphone and buttons for controlling music playback and taking calls. They come in a variety of colors, including black, white, and blue.</p>"
+        },
+        "specifications": [
+            {
+                "name": "sound",
+                "value": "Stereo"
+            },
+            {
+                "name": "wireless",
+                "value": true
+            },
+            {
+                "name": "microphone",
+                "value": true
+            },
+            {
+                "name": "sensitivity",
+                "value": "104 dB"
+            },
+            {
+                "name": "batteryLife",
+                "value": "~ 40 hours"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [12, 11, 8],
+        "discount": null,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 6,
+        "name": "Razer Kraken V3 HyperSense",
+        "category_id": 3,
+        "brand_id": 6,
+        "price": {
+            "old_price": null,
+            "current_price": 201.69
+        },
+        "images": [
+            {
+                "big": "assets/img/razerkraken.jpg",
+                "small": "assets/img/razerkrakens.jpg"
+            }
+        ],
+        "description": {
+            "short": "A gaming headset from Razer that features THX Spatial Audio and HyperSense haptic technology, which provides a more immersive gaming experience. The headset has cooling gel-infused cushions for added comfort and support.",
+            "long": "<p>The Razer Kraken V3 HyperSense is a gaming headset that features advanced haptic technology for a more immersive gaming experience. It has 50mm TriForce Titanium drivers that deliver clear and powerful audio, and THX Spatial Audio technology that creates a realistic 360-degree soundstage. The headset also has a built-in noise-canceling microphone and cooling gel-infused ear cushions for maximum comfort during long gaming sessions. The HyperSense haptic technology provides tactile feedback for a more immersive experience, letting you feel the game's audio as well as hear it.</p>"
+        },
+        "specifications": [
+            {
+                "name": "sound",
+                "value": "Stereo"
+            },
+            {
+                "name": "wireless",
+                "value": false
+            },
+            {
+                "name": "microphone",
+                "value": true
+            },
+            {
+                "name": "sensitivity",
+                "value": "96 dB"
+            },
+            {
+                "name": "micType",
+                "value": "Unidirectional"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [13, 10, 6],
+        "discount": null,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 7,
+        "name": "Acer Nitro 5",
+        "category_id": 1,
+        "brand_id": 7,
+        "price": {
+            "old_price": 1786.44,
+            "current_price": 1430.48
+        },
+        "images": [
+            {
+                "big": "assets/img/acernitro5.1.jpg",
+                "small": "assets/img/acernitro5.1s.jpg"
+            },
+            {
+                "big": "assets/img/acernitro5.2.jpg",
+                "small": "assets/img/acernitro5.2s.jpg"
+            }
+        ],
+        "description": {
+            "short": "A gaming laptop from Acer that features a 15.6-inch Full HD display, an Intel Core i5 processor, and an NVIDIA GeForce GTX 1650 graphics card. It also has 8GB of RAM and a 256GB SSD for storage.",
+            "long": "<p>The Acer Nitro 5 is a budget gaming laptop that offers strong performance and a stylish design. It's powered by an AMD Ryzen 5 5600H processor and NVIDIA GeForce GTX 1650 graphics, which provide fast and smooth gameplay. The laptop also features a 15.6-inch Full HD IPS display with a 144Hz refresh rate, which delivers smooth and clear visuals, and a backlit keyboard for gaming in low light conditions. It has 8GB of RAM and a 256GB solid-state drive for fast boot and load times, and runs on the latest Windows 10 operating system.</p>"
+        },
+        "specifications": [
+            {
+                "name": "processor",
+                "value": "Intel Core i9 11900H"
+            },
+            {
+                "name": "memory",
+                "value": "16 GB DDR4 - 3200 MHz"
+            },
+            {
+                "name": "storage",
+                "value": "512 GB SSD"
+            },
+            {
+                "name": "display",
+                "value": "15,6\" Full HD, IPS, ComfyView"
+            },
+            {
+                "name": "graphics",
+                "value": "nVidia GeForce RTX 3060 - 6 GB DDR6"
+            },
+            {
+                "name": "installedOS",
+                "value": null
+            }
+        ],
+        "rating": 5,
+        "review_ids": [9, 8, 3],
+        "discount": 20,
+        "is_new": true,
+        "in_stock": true
+    },
+    {
+        "id": 8,
+        "name": "HP 15",
+        "category_id": 1,
+        "brand_id": 9,
+        "price":
+        {
+            "old_price": 949.15,
+            "current_price": 751.25
+        },
+        "images": [
+            {
+                "big": "assets/img/hp15.jpg",
+                "small": "assets/img/hp15s.jpg"
+            },
+            {
+                "big": "assets/img/hp15.1.jpg",
+                "small": "assets/img/hp15.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "A budget laptop from HP that features a 15.6-inch Full HD display, an Intel Core i3 processor, and 8GB of RAM. It has a 128GB SSD for storage and comes with Windows 10 pre-installed. It is suitable for basic computing tasks such as web browsing, email, and word processing.",
+            "long": "<p>The HP 15 is an affordable laptop that's perfect for everyday use. It has a 15.6-inch diagonal HD SVA BrightView micro-edge WLED-backlit display that provides clear and bright visuals, and an Intel Pentium Silver N5000 processor that delivers reliable performance. The laptop also has 4GB of RAM and a 128GB solid-state drive for fast boot and load times, and runs on the latest Windows 10 operating system. It has a long battery life of up to 7 hours and comes in a variety of colors, including black, blue, and silver.</p>"
+        },
+        "specifications": [
+            {
+                "name": "processor",
+                "value": "AMD Ryzen 7 5825U"
+            },
+            {
+                "name": "memory",
+                "value": "16 GB DDR4 - 3200 MHz"
+            },
+            {
+                "name": "storage",
+                "value": "512 GB SSD"
+            },
+            {
+                "name": "display",
+                "value": "15,6\" Full HD, Micro-edge, Anti-glare"
+            },
+            {
+                "name": "graphics",
+                "value": "Integrated AMD Radeon"
+            },
+            {
+                "name": "installedOS",
+                "value": "freeDOS"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [11, 10, 1],
+        "discount": 20,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 9,
+        "name": "Apple MacBook Pro M2",
+        "category_id": 1,
+        "brand_id": 2,
+        "price": {
+            "old_price": 2881.33,
+            "current_price": 2542.37
+        }
+        ,
+        "images": [
+            {
+                "big": "assets/img/macm2.jpg",
+                "small": "assets/img/macm2s.jpg"
+            },
+            {
+                "big": "assets/img/macm2.1.jpg",
+                "small": "assets/img/macm2.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The MacBook Pro M2 is a high-end laptop computer produced by Apple Inc. It features a powerful M2 processor, a stunning Retina display, and a sleek aluminum design. The laptop is known for its performance and is popular among professionals in creative fields such as video editing, graphic design, and music production.",
+            "long": "<p>The Apple MacBook Pro M2 is a high-performance laptop designed for professionals who need a machine that can handle demanding tasks such as video editing, 3D rendering, and software development. It features Apple's M2 chip, which is expected to offer significant performance improvements over the previous generation M1 chip. The MacBook Pro M2 also comes with a 14-inch Retina display, up to 64GB of RAM, up to 8TB of SSD storage, and a battery life of up to 20 hours. Other features include Thunderbolt 4 ports, Wi-Fi 6, and Bluetooth 5.2.</p>"
+        },
+        "specifications": [
+            {
+                "name": "processor",
+                "value": "Apple M2 Octa Core Processor"
+            },
+            {
+                "name": "memory",
+                "value": "24 GB DDR4 - 3200 MHz"
+            },
+            {
+                "name": "storage",
+                "value": "1 TB SSD"
+            },
+            {
+                "name": "display",
+                "value": "13.3\" LED backlit display, Retina"
+            },
+            {
+                "name": "graphics",
+                "value": "Integrated Apple M2"
+            },
+            {
+                "name": "installedOS",
+                "value": "Apple MacOS Monterey 12.0"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [8, 3, 11],
+        "discount": 12,
+        "is_new": true,
+        "in_stock": true
+    },
+    {
+        "id": 10,
+        "name": "Acer Aspire 3",
+        "category_id": 1,
+        "brand_id": 7,
+        "price": {
+            "old_price": 516.94,
+            "current_price": 466.10
+        },
+        "images": [
+            {
+                "big": "assets/img/aceraspire3.jpg",
+                "small": "assets/img/aceraspire3s.jpg"
+            },
+            {
+                "big": "assets/img/aceraspire3.1.jpg",
+                "small": "assets/img/aceraspire3.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The Acer Aspire 3 is a budget-friendly laptop that is suitable for basic computing tasks such as browsing the web, checking emails, and word processing. It features a 15.6-inch HD display, Intel or AMD processors, and up to 8GB of RAM.",
+            "long": "<p>The Acer Aspire 3 is a budget laptop that offers decent performance for everyday computing tasks such as web browsing, word processing, and multimedia playback. It comes with a 15.6-inch Full HD display, an AMD Ryzen 3 3250U processor, 4GB of RAM, and a 128GB SSD. The laptop also has a full range of ports, including HDMI, USB 3.2, and Ethernet, as well as Wi-Fi 5 and Bluetooth connectivity. The Aspire 3 is a good option for students, casual users, and anyone who needs a basic laptop for everyday use.</p>"
+        },
+        "specifications": [
+            {
+                "name": "processor",
+                "value": "Intel Core i3 1005G1"
+            },
+            {
+                "name": "memory",
+                "value": "4 GB DDR4"
+            },
+            {
+                "name": "storage",
+                "value": "256 GB SSD"
+            },
+            {
+                "name": "display",
+                "value": "15.6\" Full HD, ComfyView"
+            },
+            {
+                "name": "graphics",
+                "value": "Integrated Intel UHD Graphics"
+            },
+            {
+                "name": "installedOS",
+                "value": "Windows 11 Home 64bit"
+            }
+        ],
+        "rating": 3,
+        "review_ids": [5, 12, 6],
+        "discount": 10,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 11,
+        "name": "HP Pavillion 14",
+        "category_id": 1,
+        "brand_id": 9,
+        "price": {
+            "old_price": 942.01,
+            "current_price": 759.33
+        },
+        "images": [
+            {
+                "big": "assets/img/hppav14.jpg",
+                "small": "assets/img/hppav14s.jpg"
+            },
+            {
+                "big": "assets/img/hppav14.1.jpg",
+                "small": "assets/img/hppav14.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The HP Pavilion 14 is a mid-range laptop designed for productivity and entertainment. It features a 14-inch Full HD display, Intel or AMD processors, and up to 16GB of RAM. The laptop is known for its performance and portability, making it a popular choice for students and professionals.",
+            "long": "<p>The HP Pavilion 14 is a mid-range laptop that offers a good balance of performance, portability, and affordability. It features a 14-inch Full HD display, an 11th generation Intel Core i5 processor, 8GB of RAM, and a 512GB SSD. The laptop also has a backlit keyboard, a fingerprint reader, and a full range of ports including USB 3.1, HDMI, and Ethernet. The Pavilion 14 is a good option for anyone who needs a reliable laptop for work or school, but doesn't want to spend a lot of money.</p>"
+        },
+        "specifications": [
+            {
+                "name": "processor",
+                "value": "Intel Core i5 1135G7"
+            },
+            {
+                "name": "memory",
+                "value": "8 GB DDR4"
+            },
+            {
+                "name": "storage",
+                "value": "256 GB SSD"
+            },
+            {
+                "name": "display",
+                "value": "14\" Full HD, IPS, Micro-edge, Anti-glare"
+            },
+            {
+                "name": "graphics",
+                "value": "Integrated Intel Iris Xe Graphics"
+            },
+            {
+                "name": "installedOS",
+                "value": "Windows 11 Home 64bit"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [10, 5, 12],
+        "discount": 20,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 12,
+        "name": "Samsung Galaxy S22",
+        "category_id": 2,
+        "brand_id": 5,
+        "price": {
+            "old_price": 986.88 ,
+            "current_price": 889.82
+        },
+        "images": [
+            {
+                "big": "assets/img/s22.jpg",
+                "small": "assets/img/s22s.jpg"
+            },
+            {
+                "big": "assets/img/s22.1.jpg",
+                "small": "assets/img/s22.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The Samsung Galaxy S22 is a high-end smartphone from Samsung's flagship Galaxy S series. It is expected to feature the latest technology and features, including a high-quality camera, powerful processor, and a large, high-resolution display. The phone is likely to be popular among those looking for a top-of-the-line Android device.",
+            "long": "</p><p>The Samsung Galaxy S22 is the latest flagship smartphone from Samsung. It features a 6.2-inch Super AMOLED display with a 120Hz refresh rate, making it perfect for gaming and streaming. It also boasts a powerful Exynos 2200 processor, 8GB of RAM, and up to 512GB of storage. The S22 has a triple camera setup on the back, including a 108MP primary sensor, a 12MP ultra-wide sensor, and a 5MP macro sensor. It also has a 10MP front-facing camera for high-quality selfies. The S22 runs on Android 12 and has a 4,000mAh battery with 25W fast charging support.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "10 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "50 + 12 + 10 MP"
+            },
+            {
+                "name": "memory",
+                "value": "8 GB"
+            },
+            {
+                "name": "storage",
+                "value": "128 GB"
+            },
+            {
+                "name": "battery",
+                "value": "3700 mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.1\" Dynamic AMOLED 2X"
+            },
+            {
+                "name": "color",
+                "value": "White"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [6, 11, 5],
+        "discount": 10,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 13,
+        "name": "Xiaomi 12T PRO",
+        "category_id": 2,
+        "brand_id": 10,
+        "price": {
+            "old_price": 912.70,
+            "current_price": 820.33
+        },
+        "images": [
+            {
+                "big": "assets/img/xiaomi12t.jpg",
+                "small": "assets/img/xiaomi12ts.jpg"
+            },
+            {
+                "big": "assets/img/xiaomi12t.1.jpg",
+                "small": "assets/img/xiaomi12t.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "The Xiaomi 12T PRO is a high-end smartphone from Chinese manufacturer Xiaomi. It is expected to feature the latest technology and features, including a high-quality camera, powerful processor, and a large, high-resolution display. The phone is likely to be popular among those looking for a top-of-the-line Android device at a more affordable price point compared to other high-end brands.",
+            "long": "<p>The Xiaomi 12T PRO is a flagship smartphone from Xiaomi. It features a 6.67-inch Full HD+ AMOLED display with a 120Hz refresh rate. The phone is powered by a Snapdragon 888+ processor, which is paired with up to 12GB of RAM and up to 512GB of storage. The 12T PRO boasts a triple camera setup on the back, including a 108MP primary sensor, a 20MP ultra-wide sensor, and an 8MP periscope telephoto lens. It also has a 20MP front-facing camera for high-quality selfies. The 12T PRO runs on MIUI 13 based on Android 11 and has a 5,000mAh battery with 120W fast charging support.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "20 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "200 + 8 + 2 MP"
+            },
+            {
+                "name": "memory",
+                "value": "8 GB"
+            },
+            {
+                "name": "storage",
+                "value": "256 GB"
+            },
+            {
+                "name": "battery",
+                "value": "5000 mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.67\" AMOLED"
+            },
+            {
+                "name": "color",
+                "value": "Blue"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [3, 5, 12],
+        "discount": 10,
+        "is_new": true,
+        "in_stock": true
+    },
+    {
+        "id": 14,
+        "name": "Xiaomi Redmi Note 11 Pro",
+        "category_id": 2,
+        "brand_id": 10,
+        "price": {
+            "old_price": 338.98,
+            "current_price": 305.08
+        },
+        "images": [
+            {
+                "big": "assets/img/xiaominote11.jpg",
+                "small": "assets/img/xiaominote11s.jpg"
+            },
+            {
+                "big": "assets/img/xiaominote11.1.jpg",
+                "small": "assets/img/xiaominote11.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "A mid-range smartphone from Xiaomi featuring a 6.67-inch FHD+ display, 64MP main camera, 16MP selfie camera, 5,000mAh battery, and 5G connectivity.",
+            "long": "<p>The Xiaomi Redmi Note 11 Pro is a mid-range smartphone from Xiaomi. It features a 6.67-inch Full HD+ AMOLED display with a 120Hz refresh rate. The phone is powered by a Snapdragon 870 processor, which is paired with up to 8GB of RAM and up to 256GB of storage. The Redmi Note 11 Pro boasts a quad camera setup on the back, including a 64MP primary sensor, an 8MP ultra-wide sensor, a 5MP macro sensor, and a 2MP depth sensor. It also has a 16MP front-facing camera for high-quality selfies. The Redmi Note 11 Pro runs on MIUI 13 based on Android 11 and has a 5,000mAh battery with 67W fast charging support.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "16 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "108 + 8 + 2 + 2 MP"
+            },
+            {
+                "name": "memory",
+                "value": "6 GB"
+            },
+            {
+                "name": "storage",
+                "value": "128 GB"
+            },
+            {
+                "name": "battery",
+                "value": "5000 mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.67\" Super AMOLED"
+            },
+            {
+                "name": "color",
+                "value": "Grey"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [6, 9, 11],
+        "discount": 10,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 15,
+        "name": "Xiaomi Mi 9 DS",
+        "category_id": 2,
+        "brand_id": 10,
+        "price": {
+            "old_price": 526.68,
+            "current_price": 474.57
+        },
+        "images": [
+            {
+                "big": "assets/img/xiaomimi9.jpg",
+                "small": "assets/img/xiaomimi9s.jpg"
+            },
+            {
+                "big": "assets/img/xiaomimi9.1.jpg",
+                "small": "assets/img/xiaomimi9.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "A flagship smartphone from Xiaomi featuring a 6.39-inch AMOLED display, triple rear cameras (48MP + 12MP + 16MP), 20MP front camera, Snapdragon 855 processor, 3,300mAh battery, and dual SIM support.",
+            "long": "<p>The Xiaomi Mi 9 DS is a high-end smartphone that features a 6.39-inch AMOLED display with a resolution of 1080 x 2340 pixels. It is powered by a Qualcomm Snapdragon 855 processor and has 6GB of RAM and 64GB of storage. The phone also features a triple camera setup on the back with a 48MP primary sensor, a 12MP telephoto lens, and a 16MP ultra-wide lens. The front-facing camera is a 20MP sensor. The phone has a 3300mAh battery and supports fast charging.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "20 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "48 + 12 + 16 MP"
+            },
+            {
+                "name": "memory",
+                "value": "6 GB"
+            },
+            {
+                "name": "storage",
+                "value": "128 GB"
+            },
+            {
+                "name": "battery",
+                "value": "3300  mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.39\" AMOLED"
+            },
+            {
+                "name": "color",
+                "value": "Blue"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [2, 10, 13],
+        "discount": 10,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 16,
+        "name": "Xiaomi PowerBank",
+        "category_id": 3,
+        "brand_id": 10,
+        "price": {
+            "old_price": null,
+            "current_price": 31.35
+        },
+        "images": [
+            {
+                "big": "assets/img/xiaomipb.jpg",
+                "small": "assets/img/xiaomipbs.jpg"
+            }
+        ],
+        "description": {
+            "short": "A portable power bank from Xiaomi that can charge various devices on the go. It comes in different sizes and capacities, ranging from 5,000mAh to 30,000mAh.",
+            "long": "<p>The Xiaomi PowerBank is a portable battery charger that is designed to charge your phone or tablet on the go. It has a 10000mAh battery capacity and can charge up to two devices simultaneously. The PowerBank features a USB-C port and a USB-A port, and supports fast charging with up to 18W output. The PowerBank is compact and lightweight, making it easy to carry around in your bag or pocket.</p>"
+        },
+        "specifications": [
+            {
+                "name": "capacity",
+                "value": "100000 mAh"
+            },
+            {
+                "name": "connectors",
+                "value": "2x USB-A, 1x USB-C"
+            },
+            {
+                "name": "wireless",
+                "value": false
+            },
+            {
+                "name": "flashlight",
+                "value": false
+            },
+            {
+                "name": "color",
+                "value": "Blue"
+            }
+        ],
+        "rating": 4,
+        "review_ids": [5, 8, 1],
+        "discount": null,
+        "is_new": false,
+        "in_stock": true
+    },
+    {
+        "id": 17,
+        "name": "Samsung Galaxy S23 Ultra",
+        "category_id": 2,
+        "brand_id": 5,
+        "price": {
+            "old_price": 1618.64,
+            "current_price": 1457.62
+        },
+        "images": [
+            {
+                "big": "assets/img/s23ultra.jpg",
+                "small": "assets/img/s23ultras.jpg"
+            },
+            {
+                "big": "assets/img/s23ultra.1.jpg",
+                "small": "assets/img/s23ultra.1s.jpg"
+            }
+        ],
+        "description": {
+            "short": "This is an upcoming smartphone from Samsung that is expected to feature a large AMOLED display, multiple rear cameras, a powerful processor, and 5G connectivity. As of now, no official details about its specifications and features have been announced.",
+            "long": "<p>The Samsung Galaxy S23 Ultra is a premium smartphone that features a 6.8-inch AMOLED display with a resolution of 1440 x 3200 pixels. It is powered by a Qualcomm Snapdragon 895 processor and has 12GB of RAM and 256GB of storage. The phone also features a quad camera setup on the back with a 108MP primary sensor, a 12MP telephoto lens, a 12MP ultra-wide lens, and a 5MP macro lens. The front-facing camera is a 40MP sensor. The phone has a 5000mAh battery and supports fast charging, wireless charging, and reverse wireless charging.</p>"
+        },
+        "specifications": [
+            {
+                "name": "frontCam",
+                "value": "12 MP"
+            },
+            {
+                "name": "rearCam",
+                "value": "200 + 10 + 10 + 12 MP"
+            },
+            {
+                "name": "memory",
+                "value": "8 GB"
+            },
+            {
+                "name": "storage",
+                "value": "256 GB"
+            },
+            {
+                "name": "battery",
+                "value": "5000 mAh"
+            },
+            {
+                "name": "display",
+                "value": "6.8\" AMOLED"
+            },
+            {
+                "name": "color",
+                "value": "Cream"
+            }
+        ],
+        "rating": 5,
+        "review_ids": [7, 13, 2],
+        "discount": 10,
+        "is_new": true,
+        "in_stock": true
+    }
+]

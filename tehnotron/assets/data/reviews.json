@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "name": "John Smith",
+        "date": "2022-02-18",
+        "rating": 4,
+        "review_text": "I really enjoyed using this product. It exceeded my expectations and performed well beyond what I had hoped for."
+    },
+    {
+        "id": 2,
+        "name": "Jane Doe",
+        "date": "2022-02-17",
+        "rating": 3,
+        "review_text": "Overall, I thought this product was decent. It wasn't the best I've ever used, but it got the job done and I was satisfied with my purchase."
+    },
+    {
+        "id": 3,
+        "name": "Bob Johnson",
+        "date": "2022-02-16",
+        "rating": 5,
+        "review_text": "This product is amazing! It completely changed the way I do things and has made my life so much easier. I would highly recommend it to anyone."
+    },
+    {
+        "id": 4,
+        "name": "John Doe",
+        "date": "2022-02-15",
+        "rating": 4,
+        "review_text": "I really enjoyed using this product. It was easy to set up and use, and it met all of my expectations."
+    },
+    {
+        "id": 5,
+        "name": "Jane Smith",
+        "date": "2022-02-12",
+        "rating": 5,
+        "review_text": "This is by far the best product I have ever used. It's so simple to use, and it works perfectly. I would recommend it to anyone!"
+    },
+    {
+        "id": 6,
+        "name": "Michael Johnson",
+        "date": "2022-02-10",
+        "rating": 3,
+        "review_text": "Overall, this is a good product, but I did have some trouble with the installation. Once it was set up, though, it worked fine."
+    },
+    {
+        "id": 7,
+        "name": "Sarah Lee",
+        "date": "2022-02-08",
+        "rating": 2,
+        "review_text": "I was disappointed with this product. It did not work as advertised, and I had a lot of trouble getting it set up. I would not recommend it."
+    },
+    {
+        "id": 8,
+        "name": "David Kim",
+        "date": "2022-02-05",
+        "rating": 5,
+        "review_text": "This product is amazing! It exceeded all of my expectations, and I would definitely recommend it to anyone looking for a great product."
+    },
+    {
+        "id": 9,
+        "name": "John Doe",
+        "date": "2022-01-15",
+        "rating": 5,
+        "review_text": "I recently purchased this product and I am blown away by how great it is. The quality is top-notch and it exceeded my expectations. Highly recommend!"
+    },
+    {
+        "id": 10,
+        "name": "Jane Smith",
+        "date": "2022-02-05",
+        "rating": 4,
+        "review_text": "This product is overall great, but there are a few minor issues that I've noticed. It's still worth the purchase though."
+    },
+    {
+        "id": 11,
+        "name": "Bob Johnson",
+        "date": "2022-02-10",
+        "rating": 2,
+        "review_text": "I had high hopes for this product, but unfortunately it did not meet my expectations. It's not terrible, but I wouldn't recommend it either."
+    },
+    {
+        "id": 12,
+        "name": "Sarah Williams",
+        "date": "2022-01-22",
+        "rating": 5,
+        "review_text": "I absolutely love this product! It has made my life so much easier and it's very high quality. I would definitely purchase again."
+    },
+    {
+        "id": 13,
+        "name": "Mike Brown",
+        "date": "2022-02-14",
+        "rating": 3,
+        "review_text": "This product is okay, but I think there are better options out there for the price. It gets the job done, but nothing spectacular."
+    }
+]
