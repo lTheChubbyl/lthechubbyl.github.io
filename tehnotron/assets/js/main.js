@@ -1,51 +1,24 @@
-$(document).ready(function() {
-	//#region AJAX LS REQUESTS
-	ajaxCallBack("nav.json", function(result) {
-		setLS("nav", result);
-    });
-	ajaxCallBack("products.json", function(result) {
-		setLS("products", result);
-    });
-	ajaxCallBack("categories.json", function(result) {
-		setLS("categories", result);
-    });
-	ajaxCallBack("brands.json", function(result) {
-		setLS("brands", result);
-    });
-	ajaxCallBack("sort.json", function(result) {
-		setLS("sort", result);
-    });
-	ajaxCallBack("reviews.json", function(result) {
-		setLS("reviews", result);
-    });
-	var nav = getLS("nav");
-	var products = getLS("products");
-	var categories = getLS("categories");
-	var brands = getLS("brands");
-	var sort = getLS("sort");
-	//#endregion
+ajaxCallBack("nav.json", function(result) {
+	setLS("nav", result);
+});
+ajaxCallBack("products.json", function(result) {
+	setLS("products", result);
+});
+ajaxCallBack("categories.json", function(result) {
+	setLS("categories", result);
+});
+ajaxCallBack("brands.json", function(result) {
+	setLS("brands", result);
+});
+ajaxCallBack("sort.json", function(result) {
+	setLS("sort", result);
+});
+ajaxCallBack("reviews.json", function(result) {
+	setLS("reviews", result);
 });
 
-window.onload = function() {
+$(document).ready(function() {
 	//#region AJAX LS REQUESTS
-	ajaxCallBack("nav.json", function(result) {
-		setLS("nav", result);
-    });
-	ajaxCallBack("products.json", function(result) {
-		setLS("products", result);
-    });
-	ajaxCallBack("categories.json", function(result) {
-		setLS("categories", result);
-    });
-	ajaxCallBack("brands.json", function(result) {
-		setLS("brands", result);
-    });
-	ajaxCallBack("sort.json", function(result) {
-		setLS("sort", result);
-    });
-	ajaxCallBack("reviews.json", function(result) {
-		setLS("reviews", result);
-    });
 	var nav = getLS("nav");
 	var products = getLS("products");
 	var categories = getLS("categories");
@@ -339,7 +312,7 @@ window.onload = function() {
 	}
 	$("#footer-cats").html(footerCats);
 	//#endregion
-};
+});
 
 var swiper = new Swiper('.swiper', {
 	slidesPerView: 1,
