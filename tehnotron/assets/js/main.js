@@ -1,6 +1,11 @@
 $(document).ready(function() {
 	//#region AJAX LS REQUESTS
-	makeLS();
+	ajaxCallBack("nav.json", setLS("nav", result));
+	ajaxCallBack("products.json", setLS("products", result));
+	ajaxCallBack("categories.json", setLS("categories", result));
+	ajaxCallBack("brands.json", setLS("brands", result));
+	ajaxCallBack("sort.json", setLS("sort", result));
+	ajaxCallBack("reviews.json", setLS("reviews", result));
 	var nav = getLS("nav");
 	var products = getLS("products");
 	var categories = getLS("categories");
@@ -295,31 +300,6 @@ $(document).ready(function() {
 	$("#footer-cats").html(footerCats);
 	//#endregion
 });
-
-async function makeLS() {
-	try {
-		await ajaxCallBack("nav.json", function(result) {
-			setLS("nav", result);
-		});
-		await ajaxCallBack("products.json", function(result) {
-			setLS("products", result);
-		});
-		await ajaxCallBack("categories.json", function(result) {
-			setLS("categories", result);
-		});
-		await ajaxCallBack("brands.json", function(result) {
-			setLS("brands", result);
-		});
-		await ajaxCallBack("sort.json", function(result) {
-			setLS("sort", result);
-		});
-		await ajaxCallBack("reviews.json", function(result) {
-			setLS("reviews", result);
-		});
-	} catch (error) {
-		console.log(error);
-	}
-}
 
 var swiper = new Swiper('.swiper', {
 	slidesPerView: 1,
