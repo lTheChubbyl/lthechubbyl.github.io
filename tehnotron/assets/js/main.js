@@ -1,11 +1,23 @@
 $(document).ready(function() {
 	//#region AJAX LS REQUESTS
-	ajaxCallBack("nav.json", setLS("nav", result));
-	ajaxCallBack("products.json", setLS("products", result));
-	ajaxCallBack("categories.json", setLS("categories", result));
-	ajaxCallBack("brands.json", setLS("brands", result));
-	ajaxCallBack("sort.json", setLS("sort", result));
-	ajaxCallBack("reviews.json", setLS("reviews", result));
+	ajaxCallBack("nav.json", function(result) {
+		setLS("nav", result);
+    });
+	ajaxCallBack("products.json", function(result) {
+		setLS("products", result);
+    });
+	ajaxCallBack("categories.json", function(result) {
+		setLS("categories", result);
+    });
+	ajaxCallBack("brands.json", function(result) {
+		setLS("brands", result);
+    });
+	ajaxCallBack("sort.json", function(result) {
+		setLS("sort", result);
+    });
+	ajaxCallBack("reviews.json", function(result) {
+		setLS("reviews", result);
+    });
 	var nav = getLS("nav");
 	var products = getLS("products");
 	var categories = getLS("categories");
