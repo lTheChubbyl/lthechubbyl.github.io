@@ -1,3 +1,37 @@
+function ajaxCallBack(file, result){
+    $.ajax({
+        url: "assets/data/" + file,
+        method: "get",
+        dataType: "json",
+        success: result,
+        error: function(jqXHR, exception){
+            var msg = "";
+			if (jqXHR.status === 0) {
+				msg = "Not connected. Verify network.";
+			}
+			else if (jqXHR.status == 404) {
+				msg = "Requested page not found [404]";
+			}
+			else if (jqXHR.status == 500) {
+				msg = "Internal Server Error [500]";
+			}
+			else if (exception === "parseerror") {
+				msg = "Requested JSON parse failed.";
+			}
+			else if (exception === "timeout") {
+				msg = "Requested page not found [404]";
+			}
+			else if (exception === "abort") {
+				msg = "AJAX request aborted.";
+			}
+			else {
+				msg = "Uncaught Error." + jqXHR.responseText;
+			}
+			return msg;
+        }
+    });
+}
+
 $(document).ready(function() {
 	//#region AJAX LS REQUESTS
 	ajaxCallBack("nav.json", function(result) {
@@ -340,40 +374,6 @@ var swiper = new Swiper('.swiper', {
 		}
 	}
 });
-
-function ajaxCallBack(file, result){
-    $.ajax({
-        url: "assets/data/" + file,
-        method: "get",
-        dataType: "json",
-        success: result,
-        error: function(jqXHR, exception){
-            var msg = "";
-			if (jqXHR.status === 0) {
-				msg = "Not connected. Verify network.";
-			}
-			else if (jqXHR.status == 404) {
-				msg = "Requested page not found [404]";
-			}
-			else if (jqXHR.status == 500) {
-				msg = "Internal Server Error [500]";
-			}
-			else if (exception === "parseerror") {
-				msg = "Requested JSON parse failed.";
-			}
-			else if (exception === "timeout") {
-				msg = "Requested page not found [404]";
-			}
-			else if (exception === "abort") {
-				msg = "AJAX request aborted.";
-			}
-			else {
-				msg = "Uncaught Error." + jqXHR.responseText;
-			}
-			return msg;
-        }
-    })
-}
 
 function setLS(name, value){
     localStorage.setItem(name, JSON.stringify(value));
