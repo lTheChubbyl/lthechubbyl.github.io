@@ -302,7 +302,7 @@ $(document).ready(function() {
 	}
 	$("#footer-cats").html(footerCats);
 	//#endregion
-	}, 2000);
+	}, 1500);
 });
 
 var swiper = new Swiper('.swiper', {
