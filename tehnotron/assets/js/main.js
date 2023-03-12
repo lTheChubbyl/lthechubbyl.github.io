@@ -302,7 +302,7 @@ $(document).ready(function() {
 	}
 	$("#footer-cats").html(footerCats);
 	//#endregion
-	}, 1500);
+	}, 2000);
 });
 
 var swiper = new Swiper('.swiper', {
@@ -333,12 +333,15 @@ var swiper = new Swiper('.swiper', {
 	}
 });
 
-function ajaxCallBack(file, result){
+function ajaxCallBack(file){
     $.ajax({
         url: "assets/data/" + file,
         method: "get",
         dataType: "json",
-        success: result,
+        success: function(result) {
+			file = file.substring(0, file.length-5)
+			setLS(file, result);
+		},
         error: function(jqXHR, exception){
             var msg = "";
 			if (jqXHR.status === 0) {
