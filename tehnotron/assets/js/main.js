@@ -46,6 +46,7 @@ $(document).ready(function() {
 	//#region URL
 		if (location.pathname == "/tehnotron/index.html" || location.pathname == "/tehnotron/") {
 		// if (location.pathname == "/index.html") {
+			console.log(location.pathname)
 			$("#responsive-nav ul li:nth-child(1)").addClass("active");
 			//#region HOME - COLLECTIONS
 			let categoryHTML = "";
