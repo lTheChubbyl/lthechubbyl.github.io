@@ -18,9 +18,6 @@ $(document).ready(function() {
 	ajaxCallBack("reviews.json", function(result) {
 		setLS("reviews", result);
     });
-	if (window.localStorage.length == 0) {
-		location.reload();
-	}
 	var nav = getLS("nav");
 	var products = getLS("products");
 	var categories = getLS("categories");
