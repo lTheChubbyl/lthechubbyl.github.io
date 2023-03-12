@@ -9,7 +9,7 @@ $(document).ready(function() {
 	//#endregion
 
 	setTimeout(function() {
-		$("#loader").hide();
+		
 		var nav = getLS("nav");
 		var products = getLS("products");
 		var categories = getLS("categories");
@@ -302,6 +302,7 @@ $(document).ready(function() {
 	}
 	$("#footer-cats").html(footerCats);
 	//#endregion
+	$("#loader").hide();
 	}, 1500);
 });
 
