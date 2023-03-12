@@ -1,316 +1,308 @@
 $(document).ready(function() {
 	//#region AJAX LS REQUESTS
-	ajaxCallBack("nav.json", function(result) {
-		setLS("nav", result);
-    });
-	ajaxCallBack("products.json", function(result) {
-		setLS("products", result);
-    });
-	ajaxCallBack("categories.json", function(result) {
-		setLS("categories", result);
-    });
-	ajaxCallBack("brands.json", function(result) {
-		setLS("brands", result);
-    });
-	ajaxCallBack("sort.json", function(result) {
-		setLS("sort", result);
-    });
-	ajaxCallBack("reviews.json", function(result) {
-		setLS("reviews", result);
-    });
-	var nav = getLS("nav");
-	var products = getLS("products");
-	var categories = getLS("categories");
-	var brands = getLS("brands");
-	var sort = getLS("sort");
+	ajaxCallBack("nav.json");
+	ajaxCallBack("products.json");
+	ajaxCallBack("categories.json");
+	ajaxCallBack("brands.json");
+	ajaxCallBack("sort.json");
+	ajaxCallBack("reviews.json");
 	//#endregion
 
-	//#region DYNAMIC NAV
-	let navHTML = "";
+	setTimeout(function() {
+		$("#loader").hide();
+		var nav = getLS("nav");
+		var products = getLS("products");
+		var categories = getLS("categories");
+		var brands = getLS("brands");
+		var sort = getLS("sort");
 
-	for (const link of nav) {
-		navHTML += `
-		<li class="nav-item px-3">
-			<a aria-current="page" href="${link.link}">${link.name}</a>
-		</li>
-		`;
-	}
-	$("#responsive-nav>.main-nav").html(navHTML);
+		//#region DYNAMIC NAV
+		let navHTML = "";
 
-	$(".menu-toggle > a").on("click", function (e) {
-		e.preventDefault();
-		$("#responsive-nav").toggleClass("active");
-	})
-	//#endregion
+		for (const link of nav) {
+			navHTML += `
+			<li class="nav-item px-3">
+				<a aria-current="page" href="${link.link}">${link.name}</a>
+			</li>
+			`;
+		}
+		$("#responsive-nav>.main-nav").html(navHTML);
 
-	//#region URL
-		if (location.pathname == "/tehnotron/index.html" || location.pathname == "/tehnotron/") {
-		// if (location.pathname == "/index.html") {
-			$("#responsive-nav ul li:nth-child(1)").addClass("active");
-			//#region HOME - COLLECTIONS
-			let categoryHTML = "";
+		$(".menu-toggle > a").on("click", function (e) {
+			e.preventDefault();
+			$("#responsive-nav").toggleClass("active");
+		})
+		//#endregion
 
-			for (const category of categories) {
-				categoryHTML += `
-					<div class="col-md-3 p-md-0 p-4">
-						<div class="shop">
-							<a href="store.html?cat=${category.id}">
-								<div class="shop-img">
-									<img src="assets/img/shop0${category.id}.png" alt="collections" />
-								</div>
-								<div class="shop-body">
-									<h3>${category.name}<br>Collection</h3>
-								</div>
-							</a>
+		//#region URL
+			if (location.pathname == "/tehnotron/index.html" || location.pathname == "/tehnotron/") {
+			// if (location.pathname == "/index.html") {
+				$("#responsive-nav ul li:nth-child(1)").addClass("active");
+				//#region HOME - COLLECTIONS
+				let categoryHTML = "";
+
+				for (const category of categories) {
+					categoryHTML += `
+						<div class="col-md-3 p-md-0 p-4">
+							<div class="shop">
+								<a href="store.html?cat=${category.id}">
+									<div class="shop-img">
+										<img src="assets/img/shop0${category.id}.png" alt="collections" />
+									</div>
+									<div class="shop-body">
+										<h3>${category.name}<br>Collection</h3>
+									</div>
+								</a>
+							</div>
 						</div>
-					</div>
-				`;
-			}
-			$("#collections").html(categoryHTML);
-			//#endregion
-
-			//#region HOME - NEW PRODUCTS SECTION DYNAMIC
-			var newProducts = products.filter(element => element.is_new == true);
-
-			$("#new-products .swiper .swiper-wrapper").html(getProducts(newProducts, "product swiper-slide"));
-			//#endregion
-			
-			//#region HOME - SALE COUNTER
-			setInterval(function() { makeTimer(); }, 1000);
-			//#endregion
-		}
-
-		else if (location.pathname == "/tehnotron/store.html") {
-		// else if (location.pathname == "/store.html") {
-			$("#responsive-nav ul li:nth-child(2)").addClass("active");
-			//#region STORE - PRODUCTS
-			$("#store>#store-products").html(getProducts(products, "product col-lg-4 col-sm-6 my-3"));
-			//#endregion
-
-			//#region STORE - SORT	
-			let htmlSort = "";
-			htmlSort = `<option value="0">Recommended</option>`;
-			for (const type of sort) {
-				htmlSort += `<option value="${type.value}">${type.name}</option>`;
-			}
-			$("#ddlSort").html(htmlSort);
-
-			$("#ddlSort").on("change", productsFilterAndSort);
-			//#endregion
-
-			//#region STORE - CATEGORIES
-			let rbCatHTML = "";
-			rbCatHTML += `
-				<div class="input-radio form-check">
-					<input class="form-check-input" type="radio" id="rb0" name="rbCat" value="0" checked>
-					<label class="form-check-label" for="rb0">
-						<span></span>
-						All
-						<small>(${products.length})</small>
-					</label>
-				</div>
-				`;
-			for (const category of categories) {
-				rbCatHTML += `
-				<div class="input-radio form-check">
-					<input class="form-check-input" type="radio" id="rb${category.id}" name="rbCat" value="${category.id}">
-					<label class="form-check-label" for="rb${category.id}">
-						<span></span>
-						${category.name}
-						<small>(${getNum(products, category.id, "category")})</small>
-					</label>
-				</div>
-				`;
-			}
-			$("#rbListCategory").html(rbCatHTML);
-
-			$(`#rbListCategory input[type="radio"]`).on("change", productsFilterAndSort);
-			//#endregion
-
-			//#region STORE - BRANDS
-			let chbBrandHTML = "";
-			for (const brand of brands) {
-				chbBrandHTML += `
-				<div class="input-checkbox form-check">
-					<input class="form-check-input" type="checkbox" id="chb${brand.id}" value="${brand.id}">
-					<label for="chb${brand.id}">
-						<span></span>
-						${brand.name}
-						<small>(${getNum(products, brand.id, "brand")})</small>
-					</label>
-				</div>
-				`;
-			}
-			$("#chbListBrands").html(chbBrandHTML);
-
-			$(`#chbListBrands input[type="checkbox"]`).on("change", productsFilterAndSort);
-			//#endregion
-
-			//#region STORE - PRICE
-			$("#range-value").html($("#rPrice").val() + " €");
-			$("#rPrice").on("input", function() {
-				$("#range-value").html($(this).val() + " €");
-				productsFilterAndSort();
-			});
-			//#endregion
-
-			//#region STORE - VIEWS
-			$("#store-grid-cells").on("click", function() {
-				$(this).addClass("active");
-				$("#store-grid-list").removeClass("active");
-				productsFilterAndSort();
-			});
-			$("#store-grid-list").on("click", function() {
-				$(this).addClass("active");
-				$("#store-grid-cells").removeClass("active");
-				productsFilterAndSort();
-			});
-			//#endregion
-
-			const params = new URLSearchParams(window.location.search);
-			const cat = params.get("cat");
-			if (cat != null) {
-				var radio = $("#rbListCategory input")[cat];
-				radio.checked = true;
-				var filteredProducts = products.filter(element => element.category_id == cat);
-				$("#store>#store-products").html(getProducts(filteredProducts, "product col-lg-4 col-sm-6 my-3"));
-			}
-		}
-
-		else if (location.pathname == "/tehnotron/product.html") {
-		// else if (location.pathname == "/product.html") {
-			getProductPage(products);
-
-			//#region PRODUCT - IMG CHANGE
-			$("#product-imgs img").on("click", function() {
-				let smallSrc = $(this).attr("src");
-				smallSrc = smallSrc.slice(0, -5) + smallSrc.slice(-4);
-				console.log(smallSrc)
-				$("#product-main-img .product-preview img").attr("src", smallSrc);
-			});
-			//#endregion
-		}
-
-		else if (location.pathname == "/tehnotron/checkout.html") {
-		// else if (location.pathname == "/checkout.html") {
-			getOrderItems(products);
-
-			//#region CHECKOUT - ORDER QTY
-			$(document).on("change", ".order-qty",  function() {
-				let num = $(this);
-				console.log($(this).data("id"))
-				console.log(num.val())
-		
-				for (const item of cartItems) {
-					if (num.data("id") == item.id) {
-						item.quantity = parseInt(num.val());
-						break;
-					}
+					`;
 				}
-				setLS("cart", cartItems);
-				// addToCart();
-				getOrderItems(products);
-			});
-			//#endregion
+				$("#collections").html(categoryHTML);
+				//#endregion
 
-			//#region CHECKOUT - FORM VALDATION
-			var formSubmit = document.querySelector("#form-submit");
-			if (formSubmit) {
-				formSubmit.addEventListener("click", formValidation);
+				//#region HOME - NEW PRODUCTS SECTION DYNAMIC
+				var newProducts = products.filter(element => element.is_new == true);
+
+				$("#new-products .swiper .swiper-wrapper").html(getProducts(newProducts, "product swiper-slide"));
+				//#endregion
+				
+				//#region HOME - SALE COUNTER
+				setInterval(function() { makeTimer(); }, 1000);
+				//#endregion
 			}
-			//#endregion
-		
-			//#region CHECKOUT - TRASH
-			var cartItems = getLS("cart");
-			$(document).on("click", ".trash", function(e) {
-				e.preventDefault;
-				cartItems.splice(cartItems.findIndex(element => element.id == $(this).data("id")), 1);
-				setLS("cart", cartItems);
-				getCartNum();
+
+			else if (location.pathname == "/tehnotron/store.html") {
+			// else if (location.pathname == "/store.html") {
+				$("#responsive-nav ul li:nth-child(2)").addClass("active");
+				//#region STORE - PRODUCTS
+				$("#store>#store-products").html(getProducts(products, "product col-lg-4 col-sm-6 my-3"));
+				//#endregion
+
+				//#region STORE - SORT	
+				let htmlSort = "";
+				htmlSort = `<option value="0">Recommended</option>`;
+				for (const type of sort) {
+					htmlSort += `<option value="${type.value}">${type.name}</option>`;
+				}
+				$("#ddlSort").html(htmlSort);
+
+				$("#ddlSort").on("change", productsFilterAndSort);
+				//#endregion
+
+				//#region STORE - CATEGORIES
+				let rbCatHTML = "";
+				rbCatHTML += `
+					<div class="input-radio form-check">
+						<input class="form-check-input" type="radio" id="rb0" name="rbCat" value="0" checked>
+						<label class="form-check-label" for="rb0">
+							<span></span>
+							All
+							<small>(${products.length})</small>
+						</label>
+					</div>
+					`;
+				for (const category of categories) {
+					rbCatHTML += `
+					<div class="input-radio form-check">
+						<input class="form-check-input" type="radio" id="rb${category.id}" name="rbCat" value="${category.id}">
+						<label class="form-check-label" for="rb${category.id}">
+							<span></span>
+							${category.name}
+							<small>(${getNum(products, category.id, "category")})</small>
+						</label>
+					</div>
+					`;
+				}
+				$("#rbListCategory").html(rbCatHTML);
+
+				$(`#rbListCategory input[type="radio"]`).on("change", productsFilterAndSort);
+				//#endregion
+
+				//#region STORE - BRANDS
+				let chbBrandHTML = "";
+				for (const brand of brands) {
+					chbBrandHTML += `
+					<div class="input-checkbox form-check">
+						<input class="form-check-input" type="checkbox" id="chb${brand.id}" value="${brand.id}">
+						<label for="chb${brand.id}">
+							<span></span>
+							${brand.name}
+							<small>(${getNum(products, brand.id, "brand")})</small>
+						</label>
+					</div>
+					`;
+				}
+				$("#chbListBrands").html(chbBrandHTML);
+
+				$(`#chbListBrands input[type="checkbox"]`).on("change", productsFilterAndSort);
+				//#endregion
+
+				//#region STORE - PRICE
+				$("#range-value").html($("#rPrice").val() + " €");
+				$("#rPrice").on("input", function() {
+					$("#range-value").html($(this).val() + " €");
+					productsFilterAndSort();
+				});
+				//#endregion
+
+				//#region STORE - VIEWS
+				$("#store-grid-cells").on("click", function() {
+					$(this).addClass("active");
+					$("#store-grid-list").removeClass("active");
+					productsFilterAndSort();
+				});
+				$("#store-grid-list").on("click", function() {
+					$(this).addClass("active");
+					$("#store-grid-cells").removeClass("active");
+					productsFilterAndSort();
+				});
+				//#endregion
+
+				const params = new URLSearchParams(window.location.search);
+				const cat = params.get("cat");
+				if (cat != null) {
+					var radio = $("#rbListCategory input")[cat];
+					radio.checked = true;
+					var filteredProducts = products.filter(element => element.category_id == cat);
+					$("#store>#store-products").html(getProducts(filteredProducts, "product col-lg-4 col-sm-6 my-3"));
+				}
+			}
+
+			else if (location.pathname == "/tehnotron/product.html") {
+			// else if (location.pathname == "/product.html") {
+				getProductPage(products);
+
+				//#region PRODUCT - IMG CHANGE
+				$("#product-imgs img").on("click", function() {
+					let smallSrc = $(this).attr("src");
+					smallSrc = smallSrc.slice(0, -5) + smallSrc.slice(-4);
+					console.log(smallSrc)
+					$("#product-main-img .product-preview img").attr("src", smallSrc);
+				});
+				//#endregion
+			}
+
+			else if (location.pathname == "/tehnotron/checkout.html") {
+			// else if (location.pathname == "/checkout.html") {
 				getOrderItems(products);
-			});
-			//#endregion
-		}
 
-		else if (location.pathname == "/tehnotron/author.html") {
-		// else if (location.pathname == "/author.html") {
-			$("#responsive-nav ul li:nth-child(6)").addClass("active");
-		}
-	//#endregion
+				//#region CHECKOUT - ORDER QTY
+				$(document).on("change", ".order-qty",  function() {
+					let num = $(this);
+					console.log($(this).data("id"))
+					console.log(num.val())
+			
+					for (const item of cartItems) {
+						if (num.data("id") == item.id) {
+							item.quantity = parseInt(num.val());
+							break;
+						}
+					}
+					setLS("cart", cartItems);
+					// addToCart();
+					getOrderItems(products);
+				});
+				//#endregion
 
-	//#region CART
-	$(document).on("click", ".add-to-cart-btn", addToCart);
-	getCartNum();
-	//#endregion
+				//#region CHECKOUT - FORM VALDATION
+				var formSubmit = document.querySelector("#form-submit");
+				if (formSubmit) {
+					formSubmit.addEventListener("click", formValidation);
+				}
+				//#endregion
+			
+				//#region CHECKOUT - TRASH
+				var cartItems = getLS("cart");
+				$(document).on("click", ".trash", function(e) {
+					e.preventDefault;
+					cartItems.splice(cartItems.findIndex(element => element.id == $(this).data("id")), 1);
+					setLS("cart", cartItems);
+					getCartNum();
+					getOrderItems(products);
+				});
+				//#endregion
+			}
 
-	//#region WISHLIST
-	$(".wishlist").on("click", function() {
-		$("#wishlist-tab").show();
-		$("#wishlist-tab").addClass("active");
-	});
-		// $(document).mouseup(function(e){
-		// 	if(!$("#wishlist-tab").is(e.target) && $("#wishlist-tab").has(e.target).length === 0){
-		// 		$("#wishlist-tab").hide();
-		// 	}
-		// });
+			else if (location.pathname == "/tehnotron/author.html") {
+			// else if (location.pathname == "/author.html") {
+				$("#responsive-nav ul li:nth-child(6)").addClass("active");
+			}
+		//#endregion
 
-	var wishlist = [];
-	$(document).on("click", ".add-to-wishlist", addToWishlist);
-	getWishNum();
+		//#region CART
+		$(document).on("click", ".add-to-cart-btn", addToCart);
+		getCartNum();
+		//#endregion
 
-	wishlist = getLS("wishlist");
-	$("#wishlist-tab-content").html(getWishlistProducts(wishlist));
+		//#region WISHLIST
+		$(".wishlist").on("click", function() {
+			$("#wishlist-tab").show();
+			$("#wishlist-tab").addClass("active");
+		});
+			// $(document).mouseup(function(e){
+			// 	if(!$("#wishlist-tab").is(e.target) && $("#wishlist-tab").has(e.target).length === 0){
+			// 		$("#wishlist-tab").hide();
+			// 	}
+			// });
 
-	$("#close-tab").on("click", function() {
-		$("#wishlist-tab").removeClass("active");
-	});
-	//#endregion
+		var wishlist = [];
+		$(document).on("click", ".add-to-wishlist", addToWishlist);
+		getWishNum();
 
-	//#region SEARCH
-	$("#header-search button").on("click", function() {
-		setLS("search-temp", $("#search").val());
-		if (location.pathname != "/tehnotron/store.html") {
-			window.location.pathname = "/tehnotron/store.html";
-		}
-		else {
-			productsFilterAndSort();
-		}
-	});
-	$('#search').keypress(function(event){
-		var keycode = (event.keyCode ? event.keyCode : event.which);
+		wishlist = getLS("wishlist");
+		$("#wishlist-tab-content").html(getWishlistProducts(wishlist));
 
-		if(keycode == "13"){
+		$("#close-tab").on("click", function() {
+			$("#wishlist-tab").removeClass("active");
+		});
+		//#endregion
+
+		//#region SEARCH
+		$("#header-search button").on("click", function() {
 			setLS("search-temp", $("#search").val());
 			if (location.pathname != "/tehnotron/store.html") {
 				window.location.pathname = "/tehnotron/store.html";
 			}
-		}
-		else {
-			productsFilterAndSort();
-		}
-	
-	});
-	$("#search").val(getLS("search-temp"));
-	productsFilterAndSort();
-	localStorage.removeItem("search-temp");
-	//#endregion
+			else {
+				productsFilterAndSort();
+			}
+		});
+		$('#search').keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
 
-	//#region INPUT NUMBER DISABLE
-	$("[type='number']").on("keydown",function (e) {
-		let windowSize = $(window).width()
-		if (windowSize > 767) {
-			e.preventDefault();
-		}
-	});
-	//#endregion
+			if(keycode == "13"){
+				setLS("search-temp", $("#search").val());
+				if (location.pathname != "/tehnotron/store.html") {
+					window.location.pathname = "/tehnotron/store.html";
+				}
+			}
+			else {
+				productsFilterAndSort();
+			}
+		
+		});
+		$("#search").val(getLS("search-temp"));
+		productsFilterAndSort();
+		localStorage.removeItem("search-temp");
+		//#endregion
 
-	//#region FOOTER CATEGORIES
+		//#region INPUT NUMBER DISABLE
+		$("[type='number']").on("keydown",function (e) {
+			let windowSize = $(window).width()
+			if (windowSize > 767) {
+				e.preventDefault();
+			}
+		});
+		//#endregion
+
+		//#region FOOTER CATEGORIES
 	let footerCats = "";
 	for (const cat of categories) {
 		footerCats += `<li><a href="store.html?cat=${cat.id}">${cat.name}</a></li>`;
 	}
 	$("#footer-cats").html(footerCats);
 	//#endregion
+	}, 1500);
 });
 
 var swiper = new Swiper('.swiper', {
