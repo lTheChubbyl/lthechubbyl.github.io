@@ -302,8 +302,12 @@ $(document).ready(function() {
 	}
 	$("#footer-cats").html(footerCats);
 	//#endregion
-	$("#loader").hide();
-	}, 1500);
+	setTimeout(function() {
+		$("#loader").hide();
+	}, 500)
+	
+	}, 1000);
+	
 });
 
 var swiper = new Swiper('.swiper', {
