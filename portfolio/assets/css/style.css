@@ -2,40 +2,20 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Montserrat', Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
 }
-
 *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* _-_ VARIABLES _-_ */
 /* _-_ ANIMATIONS _-_ */
-@-webkit-keyframes reveal {
-  to {
-    left: 100%;
-  }
-}
 @keyframes reveal {
   to {
     left: 100%;
   }
 }
-
-@-webkit-keyframes swoosh {
-  0%, 100% {
-    -webkit-clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
-            clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
-  }
-  50% {
-    -webkit-clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
-            clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
-  }
-}
-
 @keyframes swoosh {
   0%, 100% {
     -webkit-clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
@@ -46,33 +26,18 @@
             clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
   }
 }
-
-@-webkit-keyframes goDown {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate(-1rem, -1rem);
-            transform: translate(-1rem, -1rem);
-  }
-}
-
 @keyframes goDown {
   0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translate(-1rem, -1rem);
-            transform: translate(-1rem, -1rem);
+    transform: translate(-1rem, -1rem);
   }
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 html body {
   line-height: 1;
   background: #1D1D1F;
@@ -80,13 +45,13 @@ html body {
 }
 
 h1 {
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-weight: 400;
   font-size: 4.5rem;
 }
 
 h2 {
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-weight: 700;
   font-size: 2rem;
   text-align: center;
@@ -97,18 +62,16 @@ h2 {
   background: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
 }
-
 h2 span {
   color: #83EEFF;
   text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.5);
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
 }
 
 hr {
   color: #587291;
   width: 2.5rem;
-  -webkit-box-shadow: 0 1px 2px #000;
-          box-shadow: 0 1px 2px #000;
+  box-shadow: 0 1px 2px #000;
 }
 
 .wrapper {
@@ -118,50 +81,37 @@ hr {
 
 /* _*-*_ HEADER _*-*_ */
 header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   z-index: 2;
   background: rgba(0, 0, 0, 0.2);
 }
-
 header nav ul {
   list-style-type: none;
   text-align: right;
   margin: 1.2rem auto;
 }
-
 header nav ul li {
   display: block;
 }
-
 header nav ul li a {
   text-decoration: none;
   color: #FFFAFA;
   display: block;
   padding: 0.3em;
   font-size: 1.2rem;
-  font-family: 'Jura', Arial, sans-serif;
-  -webkit-transition: 200ms ease-in-out;
+  font-family: "Jura", Arial, sans-serif;
   transition: 200ms ease-in-out;
   margin: 0 0.2em;
 }
-
 header nav ul li:hover {
   text-shadow: 0 0 0.5em rgba(131, 238, 255, 0.6), 0 0 0.5em rgba(131, 238, 255, 0.5);
 }
-
 header nav .vr {
   border-right: 2px solid #83EEFF;
   height: 25%;
@@ -179,31 +129,21 @@ header nav .vr {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
-
 #intro #logo {
   position: absolute;
   width: 100%;
   z-index: 4;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 1rem;
 }
-
 #intro #logo a img {
   width: 6rem;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
-
 #intro #logo a img:hover {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
-
 #intro video {
   width: 100%;
   height: 100%;
@@ -211,172 +151,133 @@ header nav .vr {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-filter: brightness(25%);
-          filter: brightness(25%);
+  filter: brightness(25%);
 }
-
 #intro #intro-desc {
   position: absolute;
   top: 25%;
   left: 16%;
 }
-
 #intro #intro-desc .intro-desc-item {
   border-left: 3px solid #83EEFF;
   padding-left: 1.5rem;
   background: rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
 }
-
 #intro #intro-desc .intro-desc-item h1 {
   position: relative;
   padding: 0.2em;
 }
-
 #intro #intro-desc .intro-desc-item h1::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
 #intro #intro-desc .intro-desc-item h1::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: #FFFAFA;
-  -webkit-animation: reveal 1.5s 100ms forwards;
-          animation: reveal 1.5s 100ms forwards;
+  animation: reveal 1.5s 100ms forwards;
 }
-
 #intro #intro-desc .intro-desc-item p {
   padding: 0.45em;
   position: relative;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-size: 1.5rem;
 }
-
 #intro #intro-desc .intro-desc-item p.intro-desc-title::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
 #intro #intro-desc .intro-desc-item p.intro-desc-title::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background: #FFFAFA;
-  -webkit-animation: reveal 1.5s 1.5s forwards;
-          animation: reveal 1.5s 1.5s forwards;
+  animation: reveal 1.5s 1.5s forwards;
 }
-
 #intro #incentive {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   bottom: 10%;
 }
-
 #intro #incentive a {
   text-decoration: none;
 }
-
 #intro #incentive a .arrow {
   width: 3rem;
   height: 3rem;
   border-right: 2px solid #83EEFF;
   border-bottom: 2px solid #83EEFF;
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
 }
-
 #intro #incentive a .arrow::before {
   width: 1.5rem;
   height: 1.5rem;
   border-right: 1px solid #83EEFF;
   border-bottom: 1px solid #83EEFF;
-  content: '';
+  content: "";
   position: absolute;
   right: 25%;
   bottom: 25%;
-  -webkit-animation: goDown 2s 3s infinite;
-          animation: goDown 2s 3s infinite;
+  animation: goDown 2s 3s infinite;
 }
 
 #services {
   padding: 3rem 0 4.5rem;
 }
-
 #services .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 0.8rem;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 #services .wrapper .services-part {
   text-align: center;
   background: rgba(128, 128, 128, 0.1);
   border-left: 3px solid #FFFAFA;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 24%;
 }
-
 #services .wrapper .services-part i {
   font-size: 2.5rem;
   padding: 1.2rem;
-  -webkit-box-shadow: 3px 3px 3px #000;
-          box-shadow: 3px 3px 3px #000;
+  box-shadow: 3px 3px 3px #000;
   margin: 2rem auto;
 }
-
 #services .wrapper .services-part h3 {
   color: #83EEFF;
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.4);
 }
-
 #services .wrapper .services-part hr {
   margin: 0.6rem auto;
 }
-
 #services .wrapper .services-part p {
   line-height: 1.4;
   padding: 1.5em;
 }
-
 #services .wrapper .services-part:last-of-type i {
-  width: calc(5rem+10px);
+  width: calc(5rem + 10px);
 }
 
 #skills {
@@ -384,51 +285,36 @@ header nav .vr {
   background: #2b2b2e;
   width: 100%;
 }
-
 #skills .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 2rem;
 }
-
 #skills .wrapper .skills-part {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 14%;
   height: 7.5rem;
   background: #FFFAFA;
 }
-
 #skills .wrapper .skills-part .skill-desc {
   color: #000;
   text-align: center;
   margin: 0 auto;
 }
-
 #skills .wrapper .skills-part .skill-desc i {
   font-size: 3rem;
   text-align: center;
   margin: 0.3em auto;
   text-shadow: 2px 2px 2px rgba(131, 238, 255, 0.4);
 }
-
 #skills .wrapper .skills-part .skill-desc h3 {
   font-size: 1.2rem;
   font-weight: 400;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   padding: 0.5em;
 }
-
 #skills .wrapper .skills-part .skill-bar-out {
   height: 100%;
   width: 30%;
@@ -436,17 +322,14 @@ header nav .vr {
   position: relative;
   border-left: 1px solid #1D1D1F;
 }
-
 #skills .wrapper .skills-part .skill-bar-out .skill-bar-in {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #83EEFF;
-  -webkit-animation: swoosh 1.5s ease-in-out infinite;
-          animation: swoosh 1.5s ease-in-out infinite;
+  background: rgba(131, 238, 255, 0.5);
+  animation: swoosh 1.5s ease-in-out infinite 0.5s;
 }
-
 #skills .wrapper .skills-part .skill-bar-out .skill-bar-in p {
   position: absolute;
   color: black;
@@ -454,29 +337,33 @@ header nav .vr {
   width: 100%;
   text-align: center;
   font-weight: 700;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
 }
-
+#skills .wrapper .skills-part .skill-bar-out .skill-bar-in::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #83EEFF;
+  animation: swoosh 1.5s ease-in-out infinite;
+}
 #skills .wrapper .skills-part:nth-of-type(6n+1) .skill-bar-out .skill-bar-in {
   height: 100%;
 }
-
 #skills .wrapper .skills-part:nth-of-type(6n+2) .skill-bar-out .skill-bar-in {
-  height: 95%;
+  height: 100%;
 }
-
 #skills .wrapper .skills-part:nth-of-type(6n+3) .skill-bar-out .skill-bar-in {
-  height: 70%;
+  height: 85%;
 }
-
 #skills .wrapper .skills-part:nth-of-type(6n+4) .skill-bar-out .skill-bar-in {
-  height: 50%;
-}
-
-#skills .wrapper .skills-part:nth-of-type(6n+5) .skill-bar-out .skill-bar-in {
   height: 75%;
 }
-
+#skills .wrapper .skills-part:nth-of-type(6n+5) .skill-bar-out .skill-bar-in {
+  height: 90%;
+}
 #skills .wrapper .skills-part:nth-of-type(6n+6) .skill-bar-out .skill-bar-in {
   height: 80%;
 }
@@ -484,118 +371,85 @@ header nav .vr {
 #projects {
   padding: 3rem 0 4.5rem;
 }
-
 #projects .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
 }
-
 #projects .wrapper .projects-part {
   position: relative;
   width: 32%;
 }
-
 #projects .wrapper .projects-part img {
   display: block;
   width: 100%;
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-  -webkit-transition: 300ms ease-in-out;
+  filter: grayscale(0%);
   transition: 300ms ease-in-out;
 }
-
 #projects .wrapper .projects-part .project-desc {
   position: absolute;
   opacity: 1;
   bottom: 0;
   width: 100%;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background: rgba(0, 0, 0, 0.7);
   border-left: 3px solid #FFFAFA;
   padding: 0.5em;
-  -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
 }
-
 #projects .wrapper .projects-part .project-desc h3 {
   margin-bottom: 0.3em;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   color: #83EEFF;
   padding: 0.25em;
   text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.4);
 }
-
 #projects .wrapper .projects-part .project-desc p {
   font-size: 1rem;
 }
-
 #projects .wrapper .projects-part .project-desc p span {
   color: #83EEFF;
 }
-
 #projects .wrapper .projects-part .project-btn {
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: 300ms ease-in-out;
+  transform: translate(-50%, -50%);
   transition: 300ms ease-in-out;
 }
-
 #projects .wrapper .projects-part .project-btn a {
   text-transform: uppercase;
   text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.7), 0 0 0.4em rgba(255, 255, 255, 0.5);
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-weight: 700;
   color: #83EEFF;
   border: 3px solid #83EEFF;
   padding: 0.75em 1.5em;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.7), 0 0 0.4em rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0 0 0.5em 0 #83EEFF, inset 0 0 0.5em 0 #83EEFF;
-          box-shadow: 0 0 0.5em 0 #83EEFF, inset 0 0 0.5em 0 #83EEFF;
+  box-shadow: 0 0 0.5em 0 #83EEFF, inset 0 0 0.5em 0 #83EEFF;
   text-decoration: none;
 }
-
 #projects .wrapper .projects-part .project-btn a:hover {
   text-shadow: 0 0 0.6em rgba(255, 255, 255, 0.8), 0 0 0.7em rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: 0 0 0.8em 0.1em #83EEFF, inset 0 0 0.8em 0.1em #83EEFF;
-          box-shadow: 0 0 0.8em 0.1em #83EEFF, inset 0 0 0.8em 0.1em #83EEFF;
+  box-shadow: 0 0 0.8em 0.1em #83EEFF, inset 0 0 0.8em 0.1em #83EEFF;
 }
-
 #projects .wrapper .projects-part:hover img {
-  -webkit-filter: grayscale(80%) brightness(20%);
-          filter: grayscale(80%) brightness(20%);
+  filter: grayscale(80%) brightness(20%);
 }
-
 #projects .wrapper .projects-part:hover .project-desc {
   opacity: 0;
 }
-
 #projects .wrapper .projects-part:hover .project-btn {
   opacity: 1;
 }
-
 #projects .wrapper .projects-part:last-of-type .project-btn a {
   pointer-events: none;
 }
@@ -604,31 +458,20 @@ header nav .vr {
   padding: 3rem 0 4.5rem;
   background: #2b2b2e;
 }
-
 #about-me .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 6rem;
 }
-
 #about-me .wrapper #about-me-l-part #about-me-img {
   position: relative;
 }
-
 #about-me .wrapper #about-me-l-part #about-me-img img {
   display: block;
   width: 100%;
 }
-
 #about-me .wrapper #about-me-l-part #about-me-img #socials {
   position: absolute;
   bottom: 0;
@@ -636,64 +479,50 @@ header nav .vr {
   text-align: center;
   background: rgba(0, 0, 0, 0.6);
 }
-
 #about-me .wrapper #about-me-l-part #about-me-img #socials i {
   font-size: 1.8rem;
   padding: 0.2em;
   color: #FFFAFA;
   margin: 0.2em 0;
-  -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   text-shadow: 0 0 0.2em rgba(131, 238, 255, 0.3), 0 0 0.3em rgba(131, 238, 255, 0.4);
 }
-
 #about-me .wrapper #about-me-l-part #about-me-img #socials i:hover {
   text-shadow: 0 0 0.4em rgba(131, 238, 255, 0.5), 0 0 0.5em rgba(131, 238, 255, 0.6);
   font-size: 2.2rem;
 }
-
 #about-me .wrapper #about-me-r-part {
   width: 50%;
 }
-
 #about-me .wrapper #about-me-r-part h3 {
   color: #83EEFF;
   text-transform: uppercase;
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   text-shadow: 0 0 0.2em rgba(255, 255, 255, 0.4);
 }
-
 #about-me .wrapper #about-me-r-part hr {
   margin: 0.3rem 0 1rem;
 }
-
 #about-me .wrapper #about-me-r-part .info-desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #about-me .wrapper #about-me-r-part .info-desc .info-desc-l {
   width: 8rem;
 }
-
 #about-me .wrapper #about-me-r-part .info-desc .info-desc-l p {
   margin: 0.3em 0;
   font-size: 1.2rem;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   padding: 0.5em 0;
   color: rgba(255, 250, 250, 0.8);
 }
-
 #about-me .wrapper #about-me-r-part .info-desc .info-desc-r p {
   margin: 0.3em 0;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-size: 1.2rem;
   padding: 0.5em;
   background: #000;
@@ -703,39 +532,28 @@ header nav .vr {
 #contact {
   padding: 3rem 0 4.5rem;
 }
-
 #contact .wrapper #contact-form {
   width: 70%;
   margin: 0 auto;
 }
-
 #contact .wrapper #contact-form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem 5rem;
 }
-
 #contact .wrapper #contact-form form .form-part {
   width: 45%;
 }
-
 #contact .wrapper #contact-form form .form-part label {
   color: #FFFAFA;
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-size: 1.1rem;
 }
-
 #contact .wrapper #contact-form form .form-part hr {
   margin-top: 0.3rem;
 }
-
 #contact .wrapper #contact-form form .form-part input {
   width: 100%;
   color: #FFFAFA;
@@ -745,41 +563,23 @@ header nav .vr {
   background: rgba(0, 0, 0, 0.5);
   margin-top: 1rem;
   font-size: 1rem;
-  -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
 }
-
-#contact .wrapper #contact-form form .form-part input::-webkit-input-placeholder {
+#contact .wrapper #contact-form form .form-part input::-moz-placeholder {
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-
-#contact .wrapper #contact-form form .form-part input:-ms-input-placeholder {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-#contact .wrapper #contact-form form .form-part input::-ms-input-placeholder {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 #contact .wrapper #contact-form form .form-part input::placeholder {
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-
 #contact .wrapper #contact-form form .form-part input:focus {
   border-left: 3px solid #83EEFF;
   outline: none;
-  -webkit-box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
-          box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
+  box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
 }
-
 #contact .wrapper #contact-form form textarea {
   width: 100%;
   color: #FFFAFA;
@@ -788,64 +588,41 @@ header nav .vr {
   padding: 8px;
   background: rgba(0, 0, 0, 0.5);
   resize: none;
-  -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
-
-#contact .wrapper #contact-form form textarea::-webkit-input-placeholder {
+#contact .wrapper #contact-form form textarea::-moz-placeholder {
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-
-#contact .wrapper #contact-form form textarea:-ms-input-placeholder {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-#contact .wrapper #contact-form form textarea::-ms-input-placeholder {
-  font-style: italic;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
 #contact .wrapper #contact-form form textarea::placeholder {
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-
 #contact .wrapper #contact-form form textarea:focus {
   outline: none;
   border-left: 3px solid #83EEFF;
-  -webkit-box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
-          box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
+  box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
 }
-
 #contact .wrapper #contact-form form input#btn {
   text-transform: uppercase;
   text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.7), 0 0 0.4em rgba(255, 255, 255, 0.5);
-  font-family: 'Jura', Arial, sans-serif;
+  font-family: "Jura", Arial, sans-serif;
   font-weight: 700;
   color: #83EEFF;
   border: 3px solid #83EEFF;
   padding: 0.75em 1.5em;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.7), 0 0 0.4em rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0 0 0.5em 0 #83EEFF, inset 0 0 0.5em 0 #83EEFF;
-          box-shadow: 0 0 0.5em 0 #83EEFF, inset 0 0 0.5em 0 #83EEFF;
+  box-shadow: 0 0 0.5em 0 #83EEFF, inset 0 0 0.5em 0 #83EEFF;
   margin: 0 auto;
 }
-
 #contact .wrapper #contact-form form input#btn:hover {
   text-shadow: 0 0 0.6em rgba(255, 255, 255, 0.8), 0 0 0.7em rgba(255, 255, 255, 0.7);
-  -webkit-box-shadow: 0 0 0.8em 0.1em #83EEFF, inset 0 0 0.8em 0.1em #83EEFF;
-          box-shadow: 0 0 0.8em 0.1em #83EEFF, inset 0 0 0.8em 0.1em #83EEFF;
+  box-shadow: 0 0 0.8em 0.1em #83EEFF, inset 0 0 0.8em 0.1em #83EEFF;
 }
-
 #contact .wrapper #contact-form form input#btn:hover {
   cursor: pointer;
 }
@@ -859,41 +636,12 @@ footer {
   -webkit-clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
 }
-
 footer .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 1rem;
 }
-
-footer .wrapper #necessary {
-  text-align: center;
-}
-
-footer .wrapper #necessary a {
-  text-decoration: none;
-  color: #FFFAFA;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-}
-
-footer .wrapper #necessary a i {
-  font-size: 2rem;
-  padding: 0.2em;
-}
-
-footer .wrapper #necessary a:hover {
-  text-shadow: 0 0 0.4em rgba(131, 238, 255, 0.6), 0 0 0.3em rgba(131, 238, 255, 0.5);
-}
-
 footer .wrapper #copyright {
   color: white;
   text-align: center;
@@ -983,18 +731,14 @@ footer .wrapper #copyright {
     font-size: 0.8rem;
     text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.6), 0 0 0.4em rgba(255, 255, 255, 0.4);
     padding: 0.3em 1.2em;
-    -webkit-box-shadow: 0 0 0.4em 0 #83EEFF, inset 0 0 0.4em 0 #83EEFF;
-            box-shadow: 0 0 0.4em 0 #83EEFF, inset 0 0 0.4em 0 #83EEFF;
+    box-shadow: 0 0 0.4em 0 #83EEFF, inset 0 0 0.4em 0 #83EEFF;
   }
   #projects .wrapper .projects-part .project-btn a:hover {
     text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.7), 0 0 0.4em rgba(255, 255, 255, 0.6);
-    -webkit-box-shadow: 0 0 0.7em 0.1em #83EEFF, inset 0 0 0.7em 0.1em #83EEFF;
-            box-shadow: 0 0 0.7em 0.1em #83EEFF, inset 0 0 0.7em 0.1em #83EEFF;
+    box-shadow: 0 0 0.7em 0.1em #83EEFF, inset 0 0 0.7em 0.1em #83EEFF;
   }
   #about-me .wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     gap: 1rem;
   }
   #about-me .wrapper #about-me-l-part #about-me-img {
@@ -1048,25 +792,13 @@ footer .wrapper #copyright {
     margin-top: 0.8rem;
     font-size: 0.9rem;
   }
-  #contact .wrapper #contact-form form .form-part input::-webkit-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form .form-part input:-ms-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form .form-part input::-ms-input-placeholder {
+  #contact .wrapper #contact-form form .form-part input::-moz-placeholder {
     font-size: 0.8rem;
   }
   #contact .wrapper #contact-form form .form-part input::placeholder {
     font-size: 0.8rem;
   }
-  #contact .wrapper #contact-form form textarea::-webkit-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form textarea:-ms-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form textarea::-ms-input-placeholder {
+  #contact .wrapper #contact-form form textarea::-moz-placeholder {
     font-size: 0.8rem;
   }
   #contact .wrapper #contact-form form textarea::placeholder {
@@ -1076,16 +808,13 @@ footer .wrapper #copyright {
     font-size: 0.8rem;
     text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.6), 0 0 0.4em rgba(255, 255, 255, 0.4);
     padding: 0.3em 1.2em;
-    -webkit-box-shadow: 0 0 0.4em 0 #83EEFF, inset 0 0 0.4em 0 #83EEFF;
-            box-shadow: 0 0 0.4em 0 #83EEFF, inset 0 0 0.4em 0 #83EEFF;
+    box-shadow: 0 0 0.4em 0 #83EEFF, inset 0 0 0.4em 0 #83EEFF;
   }
   #contact .wrapper #contact-form form input#btn:hover {
     text-shadow: 0 0 0.5em rgba(255, 255, 255, 0.7), 0 0 0.4em rgba(255, 255, 255, 0.6);
-    -webkit-box-shadow: 0 0 0.7em 0.1em #83EEFF, inset 0 0 0.7em 0.1em #83EEFF;
-            box-shadow: 0 0 0.7em 0.1em #83EEFF, inset 0 0 0.7em 0.1em #83EEFF;
+    box-shadow: 0 0 0.7em 0.1em #83EEFF, inset 0 0 0.7em 0.1em #83EEFF;
   }
 }
-
 @media screen and (max-width: 1023px) {
   h2 {
     font-size: 1.2rem;
@@ -1166,9 +895,7 @@ footer .wrapper #copyright {
     font-size: 0.8rem;
   }
   #about-me .wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #about-me .wrapper #about-me-l-part {
     width: 35%;
@@ -1224,25 +951,13 @@ footer .wrapper #copyright {
     margin-top: 0.6rem;
     font-size: 0.9rem;
   }
-  #contact .wrapper #contact-form form .form-part input::-webkit-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form .form-part input:-ms-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form .form-part input::-ms-input-placeholder {
+  #contact .wrapper #contact-form form .form-part input::-moz-placeholder {
     font-size: 0.8rem;
   }
   #contact .wrapper #contact-form form .form-part input::placeholder {
     font-size: 0.8rem;
   }
-  #contact .wrapper #contact-form form textarea::-webkit-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form textarea:-ms-input-placeholder {
-    font-size: 0.8rem;
-  }
-  #contact .wrapper #contact-form form textarea::-ms-input-placeholder {
+  #contact .wrapper #contact-form form textarea::-moz-placeholder {
     font-size: 0.8rem;
   }
   #contact .wrapper #contact-form form textarea::placeholder {
@@ -1252,13 +967,11 @@ footer .wrapper #copyright {
     font-size: 0.7rem;
     text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5), 0 0 0.4em rgba(255, 255, 255, 0.3);
     padding: 0.2em 1em;
-    -webkit-box-shadow: 0 0 0.3em 0 #83EEFF, inset 0 0 0.3em 0 #83EEFF;
-            box-shadow: 0 0 0.3em 0 #83EEFF, inset 0 0 0.3em 0 #83EEFF;
+    box-shadow: 0 0 0.3em 0 #83EEFF, inset 0 0 0.3em 0 #83EEFF;
   }
   #contact .wrapper #contact-form form input#btn:hover {
     text-shadow: 0 0 0.4em rgba(255, 255, 255, 0.6), 0 0 0.3em rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 0 0 0.6em 0.1em #83EEFF, inset 0 0 0.6em 0.1em #83EEFF;
-            box-shadow: 0 0 0.6em 0.1em #83EEFF, inset 0 0 0.6em 0.1em #83EEFF;
+    box-shadow: 0 0 0.6em 0.1em #83EEFF, inset 0 0 0.6em 0.1em #83EEFF;
   }
   footer .wrapper #necessary a i {
     font-size: 1.8rem;
@@ -1271,7 +984,6 @@ footer .wrapper #copyright {
     font-size: 0.9rem;
   }
 }
-
 @media screen and (max-width: 767px) {
   h2 {
     font-size: 1.2rem;
@@ -1293,8 +1005,7 @@ footer .wrapper #copyright {
   #intro #intro-desc {
     width: 70%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   #intro #intro-desc .intro-desc-item {
     padding-left: 1rem;
@@ -1372,19 +1083,13 @@ footer .wrapper #copyright {
     position: static;
     top: auto;
     left: auto;
-    -webkit-transform: none;
-            transform: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    transform: none;
     display: flex;
     margin-top: 0.5rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   #projects .wrapper .projects-part:hover img {
-    -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
   #projects .wrapper .projects-part:hover .project-desc {
     opacity: 1;
@@ -1393,9 +1098,7 @@ footer .wrapper #copyright {
     opacity: 1;
   }
   #about-me .wrapper {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     gap: 0;
   }
   #about-me .wrapper #about-me-l-part {
@@ -1453,25 +1156,13 @@ footer .wrapper #copyright {
     font-size: 0.8rem;
     margin-top: 0.5rem;
   }
-  #contact .wrapper #contact-form form .form-part input::-webkit-input-placeholder {
-    font-size: 0.7rem;
-  }
-  #contact .wrapper #contact-form form .form-part input:-ms-input-placeholder {
-    font-size: 0.7rem;
-  }
-  #contact .wrapper #contact-form form .form-part input::-ms-input-placeholder {
+  #contact .wrapper #contact-form form .form-part input::-moz-placeholder {
     font-size: 0.7rem;
   }
   #contact .wrapper #contact-form form .form-part input::placeholder {
     font-size: 0.7rem;
   }
-  #contact .wrapper #contact-form form textarea::-webkit-input-placeholder {
-    font-size: 0.7rem;
-  }
-  #contact .wrapper #contact-form form textarea:-ms-input-placeholder {
-    font-size: 0.7rem;
-  }
-  #contact .wrapper #contact-form form textarea::-ms-input-placeholder {
+  #contact .wrapper #contact-form form textarea::-moz-placeholder {
     font-size: 0.7rem;
   }
   #contact .wrapper #contact-form form textarea::placeholder {
@@ -1481,13 +1172,11 @@ footer .wrapper #copyright {
     font-size: 0.7rem;
     text-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5), 0 0 0.4em rgba(255, 255, 255, 0.3);
     padding: 0.2em 1em;
-    -webkit-box-shadow: 0 0 0.3em 0 #83EEFF, inset 0 0 0.3em 0 #83EEFF;
-            box-shadow: 0 0 0.3em 0 #83EEFF, inset 0 0 0.3em 0 #83EEFF;
+    box-shadow: 0 0 0.3em 0 #83EEFF, inset 0 0 0.3em 0 #83EEFF;
   }
   #contact .wrapper #contact-form form input#btn:hover {
     text-shadow: 0 0 0.4em rgba(255, 255, 255, 0.6), 0 0 0.3em rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 0 0 0.6em 0.1em #83EEFF, inset 0 0 0.6em 0.1em #83EEFF;
-            box-shadow: 0 0 0.6em 0.1em #83EEFF, inset 0 0 0.6em 0.1em #83EEFF;
+    box-shadow: 0 0 0.6em 0.1em #83EEFF, inset 0 0 0.6em 0.1em #83EEFF;
   }
   footer .wrapper #necessary a i {
     font-size: 1.2rem;
@@ -1500,7 +1189,6 @@ footer .wrapper #copyright {
     font-size: 0.7rem;
   }
 }
-
 @media screen and (max-width: 424px) {
   h2 {
     font-size: 1.2rem;
@@ -1514,7 +1202,6 @@ footer .wrapper #copyright {
     font-size: 0.8rem;
   }
 }
-
 @media screen and (max-width: 374px) {
   h2 {
     font-size: 1.1rem;
@@ -1545,5 +1232,4 @@ footer .wrapper #copyright {
     border-right: 1px solid #83EEFF;
     border-bottom: 1px solid #83EEFF;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

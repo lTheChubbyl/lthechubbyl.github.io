@@ -296,12 +296,12 @@ $(document).ready(function() {
 		//#endregion
 
 		//#region FOOTER CATEGORIES
-	let footerCats = "";
-	for (const cat of categories) {
-		footerCats += `<li><a href="store.html?cat=${cat.id}">${cat.name}</a></li>`;
-	}
-	$("#footer-cats").html(footerCats);
-	//#endregion
+		let footerCats = "";
+		for (const cat of categories) {
+			footerCats += `<li><a href="store.html?cat=${cat.id}">${cat.name}</a></li>`;
+		}
+		$("#footer-cats").html(footerCats);
+		//#endregion
 	setTimeout(function() {
 		$("#loader").hide();
 	}, 500)
