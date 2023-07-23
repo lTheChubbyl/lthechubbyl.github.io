@@ -578,7 +578,7 @@ header nav .vr {
 #contact .wrapper #contact-form form .form-part input:focus {
   border-left: 3px solid #83EEFF;
   outline: none;
-  box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
+  box-shadow: 0 0 1rem rgba(255, 250, 250, 0.2);
 }
 #contact .wrapper #contact-form form textarea {
   width: 100%;
@@ -603,7 +603,7 @@ header nav .vr {
 #contact .wrapper #contact-form form textarea:focus {
   outline: none;
   border-left: 3px solid #83EEFF;
-  box-shadow: rgba(255, 250, 250, 0.1) 0 0.3rem 1rem, rgba(255, 250, 250, 0.1) 0 -0.3rem 1rem;
+  box-shadow: 0 0 1rem rgba(255, 250, 250, 0.2);
 }
 #contact .wrapper #contact-form form input#btn {
   text-transform: uppercase;
