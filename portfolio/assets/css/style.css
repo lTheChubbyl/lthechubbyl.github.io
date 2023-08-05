@@ -26,6 +26,16 @@
             clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
   }
 }
+@keyframes swooshOffset {
+  0%, 100% {
+    -webkit-clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
+            clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
+  }
+  50% {
+    -webkit-clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
+            clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
+  }
+}
 @keyframes goDown {
   0% {
     opacity: 1;
@@ -80,6 +90,9 @@ hr {
 }
 
 /* _*-*_ HEADER _*-*_ */
+header {
+  display: none;
+}
 header nav {
   display: flex;
   position: fixed;
@@ -259,7 +272,7 @@ header nav .vr {
 #services .wrapper .services-part i {
   font-size: 2.5rem;
   padding: 1.2rem;
-  box-shadow: 3px 3px 3px #000;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   margin: 2rem auto;
 }
 #services .wrapper .services-part h3 {
@@ -275,9 +288,6 @@ header nav .vr {
 #services .wrapper .services-part p {
   line-height: 1.4;
   padding: 1.5em;
-}
-#services .wrapper .services-part:last-of-type i {
-  width: calc(5rem + 10px);
 }
 
 #skills {
@@ -296,12 +306,13 @@ header nav .vr {
   justify-content: space-between;
   width: 14%;
   height: 7.5rem;
-  background: #FFFAFA;
 }
 #skills .wrapper .skills-part .skill-desc {
   color: #000;
+  background: #FFFAFA;
   text-align: center;
   margin: 0 auto;
+  width: 100%;
 }
 #skills .wrapper .skills-part .skill-desc i {
   font-size: 3rem;
@@ -328,7 +339,7 @@ header nav .vr {
   bottom: 0;
   width: 100%;
   background: rgba(131, 238, 255, 0.5);
-  animation: swoosh 1.5s ease-in-out infinite 0.5s;
+  animation: swooshOffset 1.5s ease-in-out infinite;
 }
 #skills .wrapper .skills-part .skill-bar-out .skill-bar-in p {
   position: absolute;
@@ -342,10 +353,10 @@ header nav .vr {
 #skills .wrapper .skills-part .skill-bar-out .skill-bar-in::before {
   content: "";
   position: absolute;
-  top: 2px;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 98%;
   background: #83EEFF;
   animation: swoosh 1.5s ease-in-out infinite;
 }

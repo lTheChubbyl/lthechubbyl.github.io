@@ -83,6 +83,16 @@
             clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
         }
     }
+
+    @keyframes swooshOffset {
+        0%, 100% {
+            clip-path: polygon(100% 2%, 81% 1%, 60% 2%, 38% 4%, 19% 3%, 0 0, 0 100%, 100% 100%);
+        }
+        50% {
+            clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
+        }
+    }
+
     @keyframes goDown {
         0% {
             opacity: 1;
@@ -143,6 +153,7 @@ hr {
 /* _*-*_ HEADER _*-*_ */
 
 header {
+    display: none;
     nav {
         display: flex;
         position: fixed;
@@ -300,7 +311,7 @@ header {
             i {
                 font-size: 2.5rem;
                 padding: 1.2rem;
-                box-shadow: 3px 3px 3px #000;
+                box-shadow: 3px 3px 3px rgba(#000, 0.6);
                 margin: 2rem auto;
             }
             h3 {
@@ -318,9 +329,6 @@ header {
             p {
                 line-height: 1.4;
                 padding: 1.5em;
-            }
-            &:last-of-type i {
-                width: calc(5rem + 10px);
             }
         }
     }
@@ -340,11 +348,12 @@ header {
             justify-content: space-between;
             width: 14%;
             height: 7.5rem;
-            background: $snow-white;
             .skill-desc {
                 color: #000;
+                background: $snow-white;
                 text-align: center;
                 margin: 0 auto;
+                width: 100%;
                 i {
                     font-size: 3rem;
                     text-align: center;
@@ -372,7 +381,7 @@ header {
                     bottom: 0;
                     width: 100%;
                     background: rgba($color: $neon-light-blue, $alpha: 0.5);
-                    animation: swoosh 1.5s ease-in-out infinite 0.5s;
+                    animation: swooshOffset 1.5s ease-in-out infinite;
                     p {
                         position: absolute;
                         color: black;
@@ -387,10 +396,10 @@ header {
                     &::before {
                         content: "";
                         position: absolute;
-                        top: 2px;
+                        bottom: 0;
                         left: 0;
                         width: 100%;
-                        height: 100%;
+                        height: 98%;
                         background: $neon-light-blue;
                         animation: swoosh 1.5s ease-in-out infinite;
                     }
@@ -1420,3 +1429,44 @@ footer {
         }
     }
 }
+
+// /* Set-up */
+// body {
+// 	perspective: 500px;
+// 	-webkit-perspective: 500px; 
+// }
+
+// /* Container box to set the sides relative to */
+// .cube {
+// 	-webkit-transition: -webkit-transform 1s;
+// 	transition: transform 1s; /* Animate the transform properties */
+
+// 	-webkit-transform-style: preserve-3d;
+// 	transform-style: preserve-3d; /* <-NB */
+// }
+
+// /* The two faces of the cube */
+// .flippety,.flop {
+// 	border: 1px solid rgba(147, 184, 189, .8);
+
+// 	-webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+// 	box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+// 	height: 200px;
+// }
+
+// /* Position the faces */
+// .flippety {
+// 	-webkit-transform: translateZ(30px);
+// 	transform: translateZ(30px);
+// }
+
+// .flop {
+// 	-webkit-transform: rotateY(90deg) translateZ(-30px);
+// 	transform: rotateY(90deg) translateZ(-30px);
+// }
+
+// /* Rotate the cube */
+// .cube:hover {
+// 	-webkit-transform: rotateY(-45deg);
+// 	transform: rotateY(-45deg); /* Text bleed at 90º */
+// }

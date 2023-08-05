@@ -18,7 +18,7 @@
     </head>
     <body>
         <a id="top"></a>
-        <header>
+        <header id="navigation">
             <nav>
                 <div class="vr"></div>
                 <ul> 
@@ -38,7 +38,7 @@
                 <div id="logo">
                     <a href="index.html"><img src="assets/img/logo-m.png" alt="logo m&ch"></a>
                 </div>
-                <video autoplay="autoplay" loop="loop" muted="muted">
+                <video autoplay loop muted >
                     <source src="assets/video/hero_flare.mp4"/>
                     The video is unavailable.
                 </video>
@@ -63,27 +63,26 @@
                     <div class="services-part">
                         <i class="fa-solid fa-compass-drafting"></i>
                         <h3>Web Design</h3>
-                        <hr/>
+                        <hr />
                         <p>I'm always a perfectionist when it comes to design. Everything has to be in its place and flawlessly fit in with the rest of the content. My designs are responsive and work on all platforms.</p>
                     </div>
                     <div class="services-part">
                         <i class="fa-solid fa-brain"></i>
                         <h3>UI/UX Design</h3>
-                        <hr/>
+                        <hr />
                         <p>My taste in UI/UX design might not be the best in the world, but its pretty damn good. From minimalist modern designs to extravagant colorful designs, You name it, I make it.</p>
                     </div>
                     <div class="services-part">
                         <i class="fa-solid fa-database"></i>
                         <h3>DataBase Management</h3>
-                        <hr/>
+                        <hr />
                         <p>Almost every website has some sort of back-end database that needs to be created, updated and kept in check, thats where I come in with my knowledge of SQL</p>
                     </div>
                     <div class="services-part">
-                        <i class="fa-solid fa-chess"></i>
-                        <h3>Game Development</h3>
-                        <hr/>
-                        <p>I always loved playing games, ever since I was a little kid, so one day I wanted to see what its like to make one. And now im a game dev using both Unity and Unreal Engine.
-                        </p>
+                        <i class="fa-solid fa-photo-film"></i>
+                        <h3>Photo & Video Editing</h3>
+                        <hr />
+                        <p>I always loved playing games, ever since I was a little kid, so one day I wanted to see what its like to make one. And now im a game dev using both Unity and Unreal Engine.</p>
                     </div>      
                 </div>
             </section>
@@ -202,6 +201,16 @@
                         </div>
                     </article>
                     <article class="projects-part">
+                        <img src="assets/img/shotoff8.png" alt="portfolio website"/>
+                        <div class="project-desc">
+                            <h3>This Portfolio</h3>
+                            <p>html<span> | </span>css<span> | </span>javascript<span> | </span>bootstrap</p>
+                        </div>
+                        <div class="project-btn">
+                            <a href="https://lthechubbyl.github.io/shotoff8/index.html" target="_blank">Check it out</a>
+                        </div>
+                    </article>
+                    <article class="projects-part">
                         <img src="assets/img/placeholder-img-invert.jpg" alt="coming soon"/>
                         <div class="project-desc">
                             <h3>Coming Soon...</h3>
@@ -228,7 +237,7 @@
                     </article>
                     <article id="about-me-r-part">
                         <h3>Basic Information</h3>
-                        <hr/>
+                        <hr />
                         <div class="info-desc">
                             <div class="info-desc-l">
                                 <p>Name:</p>
@@ -244,7 +253,7 @@
                             </div>
                         </div>
                         <h3>Education</h3>
-                        <hr/>
+                        <hr />
                         <div class="info-desc">
                             <div class="info-desc-l">
                                 <p>2017-2021</p>
@@ -262,25 +271,25 @@
                 <h2>Contact <span>Me</span></h2>
                 <div class="wrapper">
                     <article id="contact-form">
-                        <form action="index.php" method="post">
+                        <form>
                             <div class="form-part">
                                 <label for="fname">First Name:</label><br/>
-                                <hr/>
+                                <hr />
                                 <input type="text" name="fname" id="fname" maxlength="35" placeholder="John"/>
                             </div>
                             <div class="form-part">
                                 <label for="lname">Last Name:</label><br/>
-                                <hr/>
+                                <hr />
                                 <input type="text" name="lname" id="lname" maxlength="35" placeholder="Doe"/>
                             </div>
                             <div class="form-part">
                                 <label for="email">E-mail:</label><br/>
-                                <hr/>
+                                <hr />
                                 <input type="email" name="email" id="email" maxlength="35" placeholder="example@mail.com"/>
                             </div>
                             <div class="form-part">
                                 <label for="phone-number">Phone Number:</label><br/>
-                                <hr/>
+                                <hr />
                                 <input type="tel" name="phone-number" id="phone-number" maxlength="18"/>
                             </div>
                             <textarea name="message" id="message" cols="10" rows="8" placeholder="Send me a message.."></textarea>
@@ -305,5 +314,7 @@
         </footer>
         <!-- _*-*_ WEB ICONS _*-*_ -->
         <script src="https://kit.fontawesome.com/270460494f.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
