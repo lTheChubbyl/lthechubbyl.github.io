@@ -505,7 +505,7 @@ function getRating(rating) {
 }
 
 function makeTimer() {
-	var endTime = new Date("2023-03-31");	
+	var endTime = new Date("2023-08-31");
 	endTime = (Date.parse(endTime) / 1000);
 
 	var now = new Date();
