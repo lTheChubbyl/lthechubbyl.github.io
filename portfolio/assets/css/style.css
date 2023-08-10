@@ -78,6 +78,14 @@ h2 span {
   font-family: "Jura", Arial, sans-serif;
 }
 
+p {
+  margin-bottom: 0;
+}
+
+ol, ul {
+  padding-left: 0;
+}
+
 hr {
   color: #587291;
   width: 2.5rem;
@@ -85,7 +93,7 @@ hr {
 }
 
 .wrapper {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -121,6 +129,9 @@ header nav ul li a {
   font-family: "Jura", Arial, sans-serif;
   transition: 200ms ease-in-out;
   margin: 0 0.2em;
+}
+header nav ul li a:hover {
+  color: #FFFAFA;
 }
 header nav ul li:hover {
   text-shadow: 0 0 0.5em rgba(131, 238, 255, 0.6), 0 0 0.5em rgba(131, 238, 255, 0.5);
@@ -255,19 +266,12 @@ header nav .vr {
 #services {
   padding: 3rem 0 4.5rem;
 }
-#services .wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.8rem;
-  flex-wrap: wrap;
-}
 #services .wrapper .services-part {
-  text-align: center;
   background: rgba(128, 128, 128, 0.1);
   border-left: 3px solid #FFFAFA;
   display: flex;
   flex-direction: column;
-  width: 24%;
+  height: 100%;
 }
 #services .wrapper .services-part i {
   font-size: 2.5rem;
@@ -276,6 +280,7 @@ header nav .vr {
   margin: 2rem auto;
 }
 #services .wrapper .services-part h3 {
+  text-align: center;
   color: #83EEFF;
   font-size: 1.5rem;
   font-weight: 400;
@@ -477,6 +482,7 @@ header nav .vr {
   gap: 6rem;
 }
 #about-me .wrapper #about-me-l-part #about-me-img {
+  border-left: 3px solid #FFFAFA;
   position: relative;
 }
 #about-me .wrapper #about-me-l-part #about-me-img img {
@@ -599,6 +605,7 @@ header nav .vr {
   padding: 8px;
   background: rgba(0, 0, 0, 0.5);
   resize: none;
+  margin-top: 2rem;
   transition: 200ms ease-in-out;
 }
 #contact .wrapper #contact-form form textarea::-moz-placeholder {
@@ -694,12 +701,6 @@ footer .wrapper #copyright {
     height: 1.2rem;
     border-right: 1px solid #83EEFF;
     border-bottom: 1px solid #83EEFF;
-  }
-  #services .wrapper {
-    gap: 1.5rem;
-  }
-  #services .wrapper .services-part {
-    width: 48%;
   }
   #services .wrapper .services-part i {
     margin: 1.2rem auto;
@@ -855,12 +856,6 @@ footer .wrapper #copyright {
     height: 1rem;
     border-right: 1px solid #83EEFF;
     border-bottom: 1px solid #83EEFF;
-  }
-  #services .wrapper {
-    gap: 1rem;
-  }
-  #services .wrapper .services-part {
-    width: 48%;
   }
   #services .wrapper .services-part i {
     padding: 1rem;
@@ -1040,13 +1035,15 @@ footer .wrapper #copyright {
     border-bottom: 1px solid #83EEFF;
   }
   #services .wrapper .services-part {
-    width: 100%;
-    margin: 0 auto;
+    padding: 0 1rem;
   }
   #services .wrapper .services-part i {
     padding: 0.8rem;
     margin: 0.5rem auto;
     font-size: 1.2rem;
+  }
+  #services .wrapper .services-part hr {
+    margin: auto;
   }
   #services .wrapper .services-part h3 {
     font-size: 1rem;

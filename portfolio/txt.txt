@@ -53,3 +53,46 @@ body {
 	-webkit-transform: rotateY(-45deg);
 	transform: rotateY(-45deg); /* Text bleed at 90º */
 }
+
+
+
+// /* Set-up */
+// body {
+// 	perspective: 500px;
+// 	-webkit-perspective: 500px; 
+// }
+
+// /* Container box to set the sides relative to */
+// .cube {
+// 	-webkit-transition: -webkit-transform 1s;
+// 	transition: transform 1s; /* Animate the transform properties */
+
+// 	-webkit-transform-style: preserve-3d;
+// 	transform-style: preserve-3d; /* <-NB */
+// }
+
+// /* The two faces of the cube */
+// .flippety,.flop {
+// 	border: 1px solid rgba(147, 184, 189, .8);
+
+// 	-webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+// 	box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+// 	height: 200px;
+// }
+
+// /* Position the faces */
+// .flippety {
+// 	-webkit-transform: translateZ(30px);
+// 	transform: translateZ(30px);
+// }
+
+// .flop {
+// 	-webkit-transform: rotateY(90deg) translateZ(-30px);
+// 	transform: rotateY(90deg) translateZ(-30px);
+// }
+
+// /* Rotate the cube */
+// .cube:hover {
+// 	-webkit-transform: rotateY(-45deg);
+// 	transform: rotateY(-45deg); /* Text bleed at 90º */
+// }

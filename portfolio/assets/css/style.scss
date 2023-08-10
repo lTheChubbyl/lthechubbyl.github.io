@@ -139,6 +139,14 @@ h2 {
     }
 }
 
+p {
+    margin-bottom: 0;
+}
+
+ol, ul {
+    padding-left: 0;
+}
+
 hr {
     color: $non-neon-blue;
     width: 2.5rem;
@@ -146,7 +154,7 @@ hr {
 }
 
 .wrapper {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -179,6 +187,9 @@ header {
                     font-family: 'Jura', Arial, sans-serif;
                     transition: 200ms ease-in-out;
                     margin: 0 0.2em;
+                    &:hover {
+                        color: $snow-white;
+                    }
                 }
                 &:hover {
                     text-shadow: 
@@ -297,17 +308,12 @@ header {
 #services {
     padding: $section-p;
     .wrapper {
-        display: flex;
-        justify-content: space-between;
-        gap: 0.8rem;
-        flex-wrap: wrap;
         .services-part {
-            text-align: center;
             background: rgba(#808080, 0.1);
             border-left: 3px solid $snow-white;
             display: flex;
             flex-direction: column;
-            width: 24%;
+            height: 100%;
             i {
                 font-size: 2.5rem;
                 padding: 1.2rem;
@@ -315,6 +321,7 @@ header {
                 margin: 2rem auto;
             }
             h3 {
+                text-align: center;
                 color: $neon-light-blue;
                 font: {
                     size: 1.5rem;
@@ -503,6 +510,7 @@ header {
         gap: 6rem;
         #about-me-l-part {
             #about-me-img {
+                border-left: 3px solid $snow-white;
                 position: relative;
                 img {
                     display: block;
@@ -629,6 +637,7 @@ header {
                     padding: 8px;
                     background: rgba(#000, 0.5);
                     resize: none;
+                    margin-top: 2rem;
                     transition: 200ms ease-in-out;
                     &::placeholder {
                         font-style: italic;
@@ -738,9 +747,7 @@ footer {
     } 
     #services {
         .wrapper {
-            gap: 1.5rem;
             .services-part {
-                width: 48%;
                 i {
                     margin: 1.2rem auto;
                     font-size: 2rem;
@@ -950,9 +957,7 @@ footer {
     } 
     #services {
         .wrapper {
-            gap: 1rem;
             .services-part {
-                width: 48%;
                 i {
                     padding: 1rem;
                     margin: 1rem auto;
@@ -1175,12 +1180,14 @@ footer {
     #services {
         .wrapper {
             .services-part {
-                width: 100%;
-                margin: 0 auto;
+                padding: 0 1rem;
                 i {
                     padding: 0.8rem;
                     margin: 0.5rem auto;
                     font-size: 1.2rem;
+                }
+                hr {
+                    margin: auto;
                 }
                 h3 {
                     font-size: 1rem;
@@ -1429,44 +1436,3 @@ footer {
         }
     }
 }
-
-// /* Set-up */
-// body {
-// 	perspective: 500px;
-// 	-webkit-perspective: 500px; 
-// }
-
-// /* Container box to set the sides relative to */
-// .cube {
-// 	-webkit-transition: -webkit-transform 1s;
-// 	transition: transform 1s; /* Animate the transform properties */
-
-// 	-webkit-transform-style: preserve-3d;
-// 	transform-style: preserve-3d; /* <-NB */
-// }
-
-// /* The two faces of the cube */
-// .flippety,.flop {
-// 	border: 1px solid rgba(147, 184, 189, .8);
-
-// 	-webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
-// 	box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
-// 	height: 200px;
-// }
-
-// /* Position the faces */
-// .flippety {
-// 	-webkit-transform: translateZ(30px);
-// 	transform: translateZ(30px);
-// }
-
-// .flop {
-// 	-webkit-transform: rotateY(90deg) translateZ(-30px);
-// 	transform: rotateY(90deg) translateZ(-30px);
-// }
-
-// /* Rotate the cube */
-// .cube:hover {
-// 	-webkit-transform: rotateY(-45deg);
-// 	transform: rotateY(-45deg); /* Text bleed at 90º */
-// }
