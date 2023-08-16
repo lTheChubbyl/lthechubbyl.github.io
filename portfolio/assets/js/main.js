@@ -14,14 +14,12 @@ $(document).ready(function() {
 
     $("#copyright p span").html(new Date().getFullYear());
 
-
     $("#btn").on("click", function() {
         let fname = $("#fname");
         let lname = $("#lname");
         let email = $("#email");
         let number = $("#phone-number");
         let message = $("#message");
-
         errors = 0;
 
         let regExName = /^[a-zA-Z]+(?:[-' ][a-zA-Z]+)*$/;
@@ -35,9 +33,12 @@ $(document).ready(function() {
         if (regExValidation(email, regExEmail)) {
             errors++;
         }
-        let regExNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{2,6}$/;
-        if (regExValidation(number, regExNumber)) {
-            errors++;
+        if (number.val() != "") {
+            let regExNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{2,6}$/;
+            if (regExValidation(number, regExNumber)) {
+                errors++;
+            }
+            
         }
         let regExMessage = /^[\s\S]{1,500}$/;
         if (regExValidation(message, regExMessage)) {
