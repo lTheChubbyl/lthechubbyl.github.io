@@ -619,7 +619,6 @@ header {
                         border-left: 1px solid $neon-light-blue;
                         padding: 0.5rem;
                         background: rgba(#000, 0.5);
-                        margin-top: 1rem;
                         font-size: 1rem;
                         transition: 100ms ease-in-out;
                         &::placeholder {
@@ -633,26 +632,28 @@ header {
                             box-shadow: 0 0 1rem rgba($snow-white, 0.2);
                         }
                     }
-                }
-                textarea {
-                    width: 100%;
-                    color: $snow-white;
-                    border: none;
-                    border-left: 1px solid $neon-light-blue;
-                    padding: 8px;
-                    background: rgba(#000, 0.5);
-                    resize: none;
-                    margin-top: 2rem;
-                    transition: 200ms ease-in-out;
-                    &::placeholder {
-                        font-style: italic;
-                        font-size: 0.9rem;
-                        color: rgba(#fff, 0.8);
+                    &:last-of-type {
+                        width: 100%;
                     }
-                    &:focus {
-                        outline: none;
-                        border-left: 3px solid $neon-light-blue;
-                        box-shadow: 0 0 1rem rgba($snow-white, 0.2);
+                    textarea {
+                        width: 100%;
+                        color: $snow-white;
+                        border: none;
+                        border-left: 1px solid $neon-light-blue;
+                        padding: 8px;
+                        background: rgba(#000, 0.5);
+                        resize: none;
+                        transition: 200ms ease-in-out;
+                        &::placeholder {
+                            font-style: italic;
+                            font-size: 0.9rem;
+                            color: rgba(#fff, 0.8);
+                        }
+                        &:focus {
+                            outline: none;
+                            border-left: 3px solid $neon-light-blue;
+                            box-shadow: 0 0 1rem rgba($snow-white, 0.2);
+                        }
                     }
                 }
                 input#btn {

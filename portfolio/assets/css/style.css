@@ -581,7 +581,6 @@ header nav .vr {
   border-left: 1px solid #83EEFF;
   padding: 0.5rem;
   background: rgba(0, 0, 0, 0.5);
-  margin-top: 1rem;
   font-size: 1rem;
   transition: 100ms ease-in-out;
 }
@@ -600,7 +599,10 @@ header nav .vr {
   outline: none;
   box-shadow: 0 0 1rem rgba(255, 250, 250, 0.2);
 }
-#contact .wrapper #contact-form form textarea {
+#contact .wrapper #contact-form form .form-part:last-of-type {
+  width: 100%;
+}
+#contact .wrapper #contact-form form .form-part textarea {
   width: 100%;
   color: #FFFAFA;
   border: none;
@@ -608,20 +610,19 @@ header nav .vr {
   padding: 8px;
   background: rgba(0, 0, 0, 0.5);
   resize: none;
-  margin-top: 2rem;
   transition: 200ms ease-in-out;
 }
-#contact .wrapper #contact-form form textarea::-moz-placeholder {
+#contact .wrapper #contact-form form .form-part textarea::-moz-placeholder {
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-#contact .wrapper #contact-form form textarea::placeholder {
+#contact .wrapper #contact-form form .form-part textarea::placeholder {
   font-style: italic;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.8);
 }
-#contact .wrapper #contact-form form textarea:focus {
+#contact .wrapper #contact-form form .form-part textarea:focus {
   outline: none;
   border-left: 3px solid #83EEFF;
   box-shadow: 0 0 1rem rgba(255, 250, 250, 0.2);

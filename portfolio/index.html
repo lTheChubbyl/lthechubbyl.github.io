@@ -278,7 +278,7 @@
                     <article id="contact-form" data-aos="fade-down" data-aos-delay="200">
                         <form>
                             <div class="form-part">
-                                <label for="fname">First Name:</label><br/>
+                                <label for="fname">First Name: <span class="text-danger">*</span></label><br/>
                                 <hr />
                                 <input type="text" name="fname" id="fname" maxlength="35" placeholder="John" aria-describedby="fnameErr" />
                                 <div id="fnameErr" class="invalid-feedback fst-italic">
@@ -286,7 +286,7 @@
                                 </div>
                             </div>
                             <div class="form-part">
-                                <label for="lname">Last Name:</label><br/>
+                                <label for="lname">Last Name: <span class="text-danger">*</span></label><br/>
                                 <hr />
                                 <input type="text" name="lname" id="lname" maxlength="35" placeholder="Doe" aria-describedby="lnameErr" />
                                 <div id="lnameErr" class="invalid-feedback fst-italic">
@@ -294,7 +294,7 @@
                                 </div>
                             </div>
                             <div class="form-part">
-                                <label for="email">E-mail:</label><br/>
+                                <label for="email">E-mail: <span class="text-danger">*</span></label><br/>
                                 <hr />
                                 <input type="emailErr" name="email" id="email" maxlength="35" placeholder="example@mail.com" aria-describedby="emailErr" />
                                 <div id="emailErr" class="invalid-feedback fst-italic">
@@ -310,9 +310,13 @@
                                     Please enter a valid phone number.
                                 </div>
                             </div>
-                            <textarea name="message" id="message" cols="10" rows="8" placeholder="Send me a message.." aria-describedby="messageErr"></textarea>
-                            <div id="messageErr" class="invalid-feedback fst-italic">
-                                Please enter a valid message.
+                            <div class="form-part">
+                                <label for="phone-number">Message: <span class="text-danger">*</span></label><br/>
+                                <hr />
+                                <textarea name="message" id="message" cols="10" rows="8" placeholder="Send me a message.." aria-describedby="messageErr"></textarea>
+                                <div id="messageErr" class="invalid-feedback fst-italic">
+                                    Please enter a valid message.
+                                </div>
                             </div>
                             <input type="button" name="btn" id="btn" value="Submit">
                         </form>
