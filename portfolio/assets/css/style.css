@@ -16,6 +16,22 @@
     left: 100%;
   }
 }
+@keyframes loader {
+  25% {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  75% {
+    top: 50%;
+    transform: translateY(-50%) rotate(360deg);
+    margin: 0;
+  }
+  100% {
+    top: 0;
+    transform: translateY(0%) rotate(360deg);
+    margin-top: 1rem;
+  }
+}
 @keyframes swoosh {
   0%, 100% {
     -webkit-clip-path: polygon(100% 0, 81% 3%, 62% 4%, 40% 2%, 19% 1%, 0 2%, 0 100%, 100% 100%);
@@ -145,6 +161,27 @@ header nav .vr {
 }
 
 /* _*-*_ MAIN _*-*_ */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #1D1D1F;
+  z-index: 4;
+}
+#loader #fake-logo {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: loader 2s forwards;
+}
+#loader #fake-logo a img {
+  width: 6rem;
+}
+
 #intro {
   width: 100%;
   height: 100vh;
@@ -152,6 +189,7 @@ header nav .vr {
   z-index: 3;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
           clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  overflow: hidden;
 }
 #intro #logo {
   position: absolute;
@@ -208,7 +246,7 @@ header nav .vr {
   bottom: 0;
   left: 0;
   background: #FFFAFA;
-  animation: reveal 1.5s 100ms forwards;
+  animation: reveal 1.5s 2200ms forwards;
 }
 #intro #intro-desc .intro-desc-item p {
   padding: 0.45em;
@@ -232,7 +270,7 @@ header nav .vr {
   bottom: 0;
   left: 0;
   background: #FFFAFA;
-  animation: reveal 1.5s 1.5s forwards;
+  animation: reveal 1.5s 3.5s forwards;
 }
 #intro #incentive {
   position: absolute;
@@ -483,6 +521,7 @@ header nav .vr {
   align-items: center;
   flex-wrap: wrap;
   gap: 6rem;
+  overflow-x: hidden;
 }
 #about-me .wrapper #about-me-l-part #about-me-img {
   border-left: 3px solid #FFFAFA;
@@ -685,6 +724,9 @@ footer .wrapper #copyright {
     padding: 0.3em;
     font-size: 1rem;
   }
+  #loader #fake-logo a img {
+    width: 4.5rem;
+  }
   #intro #logo a img {
     width: 4.5rem;
   }
@@ -839,6 +881,9 @@ footer .wrapper #copyright {
   }
   header nav {
     display: none;
+  }
+  #loader #fake-logo a img {
+    width: 4rem;
   }
   #intro #logo a img {
     width: 4rem;
@@ -1006,11 +1051,14 @@ footer .wrapper #copyright {
   header nav {
     display: none;
   }
+  #loader #fake-logo a img {
+    width: 3.2rem;
+  }
   #intro {
     height: 60vh;
   }
   #intro #logo a img {
-    width: 3rem;
+    width: 3.2rem;
   }
   #intro #intro-desc {
     width: 70%;

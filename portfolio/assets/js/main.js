@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    setTimeout(function() {
+		$("#loader").fadeOut();
+	}, 2000)
+
     AOS.init();
 
     var distance = $("#services").offset().top;

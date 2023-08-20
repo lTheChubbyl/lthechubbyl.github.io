@@ -74,6 +74,23 @@
             left: 100%;
         }
     }
+
+    @keyframes loader {
+        25% {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        75% {
+            top: 50%;
+            transform: translateY(-50%) rotate(360deg);
+            margin: 0;
+        }
+        100% {
+            top: 0;
+            transform: translateY(0%) rotate(360deg);
+            margin-top: 1rem;
+        }
+    }
         
     @keyframes swoosh {
         0%, 100% {
@@ -209,6 +226,28 @@ header {
 }
 
 /* _*-*_ MAIN _*-*_ */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: $global-bg;
+    z-index: 4;
+    #fake-logo {
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        a {
+            img {
+                width: 6rem;
+            }
+        }
+        animation: loader 2s forwards;
+    }
+}
 
 #intro {
     width: 100%;
@@ -216,6 +255,7 @@ header {
     position: relative;
     z-index: 3;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    overflow: hidden;
     #logo {
         position: absolute;
         width: 100%;
@@ -258,7 +298,7 @@ header {
                 &::after {
                     @include pseudo;
                     background: $snow-white;
-                    animation: reveal $revealSpeed 100ms forwards;
+                    animation: reveal $revealSpeed 2200ms forwards;
                 }
             }
             p {  
@@ -275,7 +315,7 @@ header {
                     &::after {
                         @include pseudo;
                         background: $snow-white;
-                        animation: reveal $revealSpeed $revealSpeed forwards;
+                        animation: reveal $revealSpeed $revealSpeed+2000ms forwards;
                     }
                 }
             }  
@@ -513,6 +553,7 @@ header {
         align-items: center;
         flex-wrap: wrap;
         gap: 6rem;
+        overflow-x: hidden;
         #about-me-l-part {
             #about-me-img {
                 border-left: 3px solid $snow-white;
@@ -718,6 +759,16 @@ footer {
                     }
                 }
             }
+        }
+    }
+
+    #loader {
+        #fake-logo {
+            a {
+                img {
+                    width: 4.5rem;
+                }
+            } 
         }
     }
 
@@ -928,6 +979,16 @@ footer {
     header {
         nav {
             display: none;
+        }
+    }
+
+    #loader {
+        #fake-logo {
+            a {
+                img {
+                    width: 4rem;
+                }
+            } 
         }
     }
 
@@ -1149,12 +1210,22 @@ footer {
         }
     }
 
+    #loader {
+        #fake-logo {
+            a {
+                img {
+                    width: 3.2rem;
+                }
+            } 
+        }
+    }
+
     #intro {
         height: 60vh;
         #logo {
             a {
                 img {
-                    width: 3rem;
+                    width: 3.2rem;
                 }
             }      
         }
