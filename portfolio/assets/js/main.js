@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $("div").last().hide();
+
     setTimeout(function() {
 		$("#loader").fadeOut();
 	}, 2000)
