@@ -419,7 +419,7 @@ header nav .vr {
   height: 90%;
 }
 #skills .wrapper .skills-part:nth-of-type(6n+6) .skill-bar-out .skill-bar-in {
-  height: 50%;
+  height: 80%;
 }
 #skills p span {
   color: #83EEFF;
