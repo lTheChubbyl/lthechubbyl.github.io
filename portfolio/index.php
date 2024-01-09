@@ -160,22 +160,32 @@
                     </article>
                     <article class="skills-part" data-aos="flip-down" data-aos-delay="600">
                         <div class="skill-desc">
-                            <i class="fa-brands fa-vuejs"></i>
-                            <h3>Vue.js</h3>
+                            <i class="fa-brands fa-wordpress"></i>
+                            <h3>Wordpress</h3>
                         </div>
                         <div class="skill-bar-out">
                             <div class="skill-bar-in">
-                                <p>???%</p>
+                                <p>80%</p>
                             </div>
                         </div>
                     </article>
                 </div>
-                <p class="text-center mt-4"><span>Others:</span> JQuery, mySQL, Adobe Photoshop, Adobe Premiere, C#, SASS/LESS</p>
+                <p class="text-center mt-4"><span>Others:</span> C#, Vue.js, JQuery, SQL, Adobe Photoshop, Illustrator & Premiere, SASS/LESS</p>
             </section>
             <section id="projects">
                 <h2>My <span>Projects</span></h2>
                 <div class="wrapper">
                     <article class="projects-part" data-aos="fade-up" data-aos-delay="200">
+                        <img src="assets/img/geometar-pancevo.png" alt="coming soon"/>
+                        <div class="project-desc">
+                            <h3>Geometar Pancevo</h3>
+                            <p>wordpress<span> | </span>elementor</p>
+                        </div>
+                        <div class="project-btn">
+                            <a href="https://geometarpancevo.rs/" target="_blank">Check it out</a>
+                        </div>
+                    </article>
+                    <article class="projects-part" data-aos="fade-up" data-aos-delay="400">
                         <img src="assets/img/icecold.png" alt="ice cold jewelry website"/>
                         <div class="project-desc">
                             <h3>IceCold Jewelry</h3>
@@ -185,7 +195,7 @@
                             <a href="https://icecoldss.000webhostapp.com/index.php" target="_blank">Check it out</a>
                         </div>
                     </article>
-                    <article class="projects-part" data-aos="fade-up" data-aos-delay="400">
+                    <article class="projects-part" data-aos="fade-up" data-aos-delay="600">
                         <img src="assets/img/tehnotron.png" alt="tehnotron store website"/>
                         <div class="project-desc">
                             <h3>TehnoTRON</h3>
@@ -195,7 +205,7 @@
                             <a href="https://lthechubbyl.github.io/tehnotron/index.html" target="_blank">Check it out</a>
                         </div>
                     </article>
-                    <article class="projects-part" data-aos="fade-up" data-aos-delay="600">
+                    <article class="projects-part" data-aos="fade-up" data-aos-delay="200">
                         <img src="assets/img/knockout.png" alt="knockout gym website"/>
                         <div class="project-desc">
                             <h3>knocKOut Gym</h3>
@@ -205,7 +215,7 @@
                             <a href="https://lthechubbyl.github.io/knockout/index.html" target="_blank">Check it out</a>
                         </div>
                     </article>
-                    <article class="projects-part" data-aos="fade-up" data-aos-delay="200">
+                    <!-- <article class="projects-part" data-aos="fade-up" data-aos-delay="200">
                         <img src="assets/img/shotoff8.png" alt="knockout gym website"/>
                         <div class="project-desc">
                             <h3>ShotOfF8</h3>
@@ -214,7 +224,7 @@
                         <div class="project-btn">
                             <a href="https://lthechubbyl.github.io/shotoff8/index.html" target="_blank">Check it out</a>
                         </div>
-                    </article>
+                    </article> -->
                     <article class="projects-part" data-aos="fade-up" data-aos-delay="400">
                         <img src="assets/img/portfolio.png" alt="portfolio website"/>
                         <div class="project-desc">
@@ -262,7 +272,7 @@
                             </div>
                             <div class="info-desc-r">
                                 <p>Miloš Čubrak</p>
-                                <p>20</p>
+                                <p>21</p>
                                 <p>+381 63 8966 XXX</p>
                                 <p>miloscubrak&#64;gmail&#46;com</p>
                             </div>
