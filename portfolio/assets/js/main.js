@@ -62,7 +62,8 @@ $(document).ready(function() {
 
             ajaxCallback("models/form.php", "post", data, 
                 function(result) {
-                    console.log(result);
+                    $("#contact-form form")[0].reset();
+                    $("#contact-form alert").show();
                 }, 
                 function (xhr) {
                     console.log(xhr);

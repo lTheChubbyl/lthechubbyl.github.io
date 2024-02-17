@@ -340,6 +340,10 @@
                             </div>
                             <input type="button" name="btn" id="btn" value="Submit">
                         </form>
+                        <div class="alert alert-success d-flex align-items-center d-none" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                            <div>You have successfully submitted your message!</div>
+                        </div>
                     </article>
                 </div>
             </section>
