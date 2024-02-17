@@ -23,10 +23,5 @@
         "id": 5,
         "name": "Accessories",
         "link": "store.html?cat=3"
-    },
-    {
-        "id": 6,
-        "name": "Author",
-        "link": "author.html"
     }
 ]
