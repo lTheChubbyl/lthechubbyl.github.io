@@ -4,41 +4,41 @@
 		"title": "Make a working clock",
 		"desc": "You already have a &lt;div id='working-clock'&gt;&lt;/div&gt; in the template. Use setInterval() to update that element every second with the current time.",
 		"template": "<div class='row mt-5'><div class='col-5' id='working-clock'>00:00:00</div></div>",
-		"answer": "setInterval(() => {\n  const now = new Date();\n  document.getElementById('working-clock').textContent = now.toLocaleTimeString();\n}, 1000);"
+		"answer": "function updateClock() {\n  var now = new Date();\n  var time = now.toLocaleTimeString();\n  document.getElementById('working-clock').textContent = time;\n}\n\nsetInterval(updateClock, 1000);\nupdateClock();"
 	},
 	{
 		"id": "loop-for",
 		"title": "Challenge 1: for loop (counting loop)",
 		"desc": "You already have &lt;div id='loopForResult'&gt;&lt;/div&gt; in the template. Use a for loop to count from 1 to 5, store the numbers in a string, and display the result in that div.",
 		"template": "<div id='loopForResult'></div>",
-		"answer": "let output = '';\nfor (let i = 1; i <= 5; i++) {\n  output += i + ' ';\n}\ndocument.getElementById('loopForResult').textContent = output;"
+		"answer": "var output = '';\nfor (var i = 1; i <= 5; i++) {\n  output = output + i + ' ';\n}\ndocument.getElementById('loopForResult').textContent = output;"
 	},
 	{
 		"id": "loop-while",
 		"title": "Challenge 2: while loop (conditional loop)",
 		"desc": "You already have &lt;div id='loopWhileResult'&gt;&lt;/div&gt; in the template. Start with let num = 1; and use a while loop to double the number until it becomes greater than 100. Output the final value to the div.",
 		"template": "<div id='loopWhileResult'></div>",
-		"answer": "let num = 1;\nwhile (num <= 100) {\n  num *= 2;\n}\ndocument.getElementById('loopWhileResult').textContent = num;"
+		"answer": "var num = 1;\nwhile (num <= 100) {\n  num = num * 2;\n}\ndocument.getElementById('loopWhileResult').textContent = num;"
 	},
 	{
 		"id": "loop-do-while",
 		"title": "Challenge 3: do...while loop (run at least once)",
 		"desc": "You already have &lt;div id='loopDoWhileResult'&gt;&lt;/div&gt; in the template. Start with let total = 0 and let i = 1. Use a do...while loop to keep adding i to total until total is at least 10. Output the final total to the div.",
 		"template": "<div id='loopDoWhileResult'></div>",
-		"answer": "let total = 0;\nlet i = 1;\ndo {\n  total += i;\n  i++;\n} while (total < 10);\ndocument.getElementById('loopDoWhileResult').textContent = total;"
+		"answer": "var total = 0;\nvar i = 1;\ndo {\n  total = total + i;\n  i = i + 1;\n} while (total < 10);\n\ndocument.getElementById('loopDoWhileResult').textContent = total;"
 	},
 	{
 		"id": "loop-for-of",
 		"title": "Challenge 4: for...of loop (loop through arrays)",
 		"desc": "You already have &lt;div id='loopForOfResult'&gt;&lt;/div&gt; in the template. Use the array const fruits = ['Apple', 'Banana', 'Cherry']; and a for...of loop to display each fruit in the result div.",
 		"template": "<div id='loopForOfResult'></div>",
-		"answer": "const fruits = ['Apple', 'Banana', 'Cherry'];\nlet output = '';\nfor (const fruit of fruits) {\n  output += fruit + ' ';\n}\ndocument.getElementById('loopForOfResult').textContent = output;"
+		"answer": "var fruits = ['Apple', 'Banana', 'Cherry'];\nvar output = '';\nfor (var fruit of fruits) {\n  output = output + fruit + ' ';\n}\ndocument.getElementById('loopForOfResult').textContent = output;"
 	},
 	{
 		"id": "loop-for-in",
 		"title": "Challenge 5: for...in loop (loop through object keys)",
 		"desc": "You already have &lt;div id='loopForInResult'&gt;&lt;/div&gt; in the template. Use the object const person = { name: 'Alex', age: 25, city: 'Miami' } and a for...in loop to display all the keys in the result div.",
 		"template": "<div id='loopForInResult'></div>",
-		"answer": "const person = { name: 'Alex', age: 25, city: 'Miami' };\nlet output = '';\nfor (const key in person) {\n  output += key + ' ';\n}\ndocument.getElementById('loopForInResult').textContent = output;"
+		"answer": "var person = { name: 'Alex', age: 25, city: 'Miami' };\nvar output = '';\nfor (var key in person) {\n  output = output + key + ' ';\n}\ndocument.getElementById('loopForInResult').textContent = output;"
 	}
 ]
