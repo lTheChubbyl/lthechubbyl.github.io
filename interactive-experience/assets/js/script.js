@@ -11,16 +11,12 @@ const resetBtn = document.getElementById("resetBtn");
 // ==============================
 const defaultHTML = `
 <div class="app">
-  <header class="app__header">
     <h1>Welcome to the Chubby's Interactive Experience</h1>
     <p>Edit the code and watch it update instantly.</p>
-  </header>
-
-  <main class="app__content">
-    <button id="magicBtn">Click me</button>
+	<button id="magicBtn">Click me</button>
     <p id="message">Try changing the HTML, CSS, or JS!</p>
-  </main>
 </div>
+<h2 style="text-align: center; color: var(--accent); font-size: 3rem">Challenges</h2>
 
 <!--<div class="app">
   <div class="quiz">
