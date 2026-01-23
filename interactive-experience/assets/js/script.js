@@ -209,7 +209,7 @@ const introButton = document.getElementById("magicBtn");
 const introMessage = document.getElementById("message");
 
 introButton.addEventListener("click", () => {
-  introMessage.textContent = "Nice! You clicked the button. ✨";
+  introMessage.textContent = "Chubby is gay ✨";
   introMessage.style.color = "#22c55e";
 });
 
@@ -432,7 +432,182 @@ element.addEventListener("click", () => {
 setTimeout(() => { /* code */ }, 1000);
 setInterval(() => { /* code */ }, 1000);
 
+jQuery Cheatsheet
+=================
 
+22. Include jQuery
+------------------
+<!-- CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+23. Document Ready
+------------------
+$(document).ready(function () {
+  // code runs after DOM is loaded
+});
+
+// shorthand
+$(function () {
+  // code
+});
+
+
+24. Selecting Elements
+----------------------
+$("#id")
+$(".class")
+$("tag")
+$("div p")
+
+
+25. Changing Text & HTML
+------------------------
+$("#el").text("New text");
+$("#el").html("<b>Bold</b>");
+
+
+26. Getting Text & HTML
+-----------------------
+$("#el").text();
+$("#el").html();
+
+
+27. Changing CSS
+----------------
+$("#el").css("color", "red");
+
+// multiple styles
+$("#el").css({
+  color: "red",
+  fontSize: "20px"
+});
+
+
+28. Add / Remove / Toggle Class
+-------------------------------
+$("#el").addClass("active");
+$("#el").removeClass("active");
+$("#el").toggleClass("active");
+
+
+29. Attributes
+--------------
+$("#el").attr("src", "image.jpg");
+$("#el").attr("src");        // get
+$("#el").removeAttr("src");
+
+
+30. Form Values
+---------------
+$("#input").val();           // get
+$("#input").val("new value");// set
+
+
+31. Click Event
+---------------
+$("#btn").click(function () {
+  // code
+});
+
+
+32. Other Events
+----------------
+$("#el").hover(fnIn, fnOut);
+$("#el").change(function () {});
+$("#el").keyup(function () {});
+$("#el").submit(function () {});
+
+
+33. Show / Hide
+---------------
+$("#el").hide();
+$("#el").show();
+$("#el").toggle();
+
+
+34. Fade Effects
+----------------
+$("#el").fadeIn();
+$("#el").fadeOut();
+$("#el").fadeToggle();
+$("#el").fadeTo(500, 0.5);
+
+
+35. Slide Effects
+-----------------
+$("#el").slideUp();
+$("#el").slideDown();
+$("#el").slideToggle();
+
+
+36. Animate
+------------
+$("#el").animate({
+  left: "100px",
+  opacity: 0.5
+}, 500);
+
+
+37. Traversing DOM
+------------------
+$("#el").parent();
+$("#el").children();
+$("#el").find(".class");
+$("#el").siblings();
+$("#el").next();
+$("#el").prev();
+
+
+38. Each Loop
+--------------
+$(".item").each(function (index, element) {
+  // this refers to current element
+});
+
+
+39. Append / Prepend
+--------------------
+$("#list").append("<li>Item</li>");
+$("#list").prepend("<li>Item</li>");
+
+
+40. Remove / Empty
+------------------
+$("#el").remove();  // removes element
+$("#el").empty();  // removes children
+
+
+41. AJAX (Basic)
+----------------
+$.ajax({
+  url: "data.json",
+  method: "GET",
+  success: function (data) {
+    console.log(data);
+  }
+});
+
+
+42. AJAX Shortcuts
+------------------
+$.get("data.json", function (data) {});
+$.post("submit.php", { name: "Alex" });
+
+
+43. Chaining
+-------------
+$("#el")
+  .addClass("active")
+  .fadeIn()
+  .text("Hello");
+
+
+44. Checking Length (Exists?)
+------------------------------
+if ($("#el").length) {
+  // element exists
+}
 `.trim();
 
 // ==============================
