@@ -1,44 +1,86 @@
 [
 	{
-		"id": "clock",
-		"title": "Make a working clock",
-		"desc": "You already have a &lt;div id='working-clock'&gt;&lt;/div&gt; in the template. Use setInterval() to update that element every second with the current time.",
-		"template": "<div class='row mt-5'><div class='col-5' id='working-clock'>00:00:00</div></div>",
-		"answer": "function updateClock() {\n  var now = new Date();\n  var time = now.toLocaleTimeString();\n  document.getElementById('working-clock').textContent = time;\n}\n\nsetInterval(updateClock, 1000);\nupdateClock();"
-	},
-	{
 		"id": "loop-for",
-		"title": "Challenge 1: for loop (counting loop)",
+		"title": "Loop: For Loop (counting loop)",
 		"desc": "You already have &lt;div id='loopForResult'&gt;&lt;/div&gt; in the template. Use a for loop to count from 1 to 5, store the numbers in a string, and display the result in that div.",
 		"template": "<div id='loopForResult'></div>",
 		"answer": "var output = '';\nfor (var i = 1; i <= 5; i++) {\n  output = output + i + ' ';\n}\ndocument.getElementById('loopForResult').textContent = output;"
 	},
 	{
 		"id": "loop-while",
-		"title": "Challenge 2: while loop (conditional loop)",
+		"title": "Loop: While Loop (conditional loop)",
 		"desc": "You already have &lt;div id='loopWhileResult'&gt;&lt;/div&gt; in the template. Start with let num = 1; and use a while loop to double the number until it becomes greater than 100. Output the final value to the div.",
 		"template": "<div id='loopWhileResult'></div>",
 		"answer": "var num = 1;\nwhile (num <= 100) {\n  num = num * 2;\n}\ndocument.getElementById('loopWhileResult').textContent = num;"
 	},
 	{
 		"id": "loop-do-while",
-		"title": "Challenge 3: do...while loop (run at least once)",
+		"title": "Loop: Do...While Loop (run at least once)",
 		"desc": "You already have &lt;div id='loopDoWhileResult'&gt;&lt;/div&gt; in the template. Start with let total = 0 and let i = 1. Use a do...while loop to keep adding i to total until total is at least 10. Output the final total to the div.",
 		"template": "<div id='loopDoWhileResult'></div>",
 		"answer": "var total = 0;\nvar i = 1;\ndo {\n  total = total + i;\n  i = i + 1;\n} while (total < 10);\n\ndocument.getElementById('loopDoWhileResult').textContent = total;"
 	},
 	{
 		"id": "loop-for-of",
-		"title": "Challenge 4: for...of loop (loop through arrays)",
+		"title": "Loop: For...Of Loop (loop through arrays)",
 		"desc": "You already have &lt;div id='loopForOfResult'&gt;&lt;/div&gt; in the template. Use the array const fruits = ['Apple', 'Banana', 'Cherry']; and a for...of loop to display each fruit in the result div.",
 		"template": "<div id='loopForOfResult'></div>",
 		"answer": "var fruits = ['Apple', 'Banana', 'Cherry'];\nvar output = '';\nfor (var fruit of fruits) {\n  output = output + fruit + ' ';\n}\ndocument.getElementById('loopForOfResult').textContent = output;"
 	},
 	{
 		"id": "loop-for-in",
-		"title": "Challenge 5: for...in loop (loop through object keys)",
+		"title": "Loop: For...In Loop (loop through object keys)",
 		"desc": "You already have &lt;div id='loopForInResult'&gt;&lt;/div&gt; in the template. Use the object const person = { name: 'Alex', age: 25, city: 'Miami' } and a for...in loop to display all the keys in the result div.",
 		"template": "<div id='loopForInResult'></div>",
 		"answer": "var person = { name: 'Alex', age: 25, city: 'Miami' };\nvar output = '';\nfor (var key in person) {\n  output = output + key + ' ';\n}\ndocument.getElementById('loopForInResult').textContent = output;"
+	},
+	{
+		"id": "switch-day",
+		"title": "Switch: Day of the Week",
+		"desc": "Use a switch statement to show the day name from a number 1–7.",
+		"template": "<div id='switchDay'></div>",
+		"answer": "let day = 3;\nlet result = '';\nswitch(day) {\n  case 1:\n    result = 'Monday';\n    break;\n  case 2:\n    result = 'Tuesday';\n    break;\n  case 3:\n    result = 'Wednesday';\n    break;\n  case 4:\n    result = 'Thursday';\n    break;\n  case 5:\n    result = 'Friday';\n    break;\n  case 6:\n    result = 'Saturday';\n    break;\n  case 7:\n    result = 'Sunday';\n    break;\n  default:\n    result = 'Invalid day';\n}\ndocument.getElementById('switchDay').textContent = result;"
+	},
+	{
+		"id": "switch-calculator",
+		"title": "Switch: Simple Calculator",
+		"desc": "Use switch to perform +, -, *, or / based on the operator.",
+		"template": "<div id='switchCalc'></div>",
+		"answer": "let a = 10;\nlet b = 5;\nlet op = '+';\nlet result = 0;\nswitch(op) {\n  case '+':\n    result = a + b;\n    break;\n  case '-':\n    result = a - b;\n    break;\n  case '*':\n    result = a * b;\n    break;\n  case '/':\n    result = a / b;\n    break;\n  default:\n    result = 'Invalid operator';\n}\ndocument.getElementById('switchCalc').textContent = result;"
+	},
+	{
+		"id": "break-stop-at-5",
+		"title": "Break: Stop at 5",
+		"desc": "Loop from 1 to 10 but stop the loop when it reaches 5.",
+		"template": "<div id='breakStop'></div>",
+		"answer": "let output = '';\nfor (let i = 1; i <= 10; i++) {\n  if (i === 5) {\n    break;\n  }\n  output += i + ' ';\n}\ndocument.getElementById('breakStop').textContent = output;"
+	},
+	{
+		"id": "break-find-even",
+		"title": "Break: Find First Even Number",
+		"desc": "Find the first even number in the array and stop the loop when found.",
+		"template": "<div id='breakEven'></div>",
+		"answer": "let arr = [1, 3, 7, 8, 9];\nlet found = '';\nfor (let i = 0; i < arr.length; i++) {\n  if (arr[i] % 2 === 0) {\n    found = arr[i];\n    break;\n  }\n}\ndocument.getElementById('breakEven').textContent = found;"
+	},
+	{
+		"id": "continue-skip-3",
+		"title": "Continue: Skip Number 3",
+		"desc": "Loop from 1 to 5 but skip printing 3.",
+		"template": "<div id='continueSkip'></div>",
+		"answer": "let output = '';\nfor (let i = 1; i <= 5; i++) {\n  if (i === 3) {\n    continue;\n  }\n  output += i + ' ';\n}\ndocument.getElementById('continueSkip').textContent = output;"
+	},
+	{
+		"id": "continue-even",
+		"title": "Continue: Print Only Even Numbers",
+		"desc": "Use continue to print only even numbers from 1 to 10.",
+		"template": "<div id='continueEven'></div>",
+		"answer": "let output = '';\nfor (let i = 1; i <= 10; i++) {\n  if (i % 2 !== 0) {\n    continue;\n  }\n  output += i + ' ';\n}\ndocument.getElementById('continueEven').textContent = output;"
+	},
+	{
+		"id": "clock",
+		"title": "Make a working clock",
+		"desc": "You already have a &lt;div id='working-clock'&gt;&lt;/div&gt; in the template. Use setInterval() to update that element every second with the current time.",
+		"template": "<div class='row mt-5'><div class='col-5' id='working-clock'>00:00:00</div></div>",
+		"answer": "function updateClock() {\n  var now = new Date();\n  var time = now.toLocaleTimeString();\n  document.getElementById('working-clock').textContent = time;\n}\n\nsetInterval(updateClock, 1000);\nupdateClock();"
 	}
 ]
