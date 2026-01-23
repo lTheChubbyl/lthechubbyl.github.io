@@ -209,13 +209,72 @@ const defaultJS = `
 // ==============================
 // Intro
 // ==============================
-const button = document.getElementById("magicBtn");
-const message = document.getElementById("message");
+const introButton = document.getElementById("magicBtn");
+const introMessage = document.getElementById("message");
 
-button.addEventListener("click", () => {
-  message.textContent = "Nice! You clicked the button. ✨";
-  message.style.color = "#22c55e";
+introButton.addEventListener("click", () => {
+  introMessage.textContent = "Nice! You clicked the button. ✨";
+  introMessage.style.color = "#22c55e";
 });
+
+// ==============================
+// JS vs jQuery Challenges in plain js as a reference
+// ==============================
+
+// JS vs jQuery: Select an Element
+// var message = document.getElementById('jqMessage');
+// message.textContent = 'Hello from jQuery';
+
+// JS vs jQuery: Button Click
+// var button = document.getElementById('jqBtn');
+// var result = document.getElementById('jqResult');
+// button.addEventListener('click', function () {
+// result.textContent = 'Button clicked!';
+// });
+
+// JS vs jQuery: Change CSS
+// var text = document.getElementById('jqStyle');
+// text.style.color = 'green';
+// text.style.fontSize = '20px';
+
+// JS vs jQuery: Show and Hide
+// var text = document.getElementById('jqToggle');
+// text.style.display = 'none';
+// text.style.display = 'block';
+
+// JS vs jQuery: Toggle Visibility
+// var button = document.getElementById('jqToggleBtn');
+// var text = document.getElementById('jqToggleText');
+// button.addEventListener('click', function () {
+// if (text.style.display === 'none') {
+// text.style.display = 'block';
+// } else {
+// text.style.display = 'none';
+// }
+// });
+
+// JS vs jQuery: Change HTML
+// var box = document.getElementById('jqHtml');
+// box.innerHTML = '<strong>Hello from jQuery</strong>';
+
+// JS vs jQuery: Add Class
+// var item = document.getElementById('jqClass');
+// item.classList.add('active');
+
+// JS vs jQuery: Remove Class
+// var item = document.getElementById('jqRemove');
+// item.classList.remove('active');
+
+// JS vs jQuery: Loop Through Elements
+// var items = document.querySelectorAll('.jqItem');
+// items.forEach(function (item) {
+// item.style.color = 'blue';
+// });
+
+// JS vs jQuery: Document Ready
+// document.addEventListener('DOMContentLoaded', function () {
+// console.log('Page loaded');
+// });
 `.trim();
 
 const defaultCheatsheet = `
@@ -465,6 +524,7 @@ async function update() {
     <html>
     <head>
       <style>${cssEditor.getValue()}</style>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
       ${htmlEditor.getValue()}

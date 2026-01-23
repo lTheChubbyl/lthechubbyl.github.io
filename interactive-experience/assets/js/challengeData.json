@@ -79,8 +79,78 @@
 	{
 		"id": "clock",
 		"title": "Make a working clock",
-		"desc": "You already have a &lt;div id='working-clock'&gt;&lt;/div&gt; in the template. Use setInterval() to update that element every second with the current time.",
+		"desc": "You already have a &lt;div id='working-clock'&gt;&lt;/div&gt; in the template. First, use setTimeout() to wait 1 second before starting the clock. Then use setInterval() to update the clock every second. Finally, use clearInterval() to stop the clock after 10 seconds.",
 		"template": "<div class='row mt-5'><div class='col-5' id='working-clock'>00:00:00</div></div>",
-		"answer": "function updateClock() {\n  var now = new Date();\n  var time = now.toLocaleTimeString();\n  document.getElementById('working-clock').textContent = time;\n}\n\nsetInterval(updateClock, 1000);\nupdateClock();"
+		"answer": "function updateClock() {\n  var now = new Date();\n  var time = now.toLocaleTimeString();\n  document.getElementById('working-clock').textContent = time;\n}\n\n// Wait 1 second before starting the clock\nsetTimeout(function () {\n  // Update the clock every second\n  var clockInterval = setInterval(updateClock, 1000);\n\n  // Stop updating after 10 seconds\n  setTimeout(function () {\n    clearInterval(clockInterval);\n  }, 10000);\n}, 1000);\n\n// Show the time immediately\nupdateClock();"
+	},
+	{
+		"id": "jq-select",
+		"title": "JS vs jQuery: Select an Element",
+		"desc": "A paragraph with the id 'jqMessage' already exists in the template. Do NOT create a new element. Use jQuery to select this element and change its text to say 'Hello from jQuery'.",
+		"template": "<p id='jqMessage'>Hello</p>",
+		"answer": "var message = $('#jqMessage');\nmessage.text('Hello from jQuery');"
+	},
+	{
+		"id": "jq-click",
+		"title": "JS vs jQuery: Button Click",
+		"desc": "A button with the id 'jqBtn' and an empty paragraph with the id 'jqResult' already exist. Do NOT add new HTML. Use jQuery to listen for a click on the button and update the paragraph text to say 'Button clicked!'.",
+		"template": "<button id='jqBtn'>Click me</button><p id='jqResult'></p>",
+		"answer": "var button = $('#jqBtn');\nbutton.on('click', function () {\n  $('#jqResult').text('Button clicked!');\n});"
+	},
+	{
+		"id": "jq-css",
+		"title": "JS vs jQuery: Change CSS",
+		"desc": "A paragraph with the id 'jqStyle' already exists. Do NOT change the HTML or CSS files. Use jQuery to change the text color to green and the font size to 20px.",
+		"template": "<p id='jqStyle'>Style me</p>",
+		"answer": "var text = $('#jqStyle');\ntext.css('color', 'green');\ntext.css('fontSize', '20px');"
+	},
+	{
+		"id": "jq-hide-show",
+		"title": "JS vs jQuery: Show and Hide",
+		"desc": "A paragraph with the id 'jqToggle' is visible by default. Use jQuery to hide the paragraph first, then show it again using jQuery methods.",
+		"template": "<p id='jqToggle'>Now you see me</p>",
+		"answer": "var text = $('#jqToggle');\ntext.hide();\ntext.show();"
+	},
+	{
+		"id": "jq-toggle",
+		"title": "JS vs jQuery: Toggle Visibility",
+		"desc": "A button with the id 'jqToggleBtn' and a paragraph with the id 'jqToggleText' already exist. Use jQuery so that clicking the button will toggle the visibility of the paragraph.",
+		"template": "<button id='jqToggleBtn'>Toggle</button><p id='jqToggleText'>Toggle me</p>",
+		"answer": "var button = $('#jqToggleBtn');\nbutton.on('click', function () {\n  $('#jqToggleText').toggle();\n});"
+	},
+	{
+		"id": "jq-html",
+		"title": "JS vs jQuery: Change HTML",
+		"desc": "An empty paragraph with the id 'jqHtml' already exists. Use jQuery to insert bold text that says 'Hello from jQuery' into this paragraph.",
+		"template": "<p id='jqHtml'></p>",
+		"answer": "var box = $('#jqHtml');\nbox.html('<strong>Hello from jQuery</strong>');"
+	},
+	{
+		"id": "jq-class-add",
+		"title": "JS vs jQuery: Add Class",
+		"desc": "A paragraph with the id 'jqClass' already exists. Use jQuery to add a class called 'active' to this element.",
+		"template": "<p id='jqClass'>Add a class</p>",
+		"answer": "var item = $('#jqClass');\nitem.addClass('active');"
+	},
+	{
+		"id": "jq-class-remove",
+		"title": "JS vs jQuery: Remove Class",
+		"desc": "A paragraph with the id 'jqRemove' already has a class called 'active'. Use jQuery to remove the 'active' class from this element.",
+		"template": "<p id='jqRemove' class='active'>Remove class</p>",
+		"answer": "var item = $('#jqRemove');\nitem.removeClass('active');"
+	},
+	{
+		"id": "jq-each",
+		"title": "JS vs jQuery: Loop Through Elements",
+		"desc": "Multiple paragraphs already exist and all share the class 'jqItem'. Use jQuery to loop through each element and change its text color to blue.",
+		"template": "<p class='jqItem'>One</p><p class='jqItem'>Two</p><p class='jqItem'>Three</p>",
+		"answer": "var items = $('.jqItem');\nitems.each(function () {\n  $(this).css('color', 'blue');\n});"
+	},
+	{
+		"id": "jq-ready",
+		"title": "JS vs jQuery: Document Ready",
+		"desc": "The page already contains content. Use jQuery to run code only after the page has fully loaded, then log 'Page loaded' to the console.",
+		"template": "<p>Check the console</p>",
+		"answer": "$(document).ready(function () {\n  console.log('Page loaded');\n});"
 	}
 ]
