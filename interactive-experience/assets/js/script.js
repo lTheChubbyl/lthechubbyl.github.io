@@ -22,21 +22,21 @@ const defaultHTML = `
   </main>
 </div>
 
-// <div class="app">
-//   <div class="quiz">
-//     <div class="quiz__header">
-//       <h2>Module 1: jQuery Basics</h2>
-//       <p id="quizStatus">Question 1 of 3</p>
-//     </div>
+<!--<div class="app">
+  <div class="quiz">
+    <div class="quiz__header">
+      <h2>Module 1: jQuery Basics</h2>
+      <p id="quizStatus">Question 1 of 3</p>
+    </div>
 
-//     <div class="quiz__content" id="quizContent"></div>
+    <div class="quiz__content" id="quizContent"></div>
 
-//     <div class="quiz__controls">
-//         <button id="backBtn" disabled>Back</button>
-//         <button id="nextBtn" disabled>Next</button>
-//     </div>
-//   </div>
-// </div>
+    <div class="quiz__controls">
+        <button id="backBtn" disabled>Back</button>
+        <button id="nextBtn" disabled>Next</button>
+    </div>
+  </div>
+</div> -->
 `.trim();
 
 const defaultCSS = `
