@@ -218,59 +218,142 @@ introButton.addEventListener("click", () => {
 // ==============================
 
 // JS vs jQuery: Select an Element
-// var message = document.getElementById('jqMessage');
-// message.textContent = 'Hello from jQuery';
+    // var message = document.getElementById('jqMessage');
+    // message.textContent = 'Hello from jQuery';
 
 // JS vs jQuery: Button Click
-// var button = document.getElementById('jqBtn');
-// var result = document.getElementById('jqResult');
-// button.addEventListener('click', function () {
-// result.textContent = 'Button clicked!';
-// });
+    // var button = document.getElementById('jqBtn');
+    // var result = document.getElementById('jqResult');
+    // button.addEventListener('click', function () {
+    //  result.textContent = 'Button clicked!';
+    // });
 
 // JS vs jQuery: Change CSS
-// var text = document.getElementById('jqStyle');
-// text.style.color = 'green';
-// text.style.fontSize = '20px';
+    // var text = document.getElementById('jqStyle');
+    // text.style.color = 'green';
+    // text.style.fontSize = '20px';
 
 // JS vs jQuery: Show and Hide
-// var text = document.getElementById('jqToggle');
-// text.style.display = 'none';
-// text.style.display = 'block';
+    // var text = document.getElementById('jqToggle');
+    // text.style.display = 'none';
+    // text.style.display = 'block';
 
 // JS vs jQuery: Toggle Visibility
-// var button = document.getElementById('jqToggleBtn');
-// var text = document.getElementById('jqToggleText');
-// button.addEventListener('click', function () {
-// if (text.style.display === 'none') {
-// text.style.display = 'block';
-// } else {
-// text.style.display = 'none';
-// }
-// });
+    // var button = document.getElementById('jqToggleBtn');
+    // var text = document.getElementById('jqToggleText');
+    // button.addEventListener('click', function () {
+    //  if (text.style.display === 'none') {
+    //      text.style.display = 'block';
+    //  } else {
+    //      text.style.display = 'none';
+    //  }
+    // });
 
 // JS vs jQuery: Change HTML
-// var box = document.getElementById('jqHtml');
-// box.innerHTML = '<strong>Hello from jQuery</strong>';
+    // var box = document.getElementById('jqHtml');
+    // box.innerHTML = '<strong>Hello from jQuery</strong>';
 
 // JS vs jQuery: Add Class
-// var item = document.getElementById('jqClass');
-// item.classList.add('active');
+    // var item = document.getElementById('jqClass');
+    // item.classList.add('active');
 
 // JS vs jQuery: Remove Class
-// var item = document.getElementById('jqRemove');
-// item.classList.remove('active');
+    // var item = document.getElementById('jqRemove');
+    // item.classList.remove('active');
 
 // JS vs jQuery: Loop Through Elements
-// var items = document.querySelectorAll('.jqItem');
-// items.forEach(function (item) {
-// item.style.color = 'blue';
-// });
+    // var items = document.querySelectorAll('.jqItem');
+    // items.forEach(function (item) {
+    //  item.style.color = 'blue';
+    // });
 
 // JS vs jQuery: Document Ready
-// document.addEventListener('DOMContentLoaded', function () {
-// console.log('Page loaded');
-// });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //  console.log('Page loaded');
+    // });
+
+// jQuery: Hover to Change Text
+    // var hoverText = document.getElementById('hoverText');
+    // hoverText.addEventListener('mouseenter', function () {
+    //  hoverText.textContent = 'Hovering!';
+    // });
+    // hoverText.addEventListener('mouseleave', function () {
+    //  hoverText.textContent = 'Hover over me';
+    // });
+
+// jQuery: Mouse Enter to Change Color
+    // var colorBox = document.getElementById('colorBox');
+    // colorBox.addEventListener('mouseenter', function () {
+    //  colorBox.style.background = 'green';
+    // });
+    // colorBox.addEventListener('mouseleave', function () {
+    //  colorBox.style.background = 'red';
+    // });
+
+// jQuery: Click to Fade Out
+    // var fadeBtn = document.getElementById('fadeBtn');
+    // var fadeText = document.getElementById('fadeText');
+    // fadeBtn.addEventListener('click', function () {
+    //  fadeText.style.transition = 'opacity 0.5s';
+    //  fadeText.style.opacity = '0';
+    // });
+
+// jQuery: Slide Toggle
+    // var slideBtn = document.getElementById('slideBtn');
+    // var slideBox = document.getElementById('slideBox');
+    // slideBtn.addEventListener('click', function () {
+    //  if (slideBox.style.display === 'none') {
+    //      slideBox.style.display = 'block';
+    //  } else {
+    //      slideBox.style.display = 'none';
+    //  }
+    // });
+
+// jQuery: Animate Move Right (with stop)
+    // var button = document.getElementById('moveBtn');
+    // var box = document.getElementById('moveBox');
+
+    // button.addEventListener('click', function () {
+    //   box.style.transition = 'none';
+    //   box.style.left = box.style.left || '0px';
+
+    //   requestAnimationFrame(function () {
+    //     box.style.transition = 'left 0.8s';
+    //     box.style.left = '100px';
+    //   });
+    // });
+
+// jQuery: AJAX GET (Simple)
+    // var getBtn = document.getElementById('getBtn');
+    // var getResult = document.getElementById('getResult');
+    // getBtn.addEventListener('click', function () {
+    // fetch('https://jsonplaceholder.typicode.com/posts/1')
+    // .then(function (response) {
+    // return response.json();
+    // })
+    // .then(function (data) {
+    // getResult.textContent = data.title;
+    // });
+    // });
+
+// jQuery: AJAX POST (Simple)
+    // var postBtn = document.getElementById('postBtn');
+    // var postResult = document.getElementById('postResult');
+    // postBtn.addEventListener('click', function () {
+    //  fetch('https://jsonplaceholder.typicode.com/posts', {
+    //      method: 'POST',
+    //      headers: {
+    //      'Content-Type': 'application/json'
+    //  },
+    //  body: JSON.stringify({ name: 'Alex' })
+    //  })
+    //  .then(function (response) {
+    //      return response.json();
+    //  })
+    // .then(function (data) {
+    //  postResult.textContent = 'Response ID: ' + data.id;
+    // });
+    // });
 `.trim();
 
 const defaultCheatsheet = `

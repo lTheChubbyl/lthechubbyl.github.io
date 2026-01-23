@@ -152,5 +152,54 @@
 		"desc": "The page already contains content. Use jQuery to run code only after the page has fully loaded, then log 'Page loaded' to the console.",
 		"template": "<p>Check the console</p>",
 		"answer": "$(document).ready(function () {\n  console.log('Page loaded');\n});"
+	},
+	{
+		"id": "jq-hover-change-text",
+		"title": "jQuery: Hover to Change Text",
+		"desc": "You already have a paragraph with the id 'hoverText'. When the user hovers over the paragraph, change its text to 'Hovering!'. When the mouse leaves, change it back to 'Hover over me'.",
+		"template": "<p id='hoverText'>Hover over me</p>",
+		"answer": "$('#hoverText').hover(\n  function() {\n    $(this).text('Hovering!');\n  },\n  function() {\n    $(this).text('Hover over me');\n  }\n);"
+	},
+	{
+		"id": "jq-mouseenter-change-color",
+		"title": "jQuery: Mouse Enter to Change Color",
+		"desc": "A box with the id 'colorBox' already exists. When the mouse enters the box, change its background color to green. When the mouse leaves, change it back to red.",
+		"template": "<div id='colorBox' style='width:150px;height:80px;background:red;'></div>",
+		"answer": "$('#colorBox').on('mouseenter', function() {\n  $(this).css('background', 'green');\n});\n\n$('#colorBox').on('mouseleave', function() {\n  $(this).css('background', 'red');\n});"
+	},
+	{
+		"id": "jq-click-fade",
+		"title": "jQuery: Click to Fade Out",
+		"desc": "A button with the id 'fadeBtn' and a paragraph with the id 'fadeText' already exist. When the button is clicked, fade out the paragraph.",
+		"template": "<button id='fadeBtn'>Fade</button><p id='fadeText'>Fade me</p>",
+		"answer": "$('#fadeBtn').on('click', function() {\n  $('#fadeText').fadeOut();\n});"
+	},
+	{
+		"id": "jq-slide-toggle",
+		"title": "jQuery: Slide Toggle",
+		"desc": "A button with the id 'slideBtn' and a box with the id 'slideBox' already exist. When the button is clicked, slide the box up if it's visible, and slide it down if it's hidden.",
+		"template": "<button id='slideBtn'>Slide</button><div id='slideBox' style='width:200px;height:80px;background:#ccc;'></div>",
+		"answer": "$('#slideBtn').on('click', function() {\n  $('#slideBox').slideToggle();\n});"
+	},
+	{
+		"id": "jq-animate-move",
+		"title": "jQuery: Animate Move Right (with stop)",
+		"desc": "A box with the id 'moveBox' and a button with the id 'moveBtn' already exist. When the button is clicked, animate the box to move 100px to the right. Use stop() so that if the user clicks the button repeatedly, the animation doesnt stack up and queue.",
+		"template": "<button id='moveBtn'>Move</button><div id='moveBox' style='width:100px;height:50px;background:blue;position:relative;'></div>",
+		"answer": "$('#moveBtn').on('click', function() {\n  $('#moveBox').stop().animate({ left: '100px' }, 800);\n});"
+	},
+	{
+		"id": "jq-ajax-get",
+		"title": "jQuery: AJAX GET (Simple)",
+		"desc": "A button with the id 'getBtn' and an empty paragraph with the id 'getResult' already exist. When the button is clicked, use jQuery $.get() to fetch data from https://jsonplaceholder.typicode.com/posts/1 and display the post title in the paragraph.",
+		"template": "<button id='getBtn'>Get Post</button><p id='getResult'></p>",
+		"answer": "$('#getBtn').on('click', function() {\n  $.get('https://jsonplaceholder.typicode.com/posts/1', function(data) {\n    $('#getResult').text(data.title);\n  });\n});"
+	},
+	{
+		"id": "jq-ajax-post",
+		"title": "jQuery: AJAX POST (Simple)",
+		"desc": "A button with the id 'postBtn' and an empty paragraph with the id 'postResult' already exist. When the button is clicked, use jQuery $.post() to send {name: 'Alex'} to https://jsonplaceholder.typicode.com/posts and display the response id in the paragraph.",
+		"template": "<button id='postBtn'>Send Post</button><p id='postResult'></p>",
+		"answer": "$('#postBtn').on('click', function() {\n  $.post('https://jsonplaceholder.typicode.com/posts', { name: 'Alex' }, function(data) {\n    $('#postResult').text('Response ID: ' + data.id);\n  });\n});"
 	}
 ]
