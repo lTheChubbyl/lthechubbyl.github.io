@@ -218,34 +218,204 @@ button.addEventListener("click", () => {
 });
 `.trim();
 
+const defaultCheatsheet = `
+JavaScript Basics Cheatsheet
+============================
+
+1. Output
+----------
+console.log("text");
+
+
+2. Variables
+------------
+var name = "value";
+let age = 0;
+const PI = 3.14;
+
+
+3. Function
+-----------
+function functionName() {
+  // code here
+}
+
+
+4. If / Else
+------------
+if (condition) {
+  // code if true
+} else {
+  // code if false
+}
+
+
+5. If / Else If / Else
+-----------------------
+if (condition1) {
+  // code if condition1 is true
+} else if (condition2) {
+  // code if condition2 is true
+} else {
+  // code if all are false
+}
+
+
+6. Switch
+---------
+switch (value) {
+  case option1:
+    // code
+    break;
+  case option2:
+    // code
+    break;
+  default:
+    // code if no case matches
+}
+
+
+7. For Loop
+-----------
+for (let i = 0; i < 5; i++) {
+  // code to repeat
+}
+
+
+8. While Loop
+-------------
+while (condition) {
+  // code to repeat while condition is true
+}
+
+
+9. Do...While Loop
+------------------
+do {
+  // code runs at least once
+} while (condition);
+
+
+10. Break
+----------
+for (let i = 0; i < 10; i++) {
+  if (condition) {
+    break;
+  }
+}
+
+
+11. Continue
+------------
+for (let i = 0; i < 10; i++) {
+  if (condition) {
+    continue;
+  }
+  // code runs only if condition is false
+}
+
+
+12. Return
+----------
+function getValue() {
+  return value;
+}
+
+
+13. Arrays
+----------
+const fruits = ["Apple", "Banana", "Cherry"];
+
+
+14. Objects
+-----------
+const person = {
+  name: "Alex",
+  age: 25
+};
+
+
+15. Accessing Properties
+------------------------
+person.name
+person["age"]
+
+
+16. Template Literals
+----------------------
+const name = "Alex";
+console.log(\`Hello, \${name}\`);
+
+
+17. Functions with Parameters
+-----------------------------
+function add(a, b) {
+  return a + b;
+}
+
+
+18. Arrow Functions
+-------------------
+const add = (a, b) => a + b;
+
+
+19. DOM Selection
+-----------------
+document.getElementById("id")
+document.querySelector(".class")
+
+
+20. Event Listeners
+-------------------
+element.addEventListener("click", () => {
+  // code
+});
+
+
+21. setInterval / setTimeout
+----------------------------
+setTimeout(() => { /* code */ }, 1000);
+setInterval(() => { /* code */ }, 1000);
+
+
+`.trim();
+
 // ==============================
 // CodeMirror Editors
 // ==============================
 const htmlEditor = CodeMirror(document.getElementById("html"), {
 	mode: "xml",
-	theme: "default",
+	theme: "material",
 	lineNumbers: true,
 	value: defaultHTML,
 });
 
 const cssEditor = CodeMirror(document.getElementById("css"), {
 	mode: "css",
-	theme: "default",
+	theme: "material",
 	lineNumbers: true,
 	value: defaultCSS,
 });
 
 const jsEditor = CodeMirror(document.getElementById("js"), {
 	mode: "javascript",
-	theme: "default",
+	theme: "material",
 	lineNumbers: true,
 	value: defaultJS,
+});
+
+const cheatsheetEditor = CodeMirror(document.getElementById("cheatsheet"), {
+	mode: "text",
+	theme: "material",
+	lineNumbers: true,
+	value: defaultCheatsheet,
 });
 
 const editors = {
 	html: htmlEditor,
 	css: cssEditor,
 	js: jsEditor,
+	cheatsheet: cheatsheetEditor,
 };
 
 // ==============================
@@ -255,6 +425,7 @@ const STORAGE_KEYS = {
 	html: "live-editor-html",
 	css: "live-editor-css",
 	js: "live-editor-js",
+	cheatsheet: "live-editor-cheatsheet",
 	activeTab: "live-editor-active-tab",
 };
 
@@ -271,6 +442,10 @@ if (localStorage.getItem(STORAGE_KEYS.css)) {
 
 if (localStorage.getItem(STORAGE_KEYS.js)) {
 	jsEditor.setValue(localStorage.getItem(STORAGE_KEYS.js));
+}
+
+if (localStorage.getItem(STORAGE_KEYS.cheatsheet)) {
+	cheatsheetEditor.setValue(localStorage.getItem(STORAGE_KEYS.cheatsheet));
 }
 
 // ==============================
@@ -372,6 +547,10 @@ jsEditor.on("change", () => {
 	update();
 });
 
+cheatsheetEditor.on("change", () => {
+	localStorage.setItem(STORAGE_KEYS.cheatsheet, cheatsheetEditor.getValue());
+});
+
 // ==============================
 // Tabs logic
 // ==============================
@@ -415,10 +594,12 @@ resetBtn.addEventListener("click", () => {
 	localStorage.removeItem(STORAGE_KEYS.html);
 	localStorage.removeItem(STORAGE_KEYS.css);
 	localStorage.removeItem(STORAGE_KEYS.js);
+	localStorage.removeItem(STORAGE_KEYS.cheatsheet);
 
 	htmlEditor.setValue(defaultHTML);
 	cssEditor.setValue(defaultCSS);
 	jsEditor.setValue(defaultJS);
+	cheatsheetEditor.setValue(defaultCheatsheet);
 
 	update();
 });
