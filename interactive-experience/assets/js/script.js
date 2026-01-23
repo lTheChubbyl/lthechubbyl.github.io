@@ -905,15 +905,17 @@ update();
 // Reset button
 // ==============================
 resetBtn.addEventListener("click", () => {
-	localStorage.removeItem(STORAGE_KEYS.html);
-	localStorage.removeItem(STORAGE_KEYS.css);
-	localStorage.removeItem(STORAGE_KEYS.js);
-	localStorage.removeItem(STORAGE_KEYS.cheatsheet);
+	if (confirm("Are you sure you want to reset all code?")) {
+		localStorage.removeItem(STORAGE_KEYS.html);
+		localStorage.removeItem(STORAGE_KEYS.css);
+		localStorage.removeItem(STORAGE_KEYS.js);
+		localStorage.removeItem(STORAGE_KEYS.cheatsheet);
 
-	htmlEditor.setValue(defaultHTML);
-	cssEditor.setValue(defaultCSS);
-	jsEditor.setValue(defaultJS);
-	cheatsheetEditor.setValue(defaultCheatsheet);
+		htmlEditor.setValue(defaultHTML);
+		cssEditor.setValue(defaultCSS);
+		jsEditor.setValue(defaultJS);
+		cheatsheetEditor.setValue(defaultCheatsheet);
 
-	update();
+		update();
+	}
 });
